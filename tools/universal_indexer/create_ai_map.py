@@ -71,8 +71,9 @@ def collect_target_files():
         scan_target = PROJECT_ROOT
         print("🎯 [create_ai_map] Mode: ROOT (프로젝트 전체 경로를 직접 스캔합니다)")
     else:
-        scan_target = PROJECT_ROOT / "src"
-        print("🎯 [create_ai_map] Mode: SRC (src/ 폴더 내부만 정밀 스캔합니다)")
+        # 레거시 src 지칭을 완전히 청산하고, 새로운 타깃 폴더명으로 단일화
+        scan_target = PROJECT_ROOT / "extraction_target_project"
+        print("🎯 [create_ai_map] Mode: EXTRACTION_TARGET_PROJECT (extraction_target_project/ 폴더 내부만 정밀 스캔합니다)")
 
     if not scan_target.exists():
         print(f"❌ [오류] 스캔 대상 경로가 존재하지 않습니다: {scan_target}")
@@ -275,9 +276,9 @@ def main():
             posix_rel_path = rel_path.as_posix()
             file_name = file_path.name
 
-            # 🎯 [형님 제안 반영] SRC 모드일 때만 가장 바깥의 'src/' 문자열 제거 (출력용 display_path 생성)
-            if SCAN_MODE == "SRC" and posix_rel_path.startswith("src/"):
-                display_path = posix_rel_path[4:]  # "src/" 4글자 컷
+            # 🎯 [형님 제안 반영] EXTRACTION_TARGET_PROJECT 모드일 때만 가장 바깥의 'extraction_target_project/' 문자열 제거 (출력용 display_path 생성)
+            if SCAN_MODE == "EXTRACTION_TARGET_PROJECT" and posix_rel_path.startswith("extraction_target_project/"):
+                display_path = posix_rel_path[24:]  # "extraction_target_project/" 24글자 컷
             else:
                 display_path = posix_rel_path
 
@@ -296,9 +297,9 @@ def main():
             file_meta = jjap_context.get(posix_rel_path, {})
             symbols_info = file_meta.get("symbols_summary", "")
 
-            # 🛠️ [경로 유틸 불일치 폴백 방어선] (순정 유지)
-            if not symbols_info and posix_rel_path.startswith("src/src/"):
-                shorter_path = posix_rel_path.replace("src/src/", "src/", 1)
+            # 🛠️ 레거시 src 대신 실제 물리 폴더명인 "extraction_target_project" 기준으로 중복 경로 폴백 방어선 구축
+            if not symbols_info and posix_rel_path.startswith("extraction_target_project/extraction_target_project/"):
+                shorter_path = posix_rel_path.replace("extraction_target_project/extraction_target_project/", "extraction_target_project/", 1)
                 symbols_info = jjap_context.get(shorter_path, {}).get("symbols_summary", "")
 
             # 코드맵에 최종 파일 사양 한 줄 출력 (출력값만 display_path 적용)

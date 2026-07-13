@@ -81,7 +81,8 @@ class AdvancedIndexerV2:
 
     def scan_project(self):
         """설정된 SCAN_MODE에 따라 프로젝트 내의 모든 등록된 언어 파일을 스캔합니다."""
-        scan_target = self.project_root if SCAN_MODE == "ROOT" else self.project_root / "src"
+        # 🛠️ 레거시 "src" 하드코딩을 청산하고, switch.py의 새로운 물리 폴더명("extraction_target_project")과 완벽 매핑
+        scan_target = self.project_root if SCAN_MODE == "ROOT" else self.project_root / "extraction_target_project"
         log(f"🚀 [디버깅 레이더 가동] 모드: {SCAN_MODE} | 물리 스캔 범위: {scan_target}")
 
         EXCLUDE_KEYWORDS = [".venv", ".git", "__pycache__", "system_memory", "system_maps"]
