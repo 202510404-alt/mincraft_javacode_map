@@ -45,9 +45,42 @@ project_root/
 │   │   │   ├── entry.bin [📂 .gradle/configuration-cache/2e50130e-d504-420b-814b-ca43734c0176/entry.bin]
 │   │   │   ├── projectfingerprint.bin [📂 .gradle/configuration-cache/2e50130e-d504-420b-814b-ca43734c0176/projectfingerprint.bin]
 │   │   │   ├── work.bin [📂 .gradle/configuration-cache/2e50130e-d504-420b-814b-ca43734c0176/work.bin]
+│   │   ├── 2fb81455-8f38-43f9-bf55-5a1594a31e04/
+│   │   │   ├── .globals.work.bin [📂 .gradle/configuration-cache/2fb81455-8f38-43f9-bf55-5a1594a31e04/.globals.work.bin]
+│   │   │   ├── .strings.work.bin [📂 .gradle/configuration-cache/2fb81455-8f38-43f9-bf55-5a1594a31e04/.strings.work.bin]
+│   │   │   ├── _.work.bin [📂 .gradle/configuration-cache/2fb81455-8f38-43f9-bf55-5a1594a31e04/_.work.bin]
+│   │   │   ├── buildfingerprint.bin [📂 .gradle/configuration-cache/2fb81455-8f38-43f9-bf55-5a1594a31e04/buildfingerprint.bin]
+│   │   │   ├── classloaderscopes.bin [📂 .gradle/configuration-cache/2fb81455-8f38-43f9-bf55-5a1594a31e04/classloaderscopes.bin]
+│   │   │   ├── entry.bin [📂 .gradle/configuration-cache/2fb81455-8f38-43f9-bf55-5a1594a31e04/entry.bin]
+│   │   │   ├── projectfingerprint.bin [📂 .gradle/configuration-cache/2fb81455-8f38-43f9-bf55-5a1594a31e04/projectfingerprint.bin]
+│   │   │   ├── work.bin [📂 .gradle/configuration-cache/2fb81455-8f38-43f9-bf55-5a1594a31e04/work.bin]
+│   │   ├── 4y709znrotf8jugh2z4hi6yue/
+│   │   │   ├── candidates.bin [📂 .gradle/configuration-cache/4y709znrotf8jugh2z4hi6yue/candidates.bin]
+│   │   ├── 6a7dc038-c222-4130-932f-de509d6a848f/
+│   │   │   ├── .globals.work.bin [📂 .gradle/configuration-cache/6a7dc038-c222-4130-932f-de509d6a848f/.globals.work.bin]
+│   │   │   ├── .strings.work.bin [📂 .gradle/configuration-cache/6a7dc038-c222-4130-932f-de509d6a848f/.strings.work.bin]
+│   │   │   ├── _.work.bin [📂 .gradle/configuration-cache/6a7dc038-c222-4130-932f-de509d6a848f/_.work.bin]
+│   │   │   ├── buildfingerprint.bin [📂 .gradle/configuration-cache/6a7dc038-c222-4130-932f-de509d6a848f/buildfingerprint.bin]
+│   │   │   ├── classloaderscopes.bin [📂 .gradle/configuration-cache/6a7dc038-c222-4130-932f-de509d6a848f/classloaderscopes.bin]
+│   │   │   ├── entry.bin [📂 .gradle/configuration-cache/6a7dc038-c222-4130-932f-de509d6a848f/entry.bin]
+│   │   │   ├── projectfingerprint.bin [📂 .gradle/configuration-cache/6a7dc038-c222-4130-932f-de509d6a848f/projectfingerprint.bin]
+│   │   │   ├── work.bin [📂 .gradle/configuration-cache/6a7dc038-c222-4130-932f-de509d6a848f/work.bin]
 │   │   ├── 776cqg6727pn053kqtq5p5ce4/
 │   │   │   ├── candidates.bin [📂 .gradle/configuration-cache/776cqg6727pn053kqtq5p5ce4/candidates.bin]
+│   │   ├── 9f315c7c-8405-4373-9085-15bac9a32d82/
+│   │   │   ├── .globals.work.bin [📂 .gradle/configuration-cache/9f315c7c-8405-4373-9085-15bac9a32d82/.globals.work.bin]
+│   │   │   ├── .strings.work.bin [📂 .gradle/configuration-cache/9f315c7c-8405-4373-9085-15bac9a32d82/.strings.work.bin]
+│   │   │   ├── _.work.bin [📂 .gradle/configuration-cache/9f315c7c-8405-4373-9085-15bac9a32d82/_.work.bin]
+│   │   │   ├── buildfingerprint.bin [📂 .gradle/configuration-cache/9f315c7c-8405-4373-9085-15bac9a32d82/buildfingerprint.bin]
+│   │   │   ├── classloaderscopes.bin [📂 .gradle/configuration-cache/9f315c7c-8405-4373-9085-15bac9a32d82/classloaderscopes.bin]
+│   │   │   ├── entry.bin [📂 .gradle/configuration-cache/9f315c7c-8405-4373-9085-15bac9a32d82/entry.bin]
+│   │   │   ├── projectfingerprint.bin [📂 .gradle/configuration-cache/9f315c7c-8405-4373-9085-15bac9a32d82/projectfingerprint.bin]
+│   │   │   ├── work.bin [📂 .gradle/configuration-cache/9f315c7c-8405-4373-9085-15bac9a32d82/work.bin]
+│   │   ├── afhxpttqos8i0dfuazsshilma/
+│   │   │   ├── candidates.bin [📂 .gradle/configuration-cache/afhxpttqos8i0dfuazsshilma/candidates.bin]
 │   │   ├── configuration-cache.lock [📂 .gradle/configuration-cache/configuration-cache.lock]
+│   │   ├── f25fbzom4d1wet9f7w45oash3/
+│   │   │   ├── candidates.bin [📂 .gradle/configuration-cache/f25fbzom4d1wet9f7w45oash3/candidates.bin]
 │   │   ├── gc.properties [📂 .gradle/configuration-cache/gc.properties]
 │   │   ├── rcufm7m5joetcwnfp0ztcdza/
 │   │   │   ├── candidates.bin [📂 .gradle/configuration-cache/rcufm7m5joetcwnfp0ztcdza/candidates.bin]
@@ -81,9 +114,18 @@ project_root/
 │   │   │   │   │   │   ├── samakportal.class [📂 build/classes/java/main/com/desertcore/samakportal.class]
 │   ├── reports/
 │   │   ├── configuration-cache/
+│   │   │   ├── 4y709znrotf8jugh2z4hi6yue/
+│   │   │   │   ├── x0k0q07cpzquldnivxt1q1jv/
+│   │   │   │   │   ├── configuration-cache-report.html [📂 build/reports/configuration-cache/4y709znrotf8jugh2z4hi6yue/x0k0q07cpzquldnivxt1q1jv/configuration-cache-report.html]
 │   │   │   ├── 776cqg6727pn053kqtq5p5ce4/
 │   │   │   │   ├── cytukaxbb6g0h4doz1k866sy8/
 │   │   │   │   │   ├── configuration-cache-report.html [📂 build/reports/configuration-cache/776cqg6727pn053kqtq5p5ce4/cytukaxbb6g0h4doz1k866sy8/configuration-cache-report.html]
+│   │   │   ├── afhxpttqos8i0dfuazsshilma/
+│   │   │   │   ├── 22cofaq8odi9cdt8kkh6p4etj/
+│   │   │   │   │   ├── configuration-cache-report.html [📂 build/reports/configuration-cache/afhxpttqos8i0dfuazsshilma/22cofaq8odi9cdt8kkh6p4etj/configuration-cache-report.html]
+│   │   │   ├── f25fbzom4d1wet9f7w45oash3/
+│   │   │   │   ├── 9snj33wva79t3v9dlc40h87dt/
+│   │   │   │   │   ├── configuration-cache-report.html [📂 build/reports/configuration-cache/f25fbzom4d1wet9f7w45oash3/9snj33wva79t3v9dlc40h87dt/configuration-cache-report.html]
 │   │   │   ├── rcufm7m5joetcwnfp0ztcdza/
 │   │   │   │   ├── 11gtu45fpepa59wo4kw0l56mh/
 │   │   │   │   │   ├── configuration-cache-report.html [📂 build/reports/configuration-cache/rcufm7m5joetcwnfp0ztcdza/11gtu45fpepa59wo4kw0l56mh/configuration-cache-report.html]
@@ -100,6 +142,7 @@ project_root/
 │   ├── wrapper/
 │   │   ├── gradle-wrapper.properties [📂 gradle/wrapper/gradle-wrapper.properties]
 ├── gradle.properties [📂 gradle.properties]
+├── gradlew.bat [📂 gradlew.bat]
 ├── plan.md [📂 plan.md]
 ├── settings.gradle.kts [📂 settings.gradle.kts]
 ├── src/

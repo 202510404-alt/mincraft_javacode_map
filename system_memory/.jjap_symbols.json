@@ -20,19 +20,19 @@
       "start_line": 38,
       "end_line": 51,
       "calls": [
-        "getPlugin",
-        "startsWith",
-        "getPluginManager",
-        "respawn",
-        "getName",
         "getDrops",
-        "getWorld",
-        "getEntity",
+        "startsWith",
         "clear",
-        "runTaskLater",
-        "setKeepInventory",
         "spigot",
-        "getScheduler"
+        "getPlugin",
+        "setKeepInventory",
+        "getName",
+        "respawn",
+        "runTaskLater",
+        "getPluginManager",
+        "getWorld",
+        "getScheduler",
+        "getEntity"
       ],
       "used_by": []
     },
@@ -45,23 +45,23 @@
       "start_line": 54,
       "end_line": 73,
       "calls": [
-        "getPlayer",
-        "getPlugin",
+        "getScheduler",
         "startsWith",
-        "getLocation",
-        "getPluginManager",
-        "text",
-        "getUniqueId",
-        "getName",
-        "remove",
-        "runTaskLater",
         "getWorld",
-        "sendMessage",
+        "getUniqueId",
         "cancelTimer",
-        "color",
+        "remove",
+        "getPlugin",
+        "text",
+        "getName",
+        "runTaskLater",
+        "getPlayer",
+        "getLocation",
         "setRespawnLocation",
+        "getPluginManager",
         "setGameMode",
-        "getScheduler"
+        "color",
+        "sendMessage"
       ],
       "used_by": []
     },
@@ -74,8 +74,8 @@
       "start_line": 66,
       "end_line": 76,
       "calls": [
-        "text",
         "getUniqueId",
+        "text",
         "onPlayerMove",
         "sendMessage",
         "color"
@@ -91,31 +91,31 @@
       "start_line": 76,
       "end_line": 123,
       "calls": [
-        "decorate",
+        "runCommand",
+        "getName",
         "containsKey",
+        "decorate",
+        "getPlayer",
+        "color",
         "isSneaking",
+        "add",
+        "text",
+        "append",
+        "run",
+        "clickEvent",
+        "getUniqueId",
+        "getPlugin",
+        "put",
         "getPluginManager",
         "sendMessage",
-        "cancelTimer",
-        "color",
-        "append",
-        "getGameMode",
         "BukkitRunnable",
-        "getPlayer",
-        "getPlugin",
-        "runTaskTimer",
-        "clickEvent",
-        "put",
-        "getWorld",
-        "add",
-        "isOnline",
-        "runCommand",
-        "run",
         "startsWith",
-        "text",
-        "getUniqueId",
-        "getName",
-        "contains"
+        "isOnline",
+        "cancelTimer",
+        "getGameMode",
+        "contains",
+        "getWorld",
+        "runTaskTimer"
       ],
       "used_by": []
     },
@@ -128,18 +128,18 @@
       "start_line": 91,
       "end_line": 114,
       "calls": [
-        "decorate",
-        "text",
-        "clickEvent",
-        "sendMessage",
-        "cancelTimer",
-        "isSneaking",
         "color",
-        "runCommand",
-        "append",
-        "add",
         "isOnline",
-        "getGameMode"
+        "cancelTimer",
+        "getGameMode",
+        "text",
+        "runCommand",
+        "decorate",
+        "add",
+        "sendMessage",
+        "append",
+        "isSneaking",
+        "clickEvent"
       ],
       "used_by": []
     },
@@ -176,16 +176,16 @@
       "start_line": 106,
       "end_line": 119,
       "calls": [
-        "decorate",
         "text",
-        "runTaskTimer",
-        "clickEvent",
+        "runCommand",
+        "decorate",
         "put",
-        "sendMessage",
-        "color",
-        "append",
         "add",
-        "runCommand"
+        "runTaskTimer",
+        "sendMessage",
+        "append",
+        "color",
+        "clickEvent"
       ],
       "used_by": []
     },
@@ -199,9 +199,9 @@
       "end_line": 130,
       "calls": [
         "get",
-        "remove",
         "containsKey",
-        "cancel"
+        "cancel",
+        "remove"
       ],
       "used_by": []
     },
@@ -214,16 +214,16 @@
       "start_line": 133,
       "end_line": 148,
       "calls": [
-        "getPlayer",
         "startsWith",
         "getUniqueId",
-        "getName",
-        "getWorld",
-        "cancelTimer",
         "unloadAndDeleteInstance",
+        "cancelTimer",
+        "teleport",
+        "getName",
+        "getPlayer",
+        "getWorld",
         "Location",
-        "setGameMode",
-        "teleport"
+        "setGameMode"
       ],
       "used_by": []
     },
@@ -239,9 +239,9 @@
         "startsWith",
         "getUniqueId",
         "unloadAndDeleteInstance",
+        "teleport",
         "Location",
-        "setGameMode",
-        "teleport"
+        "setGameMode"
       ],
       "used_by": []
     },
@@ -267,23 +267,23 @@
       "start_line": 151,
       "end_line": 178,
       "calls": [
-        "getPlayer",
-        "startsWith",
-        "getMessage",
-        "text",
-        "getUniqueId",
-        "getName",
-        "remove",
-        "setCancelled",
-        "sendMessage",
-        "getWorld",
-        "cancelTimer",
         "color",
+        "startsWith",
+        "getUniqueId",
         "unloadAndDeleteInstance",
+        "cancelTimer",
+        "remove",
+        "teleport",
+        "setCancelled",
+        "text",
+        "getName",
+        "getPlayer",
+        "equalsIgnoreCase",
+        "getWorld",
         "Location",
         "setGameMode",
-        "equalsIgnoreCase",
-        "teleport"
+        "getMessage",
+        "sendMessage"
       ],
       "used_by": []
     },
@@ -297,14 +297,14 @@
       "end_line": 170,
       "calls": [
         "startsWith",
-        "text",
         "getUniqueId",
-        "sendMessage",
-        "color",
         "unloadAndDeleteInstance",
+        "teleport",
+        "text",
         "Location",
         "setGameMode",
-        "teleport"
+        "color",
+        "sendMessage"
       ],
       "used_by": []
     },
@@ -330,11 +330,11 @@
       "start_line": 175,
       "end_line": 181,
       "calls": [
-        "text",
         "getUniqueId",
+        "unloadAndDeleteInstance",
+        "text",
         "sendMessage",
-        "color",
-        "unloadAndDeleteInstance"
+        "color"
       ],
       "used_by": []
     },
@@ -347,22 +347,22 @@
       "start_line": 181,
       "end_line": 205,
       "calls": [
-        "getPlugin",
-        "getPluginManager",
-        "File",
-        "unloadWorld",
         "getLogger",
-        "getWorldContainer",
-        "toPath",
-        "runTaskLater",
-        "getWorld",
-        "exists",
-        "deleteDirectoryNative",
         "getPlayers",
-        "isEmpty",
         "warning",
+        "File",
+        "exists",
         "runTaskAsynchronously",
-        "getScheduler"
+        "getPlugin",
+        "isEmpty",
+        "toPath",
+        "deleteDirectoryNative",
+        "runTaskLater",
+        "getWorldContainer",
+        "getPluginManager",
+        "getWorld",
+        "getScheduler",
+        "unloadWorld"
       ],
       "used_by": []
     },
@@ -388,10 +388,10 @@
       "start_line": 208,
       "end_line": 222,
       "calls": [
+        "walkFileTree",
         "delete",
-        "postVisitDirectory",
         "visitFile",
-        "walkFileTree"
+        "postVisitDirectory"
       ],
       "used_by": []
     },
@@ -430,17 +430,17 @@
       "start_line": 8,
       "end_line": 14,
       "calls": [
-        "getPluginManager",
+        "getLogger",
+        "samakportal",
+        "lobbycmd",
+        "deathevent",
         "setExecutor",
         "marendumbul",
-        "samakportal",
-        "getLogger",
-        "lobbycmd",
-        "registerEvents",
+        "getCommand",
         "info",
+        "getPluginManager",
         "getServer",
-        "deathevent",
-        "getCommand"
+        "registerEvents"
       ],
       "used_by": []
     },
@@ -453,17 +453,17 @@
       "start_line": 9,
       "end_line": 17,
       "calls": [
-        "getPluginManager",
-        "setExecutor",
         "onDisable",
-        "marendumbul",
-        "samakportal",
         "getLogger",
+        "samakportal",
         "lobbycmd",
-        "registerEvents",
-        "info",
         "deathevent",
-        "getCommand"
+        "setExecutor",
+        "marendumbul",
+        "getCommand",
+        "info",
+        "getPluginManager",
+        "registerEvents"
       ],
       "used_by": []
     },
@@ -476,16 +476,16 @@
       "start_line": 10,
       "end_line": 17,
       "calls": [
-        "getPluginManager",
-        "setExecutor",
         "onDisable",
         "samakportal",
         "lobbycmd",
-        "registerEvents",
-        "info",
-        "getServer",
         "deathevent",
-        "getCommand"
+        "setExecutor",
+        "getCommand",
+        "info",
+        "getPluginManager",
+        "getServer",
+        "registerEvents"
       ],
       "used_by": []
     },
@@ -498,14 +498,14 @@
       "start_line": 11,
       "end_line": 17,
       "calls": [
-        "getPluginManager",
-        "setExecutor",
         "onDisable",
         "samakportal",
         "lobbycmd",
-        "registerEvents",
         "deathevent",
-        "getCommand"
+        "setExecutor",
+        "getCommand",
+        "getPluginManager",
+        "registerEvents"
       ],
       "used_by": []
     },
@@ -518,13 +518,13 @@
       "start_line": 12,
       "end_line": 17,
       "calls": [
-        "getPluginManager",
-        "setExecutor",
         "onDisable",
         "lobbycmd",
-        "registerEvents",
         "deathevent",
-        "getCommand"
+        "setExecutor",
+        "getCommand",
+        "getPluginManager",
+        "registerEvents"
       ],
       "used_by": []
     },
@@ -538,8 +538,8 @@
       "end_line": 17,
       "calls": [
         "onDisable",
-        "setExecutor",
-        "lobbycmd"
+        "lobbycmd",
+        "setExecutor"
       ],
       "used_by": []
     },
@@ -574,14 +574,14 @@
       "start_line": 18,
       "end_line": 48,
       "calls": [
-        "text",
-        "sendMessage",
-        "getWorld",
-        "color",
-        "Location",
-        "setGameMode",
         "isOp",
-        "teleport"
+        "setGameMode",
+        "teleport",
+        "text",
+        "getWorld",
+        "Location",
+        "sendMessage",
+        "color"
       ],
       "used_by": []
     },
@@ -605,21 +605,21 @@
       "start_line": 19,
       "end_line": 61,
       "calls": [
-        "getPlayer",
-        "getPlugin",
-        "setType",
-        "getPluginManager",
-        "getLogger",
-        "max",
-        "runTaskLater",
-        "getWorld",
-        "abs",
         "nextDouble",
-        "info",
-        "getBlockAt",
         "getType",
+        "getLogger",
         "isOnline",
-        "getScheduler"
+        "abs",
+        "getPlugin",
+        "max",
+        "setType",
+        "getBlockAt",
+        "runTaskLater",
+        "getPlayer",
+        "getPluginManager",
+        "getWorld",
+        "getScheduler",
+        "info"
       ],
       "used_by": []
     },
@@ -643,40 +643,40 @@
       "start_line": 25,
       "end_line": 95,
       "calls": [
-        "setCancelled",
-        "log",
-        "exists",
-        "getRightClicked",
-        "teleport",
-        "getPluginManager",
-        "runTask",
-        "getLogger",
-        "getWorldContainer",
-        "sendMessage",
-        "createWorld",
-        "WorldCreator",
-        "color",
-        "getPlayer",
-        "getPlugin",
+        "toString",
         "File",
-        "copyDirectoryNative",
-        "delete",
-        "toPath",
-        "getWorld",
-        "Location",
-        "setGameMode",
-        "getScoreboardTags",
         "warning",
-        "runTaskAsynchronously",
-        "getScheduler",
-        "startsWith",
+        "getName",
+        "deleteDirectoryNative",
+        "getPlayer",
+        "getWorldContainer",
+        "copyDirectoryNative",
+        "Location",
+        "color",
+        "runTask",
+        "WorldCreator",
+        "exists",
+        "toPath",
         "text",
         "getUniqueId",
-        "toString",
-        "getName",
-        "contains",
+        "getScoreboardTags",
+        "runTaskAsynchronously",
+        "getPlugin",
         "substring",
-        "deleteDirectoryNative"
+        "createWorld",
+        "getPluginManager",
+        "sendMessage",
+        "delete",
+        "getLogger",
+        "startsWith",
+        "teleport",
+        "log",
+        "contains",
+        "getRightClicked",
+        "setCancelled",
+        "getWorld",
+        "getScheduler",
+        "setGameMode"
       ],
       "used_by": []
     },
@@ -690,9 +690,9 @@
       "end_line": 69,
       "calls": [
         "File",
+        "exists",
         "copyDirectoryNative",
-        "toPath",
-        "exists"
+        "toPath"
       ],
       "used_by": []
     },
@@ -705,12 +705,12 @@
       "start_line": 65,
       "end_line": 74,
       "calls": [
-        "File",
-        "delete",
         "getLogger",
-        "toPath",
+        "warning",
+        "File",
         "exists",
-        "warning"
+        "toPath",
+        "delete"
       ],
       "used_by": []
     },
@@ -723,14 +723,14 @@
       "start_line": 98,
       "end_line": 115,
       "calls": [
-        "copy",
         "walkFileTree",
-        "relativize",
         "resolve",
+        "relativize",
         "exists",
+        "createDirectories",
         "preVisitDirectory",
         "visitFile",
-        "createDirectories"
+        "copy"
       ],
       "used_by": []
     },
@@ -745,8 +745,8 @@
       "calls": [
         "relativize",
         "resolve",
-        "createDirectories",
-        "exists"
+        "exists",
+        "createDirectories"
       ],
       "used_by": []
     },
@@ -760,8 +760,8 @@
       "end_line": 113,
       "calls": [
         "relativize",
-        "copy",
-        "resolve"
+        "resolve",
+        "copy"
       ],
       "used_by": []
     },
@@ -774,10 +774,10 @@
       "start_line": 118,
       "end_line": 132,
       "calls": [
+        "walkFileTree",
         "delete",
-        "postVisitDirectory",
         "visitFile",
-        "walkFileTree"
+        "postVisitDirectory"
       ],
       "used_by": []
     },
