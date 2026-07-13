@@ -278,7 +278,7 @@ def main():
 
             # 🎯 [형님 제안 반영] EXTRACTION_TARGET_PROJECT 모드일 때만 가장 바깥의 'extraction_target_project/' 문자열 제거 (출력용 display_path 생성)
             if SCAN_MODE == "EXTRACTION_TARGET_PROJECT" and posix_rel_path.startswith("extraction_target_project/"):
-                display_path = posix_rel_path[24:]  # "extraction_target_project/" 24글자 컷
+                display_path = posix_rel_path[26:]  # "extraction_target_project/" 26글자 컷
             else:
                 display_path = posix_rel_path
 
