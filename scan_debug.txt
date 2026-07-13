@@ -93,9 +93,9 @@ C:\Users\COMLAB\Desktop\mincraft_javacode_map\src\gradle.properties
 C:\Users\COMLAB\Desktop\mincraft_javacode_map\src\gradlew.bat
 C:\Users\COMLAB\Desktop\mincraft_javacode_map\src\plan.md
 C:\Users\COMLAB\Desktop\mincraft_javacode_map\src\settings.gradle.kts
-C:\Users\COMLAB\Desktop\mincraft_javacode_map\src\src\main\java\com\desertcore\deathevent.java
 C:\Users\COMLAB\Desktop\mincraft_javacode_map\src\src\main\java\com\desertcore\DesertCore.java
+C:\Users\COMLAB\Desktop\mincraft_javacode_map\src\src\main\java\com\desertcore\legacy\deathevent.java
+C:\Users\COMLAB\Desktop\mincraft_javacode_map\src\src\main\java\com\desertcore\legacy\marendumbul.java
+C:\Users\COMLAB\Desktop\mincraft_javacode_map\src\src\main\java\com\desertcore\legacy\samakportal.java
 C:\Users\COMLAB\Desktop\mincraft_javacode_map\src\src\main\java\com\desertcore\lobbycmd.java
-C:\Users\COMLAB\Desktop\mincraft_javacode_map\src\src\main\java\com\desertcore\marendumbul.java
-C:\Users\COMLAB\Desktop\mincraft_javacode_map\src\src\main\java\com\desertcore\samakportal.java
 C:\Users\COMLAB\Desktop\mincraft_javacode_map\src\src\main\resources\plugin.yml

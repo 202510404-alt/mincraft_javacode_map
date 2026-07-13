@@ -1,4 +1,4 @@
-package com.desertcore;
+package com.desertcore.legacy;
 
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.event.ClickEvent;

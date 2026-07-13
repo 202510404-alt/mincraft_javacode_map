@@ -4,10 +4,10 @@
 
 ## 🗂️ [Module Index]
 - `src/src/main/java/com/desertcore/DesertCore.java`
-- `src/src/main/java/com/desertcore/deathevent.java`
+- `src/src/main/java/com/desertcore/legacy/deathevent.java`
+- `src/src/main/java/com/desertcore/legacy/marendumbul.java`
+- `src/src/main/java/com/desertcore/legacy/samakportal.java`
 - `src/src/main/java/com/desertcore/lobbycmd.java`
-- `src/src/main/java/com/desertcore/marendumbul.java`
-- `src/src/main/java/com/desertcore/samakportal.java`
 
 ## 💀 [Skeleton & Dependency 명세서]
 ### 📄 src/src/main/java/com/desertcore/DesertCore.java
@@ -24,7 +24,7 @@ public void onDisable() { // L17-18
 
 --------------------------------------------------
 
-### 📄 src/src/main/java/com/desertcore/deathevent.java
+### 📄 src/src/main/java/com/desertcore/legacy/deathevent.java
 #### 🧱 Code Skeleton:
 ```python
 class deathevent { // L32-223
@@ -53,16 +53,7 @@ class deathevent { // L32-223
 
 --------------------------------------------------
 
-### 📄 src/src/main/java/com/desertcore/lobbycmd.java
-#### 🧱 Code Skeleton:
-```python
-class lobbycmd { // L15-49
-    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) { // L18-48
-```
-
---------------------------------------------------
-
-### 📄 src/src/main/java/com/desertcore/marendumbul.java
+### 📄 src/src/main/java/com/desertcore/legacy/marendumbul.java
 #### 🧱 Code Skeleton:
 ```python
 class marendumbul { // L13-62
@@ -71,7 +62,7 @@ class marendumbul { // L13-62
 
 --------------------------------------------------
 
-### 📄 src/src/main/java/com/desertcore/samakportal.java
+### 📄 src/src/main/java/com/desertcore/legacy/samakportal.java
 #### 🧱 Code Skeleton:
 ```python
 class samakportal { // L22-133
@@ -84,6 +75,15 @@ class samakportal { // L22-133
     private void deleteDirectoryNative(Path path) throws IOException { // L118-132
     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException { // L121-124
     public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException { // L127-130
+```
+
+--------------------------------------------------
+
+### 📄 src/src/main/java/com/desertcore/lobbycmd.java
+#### 🧱 Code Skeleton:
+```python
+class lobbycmd { // L15-49
+    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) { // L18-48
 ```
 
 --------------------------------------------------

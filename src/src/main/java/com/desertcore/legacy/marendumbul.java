@@ -1,4 +1,4 @@
-package com.desertcore;
+package com.desertcore.legacy;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
