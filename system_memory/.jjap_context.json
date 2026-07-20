@@ -20,6 +20,16 @@
       "symbols_summary": "🧬 class ModuleInitializer [L2-2]",
       "skeleton": "class ModuleInitializer { // L2-2"
     },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/contract/EnergyConsumer.java": {
+      "hash": "aa5bf9a576daf9c2f74f0d0ef07584a4dc8c870401342400b392c2bb59f8ea2c",
+      "symbols_summary": "🧬 class EnergyConsumer [L3-6] | 🎯 def getEnergyDemand() [L4-4] | 🎯 def onEnergyAllocated(int) [L5-5]",
+      "skeleton": "class EnergyConsumer { // L3-6\n    int getEnergyDemand(); // L4-4\n    void onEnergyAllocated(int amount); // L5-5"
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/contract/EnergyPriority.java": {
+      "hash": "47b093d33e57309c459eef3e30a19ce145100f4b86536eb6e0af0ff68d29efd7",
+      "symbols_summary": "🧬 class EnergyPriority [L3-8]",
+      "skeleton": "class EnergyPriority { // L3-8"
+    },
     "extraction_target_project/src/main/java/com/yourstudio/coredefense/data/pipeline/JsonSerializationPipeline.java": {
       "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "symbols_summary": "",

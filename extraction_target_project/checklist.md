@@ -2,15 +2,16 @@
 
 > 기준 문서: `plan.md` (기술 설계) + `파일구조_AI친화적_개정안.md` (파일구조 개정판)
 > 상태 기호: `[x]` 구현 완료 · `[-]` 구현 중 · `[ ]` 미구현
+> 최근 갱신: 파일구조 개정안에 렌더링(모델·애니메이션) 시스템 트리가 추가 반영됨에 따라 `render/` 패키지 및 관련 리소스 항목 신설
 
 ---
 
 ## 📂 프로젝트 루트
 
 - [ ] **`core-defense-plugin/`**
-    - [ ] `build.gradle.kts`
-        - 📌 **상태:** 미구현
-        - 📝 **변경 내역:** 없음 (계획과 동일)
+    - [-] `build.gradle.kts`
+        - 📌 **상태:** 구현 중
+        - 📝 **변경 내역:** 마인크래프트 및 Paper API 버전을 1.21.1로 수정하고 툴체인 벤더 제약을 완화함.
     - [ ] `settings.gradle.kts`
         - 📌 **상태:** 미구현
         - 📝 **변경 내역:** 없음
@@ -29,6 +30,24 @@
     - [ ] `libs/`
         - 📌 **상태:** 미구현
         - 📝 **변경 내역:** 없음
+    - [ ] **`models/`** ← ★ 신설
+        - 📌 **상태:** 미구현
+        - 📝 **변경 내역:** [구조 변경] 신설(plan.md 24장). Blockbench/Animated Java 원본(.bbmodel) 보관 전용, `src/main/resources` 밖에 위치 (빌드 산출물 아님)
+        - [ ] **`raw/core/`**
+            - [ ] `core.bbmodel` — 📌 미구현 / 📝 없음 (Animated Java 애니메이션 데이터 내장)
+        - [ ] **`raw/turret/`**
+            - 📌 **상태:** 미구현
+            - 📝 **변경 내역:** 18.3의 9개 포탑 각각의 `.bbmodel` (예: `arrow_sentry.bbmodel`, `minigun.bbmodel` 등)
+        - [ ] **`raw/drone/`**
+            - [ ] `combat_drone.bbmodel` — 📌 미구현 / 📝 없음
+        - [ ] **`raw/npc/`**
+            - [ ] `npc_base.bbmodel` — 📌 미구현 / 📝 없음
+        - [ ] **`raw/mob/`**
+            - 📌 **상태:** 미구현
+            - 📝 **변경 내역:** 몬스터 종류별 `.bbmodel`
+    - [ ] **`tools/resourcepack-build/`** ← ★ 신설
+        - 📌 **상태:** 미구현
+        - 📝 **변경 내역:** [구조 변경] 신설(24.5). Animated Java export 산출물을 `src/main/resources/assets`·`animations`로 동기화하는 빌드 스크립트. `ResourcePackBuildTask`(Gradle task) 연동 지점
 
 ---
 
@@ -99,6 +118,25 @@
         - [ ] `score_weights.yml`
             - 📌 **상태:** 미구현
             - 📝 **변경 내역:** [트리 누락분 반영] 19.1 점수 가중치, 편입
+    - [ ] **`models/`** ← ★ 신설 (config 하위)
+        - [ ] `animation_triggers.yml`
+            - 📌 **상태:** 미구현
+            - 📝 **변경 내역:** [구조 변경] 신설(24.4). 게임 이벤트 → animId 매핑 (`AnimationTriggerMapping`이 역직렬화)
+
+- [ ] **`animations/`** ← ★ 신설
+    - 📌 **상태:** 미구현
+    - 📝 **변경 내역:** [구조 변경] 신설(24.2/24.5). Animated Java export의 뼈대별 키프레임 JSON — 플러그인이 런타임 파싱(`AnimatedJavaAssetLoader`), 유저에게 배포되지 않고 서버만 읽음
+    - [ ] `core/`
+    - [ ] `turret/`
+    - [ ] `drone/`
+    - [ ] `npc/`
+    - [ ] `mob/`
+
+- [ ] **`assets/`** ← ★ 신설
+    - 📌 **상태:** 미구현
+    - 📝 **변경 내역:** [구조 변경] 신설(24.5). Animated Java export의 뼈대별 아이템 모델/텍스처 — 리소스팩 빌드 원본(유저 클라이언트 배포용)
+    - [ ] `minecraft/models/item/`
+    - [ ] `minecraft/textures/item/`
 
 - [ ] **`lang/`**
     - [ ] `en_US.yml`
@@ -150,14 +188,17 @@
 - [ ] **`common/contract/`** ← 신설 패키지
     - 📌 **상태:** 미구현
     - 📝 **변경 내역:** [구조 변경] 신설. 여러 도메인이 공동 구현하는 인터페이스 전용 폴더로 분리
-    - [ ] `EnergyConsumer.java`
-        - 📌 **상태:** 미구현
+    - [x] `EnergyConsumer.java`
+        - 📌 **상태:** 구현 완료
         - 📝 **변경 내역:** [위치 이동] `core/` → `common/contract/` (core/npc/structure/playerclass가 공동 구현하므로 core 전속 아님)
-    - [ ] `EnergyPriority.java`
-        - 📌 **상태:** 미구현 / 📝 변경 내역: 없음
+    - [x] `EnergyPriority.java`
+        - 📌 **상태:** 구현 완료 / 📝 변경 내역: 없음
     - [ ] `Healable.java`
         - 📌 **상태:** 미구현
         - 📝 **변경 내역:** [위치 이동] `core/` → `common/contract/` (core/npc/structure 공동 피회복 대상)
+    - [ ] `ModelAnchor.java`
+        - 📌 **상태:** 미구현
+        - 📝 **변경 내역:** [구조 변경] 신설(24.2). core/turret/npc/mob/drone이 공동 구현하는 렌더링 앵커 계약(`getAnchorLocation()`/`getYaw()`/`getModelId()`/`getCurrentAnimationId()`) — `render/` 패키지 소유가 아니라 공용 계약이므로 `common/contract/`에 위치
 - [ ] **`common/util/`**
     - [ ] `MathUtils.java` / `ParticleUtils.java` / `CooldownTracker.java`
         - 📌 **상태:** 미구현 / 📝 변경 내역: 없음
@@ -440,6 +481,65 @@
     - [ ] `DroneCapacityPolicy.java`
         - 📌 **상태:** 미구현 / 📝 변경 내역: 없음
 
+### render/ ← 신설 최상위 도메인
+
+- [ ] **`render/`**
+    - 📌 **상태:** 미구현
+    - 📝 **변경 내역:** [구조 변경] 신설(plan.md 24장). Blockbench+Animated Java로 제작한 모델/애니메이션을 순수 Paper Display Entity API(ItemDisplay)로 매 틱 제어하는 렌더링 엔진. 도메인 로직을 전혀 모르는 순수 계산/재생 계층으로 격리
+    - [ ] **`render/model/`**
+        - [ ] `ModelDefinition.java` (Record: modelId, List\<BoneDefinition\>, rootBoneId)
+            - 📌 **상태:** 미구현 / 📝 변경 내역: 없음
+        - [ ] `BoneDefinition.java` (Record: boneId, parentBoneId, pivot, itemModelId, baseTransform)
+            - 📌 **상태:** 미구현 / 📝 변경 내역: 없음
+        - [ ] `ModelRegistry.java`
+            - 📌 **상태:** 미구현 / 📝 변경 내역: 없음
+        - [ ] `AnimatedJavaAssetLoader.java`
+            - 📌 **상태:** 미구현
+            - 📝 **변경 내역:** `resources/animations/` 파싱 → Registry 적재, `ReloadableConfig` 구현(핫리로드)
+    - [ ] **`render/animation/`**
+        - [ ] `AnimationDefinition.java` (Record: animId, lengthTicks, loop, List\<BoneKeyframeTrack\>)
+            - 📌 **상태:** 미구현 / 📝 변경 내역: 없음
+        - [ ] `BoneKeyframeTrack.java` (Record: boneId, List\<Keyframe\>)
+            - 📌 **상태:** 미구현 / 📝 변경 내역: 없음
+        - [ ] `Keyframe.java` (Record: tick, position, rotation, scale, InterpolationType)
+            - 📌 **상태:** 미구현 / 📝 변경 내역: 없음
+        - [ ] `InterpolationType.java` (Enum: LINEAR/CATMULLROM/STEP)
+            - 📌 **상태:** 미구현 / 📝 변경 내역: 없음
+        - [ ] `AnimationRegistry.java`
+            - 📌 **상태:** 미구현 / 📝 변경 내역: 없음 (모델별 네임스페이스, 예: "core.idle")
+        - [ ] `AnimationPlayer.java`
+            - 📌 **상태:** 미구현 / 📝 변경 내역: 없음 (play/stop/isPlaying, 재생 큐 보유)
+        - [ ] `AnimationTicker.java`
+            - 📌 **상태:** 미구현
+            - 📝 **변경 내역:** `GameScheduler` 기반 분산 틱 재생(23.1 원칙 재사용)
+        - [ ] `AnimationLodPolicy.java`
+            - 📌 **상태:** 미구현
+            - 📝 **변경 내역:** 거리 기반 갱신주기 저하(23.3 `VfxLodPolicy`와 동일 패턴)
+        - [ ] `TransformInterpolator.java`
+            - 📌 **상태:** 미구현 / 📝 변경 내역: 없음 (순수 함수: 키프레임 간 보간)
+        - [ ] `BoneTransformComposer.java`
+            - 📌 **상태:** 미구현 / 📝 변경 내역: 없음 (순수 함수: 부모-자식 Transformation 행렬 합성)
+        - [ ] **`render/animation/trigger/`** ← 신설 하위 패키지
+            - 📝 **변경 내역:** [구조 변경] 게임 이벤트 → 애니메이션 매핑을 하위 패키지로 명시(24.4)
+            - [ ] `AnimationTriggerMapping.java`
+                - 📌 **상태:** 미구현 / 📝 변경 내역: 없음 (`animation_triggers.yml` 역직렬화)
+            - [ ] `AnimationTriggerListener.java`
+                - 📌 **상태:** 미구현
+                - 📝 **변경 내역:** `GameListener` 구현, 도메인 이벤트(예: `CoreDamagedEvent`, `WeaponFiredEvent`)를 구독해 해당 `ModelAnchor`의 `AnimationPlayer.play()` 호출
+    - [ ] **`render/display/`**
+        - [ ] `DisplayModelInstance.java`
+            - 📌 **상태:** 미구현
+            - 📝 **변경 내역:** ItemDisplay 엔티티 묶음(Map\<boneId, ItemDisplay\>) + 현재 AnimationPlayer 보유. `setAnchor()`/`dispose()` 제공
+        - [ ] `DisplayModelFactory.java`
+            - 📌 **상태:** 미구현 / 📝 변경 내역: 없음
+    - [ ] **`render/asset/`**
+        - [ ] `ModelAssetValidator.java`
+            - 📌 **상태:** 미구현
+            - 📝 **변경 내역:** itemModelId/boneId 참조 무결성 검증, 21.1 `validate()` 원칙 재사용
+    - [ ] **`render/event/`**
+        - [ ] `ModelSpawnedEvent.java` / `AnimationStateChangedEvent.java`
+            - 📌 **상태:** 미구현 / 📝 변경 내역: 없음
+
 ### playerclass/ ← 개명된 패키지
 
 - [ ] **`playerclass/`**
@@ -545,7 +645,10 @@
 
 | 구분 | 완료 | 진행중 | 미구현 | 합계 |
 |---|---|---|---|---|
-| 리소스(config/yml 등) | 0 | 0 | 26 | 26 |
-| Java 클래스/인터페이스 | 0 | 0 | 약 150+ | 약 150+ |
+| 리소스(config/yml 등) | 0 | 0 | 27 | 27 |
+| 리소스 디렉터리(모델/에셋 파이프라인, 파일 수 미확정) | 0 | 0 | `models/raw/*`, `animations/*`, `assets/*`, `tools/resourcepack-build/` | - |
+| Java 클래스/인터페이스 | 0 | 0 | 약 170+ | 약 170+ |
 
 > 현재 초기 상태로 전 항목 미구현입니다. 실제 개발 착수 후 각 항목의 `[ ]`를 `[-]`(구현 중)/`[x]`(완료)로 갱신하고, 설계와 다르게 구현된 부분은 📝 변경 내역에 사유를 기록하세요.
+>
+> **이번 갱신 요약 (파일구조_AI친화적_개정안.md 반영):** 렌더링 시스템(plan.md 24장, Blockbench+Animated Java 파이프라인)이 파일구조 개정안에 새로 편입되어, `render/` 패키지(model/animation/display/asset/event, 총 20개 클래스) · `common/contract/ModelAnchor.java` · 리소스 트리의 `models/raw/`, `tools/resourcepack-build/`, `src/main/resources/animations/`, `src/main/resources/assets/`, `config/models/animation_triggers.yml`을 신규 항목으로 추가했습니다. 그 외 이미 반영되어 있던 기존 항목(playerclass/vocation 개명, common/contract 이동, drone/ 신설 등)은 변경 없이 유지했습니다.

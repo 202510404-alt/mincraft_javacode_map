@@ -38,6 +38,13 @@ project_root/
 │   │   ├── cache.properties [📂 .gradle/buildOutputCleanup/cache.properties]
 │   │   ├── outputFiles.bin [📂 .gradle/buildOutputCleanup/outputFiles.bin]
 │   ├── configuration-cache/
+│   │   ├── 25t8mf7ng0kl0xfjvz4t1il9c/
+│   │   │   ├── candidates.bin [📂 .gradle/configuration-cache/25t8mf7ng0kl0xfjvz4t1il9c/candidates.bin]
+│   │   ├── 49eb7f4e-1720-4c71-b443-e4bb23c01011/
+│   │   │   ├── .globals.work.bin [📂 .gradle/configuration-cache/49eb7f4e-1720-4c71-b443-e4bb23c01011/.globals.work.bin]
+│   │   │   ├── .strings.work.bin [📂 .gradle/configuration-cache/49eb7f4e-1720-4c71-b443-e4bb23c01011/.strings.work.bin]
+│   │   │   ├── _.work.bin [📂 .gradle/configuration-cache/49eb7f4e-1720-4c71-b443-e4bb23c01011/_.work.bin]
+│   │   │   ├── work.bin [📂 .gradle/configuration-cache/49eb7f4e-1720-4c71-b443-e4bb23c01011/work.bin]
 │   │   ├── 65030a47-5f7b-4767-979f-593221e0ddba/
 │   │   │   ├── .globals.work.bin [📂 .gradle/configuration-cache/65030a47-5f7b-4767-979f-593221e0ddba/.globals.work.bin]
 │   │   │   ├── .strings.work.bin [📂 .gradle/configuration-cache/65030a47-5f7b-4767-979f-593221e0ddba/.strings.work.bin]
@@ -55,6 +62,14 @@ project_root/
 │   │   │   ├── entry.bin [📂 .gradle/configuration-cache/8dbb8d7e-3cc9-4f07-b251-34713ec0a34f/entry.bin]
 │   │   │   ├── projectfingerprint.bin [📂 .gradle/configuration-cache/8dbb8d7e-3cc9-4f07-b251-34713ec0a34f/projectfingerprint.bin]
 │   │   │   ├── work.bin [📂 .gradle/configuration-cache/8dbb8d7e-3cc9-4f07-b251-34713ec0a34f/work.bin]
+│   │   ├── a2e6281c-c9b5-45f6-a2d0-94b0263944b3/
+│   │   │   ├── .globals.work.bin [📂 .gradle/configuration-cache/a2e6281c-c9b5-45f6-a2d0-94b0263944b3/.globals.work.bin]
+│   │   │   ├── .strings.work.bin [📂 .gradle/configuration-cache/a2e6281c-c9b5-45f6-a2d0-94b0263944b3/.strings.work.bin]
+│   │   │   ├── _.work.bin [📂 .gradle/configuration-cache/a2e6281c-c9b5-45f6-a2d0-94b0263944b3/_.work.bin]
+│   │   │   ├── buildfingerprint.bin [📂 .gradle/configuration-cache/a2e6281c-c9b5-45f6-a2d0-94b0263944b3/buildfingerprint.bin]
+│   │   │   ├── entry.bin [📂 .gradle/configuration-cache/a2e6281c-c9b5-45f6-a2d0-94b0263944b3/entry.bin]
+│   │   │   ├── projectfingerprint.bin [📂 .gradle/configuration-cache/a2e6281c-c9b5-45f6-a2d0-94b0263944b3/projectfingerprint.bin]
+│   │   │   ├── work.bin [📂 .gradle/configuration-cache/a2e6281c-c9b5-45f6-a2d0-94b0263944b3/work.bin]
 │   │   ├── ckppi0xkjk8gfncf84kencwt9/
 │   │   │   ├── candidates.bin [📂 .gradle/configuration-cache/ckppi0xkjk8gfncf84kencwt9/candidates.bin]
 │   │   ├── configuration-cache.lock [📂 .gradle/configuration-cache/configuration-cache.lock]
@@ -112,27 +127,41 @@ project_root/
 │   │   ├── java/
 │   │   │   ├── main/
 │   │   │   │   ├── com/
-│   │   │   │   │   ├── desertcore/
-│   │   │   │   │   │   ├── DesertCore.class [📂 build/classes/java/main/com/desertcore/DesertCore.class]
-│   │   │   │   │   │   ├── DesertCoreTester.class [📂 build/classes/java/main/com/desertcore/DesertCoreTester.class]
-│   │   │   │   │   │   ├── legacy/
-│   │   │   │   │   │   │   ├── DeathEvent$1.class [📂 build/classes/java/main/com/desertcore/legacy/DeathEvent$1.class]
-│   │   │   │   │   │   │   ├── DeathEvent$2.class [📂 build/classes/java/main/com/desertcore/legacy/DeathEvent$2.class]
-│   │   │   │   │   │   │   ├── DeathEvent.class [📂 build/classes/java/main/com/desertcore/legacy/DeathEvent.class]
-│   │   │   │   │   │   │   ├── DesertPortal$1.class [📂 build/classes/java/main/com/desertcore/legacy/DesertPortal$1.class]
-│   │   │   │   │   │   │   ├── DesertPortal$2.class [📂 build/classes/java/main/com/desertcore/legacy/DesertPortal$2.class]
-│   │   │   │   │   │   │   ├── DesertPortal.class [📂 build/classes/java/main/com/desertcore/legacy/DesertPortal.class]
-│   │   │   │   │   │   │   ├── LobbyCommand.class [📂 build/classes/java/main/com/desertcore/legacy/LobbyCommand.class]
-│   │   │   │   │   │   │   ├── Marendumbul.class [📂 build/classes/java/main/com/desertcore/legacy/Marendumbul.class]
-│   │   │   │   │   │   ├── session/
-│   │   │   │   │   │   │   ├── GameSession.class [📂 build/classes/java/main/com/desertcore/session/GameSession.class]
-│   │   │   │   │   │   │   ├── GameSessionManager.class [📂 build/classes/java/main/com/desertcore/session/GameSessionManager.class]
-│   │   │   │   │   │   ├── Switch.class [📂 build/classes/java/main/com/desertcore/Switch.class]
+│   │   │   │   │   ├── yourstudio/
+│   │   │   │   │   │   ├── coredefense/
+│   │   │   │   │   │   │   ├── bootstrap/
+│   │   │   │   │   │   │   │   ├── ModuleInitializer.class [📂 build/classes/java/main/com/yourstudio/coredefense/bootstrap/ModuleInitializer.class]
+│   │   │   │   │   │   │   ├── common/
+│   │   │   │   │   │   │   │   ├── contract/
+│   │   │   │   │   │   │   │   │   ├── EnergyConsumer.class [📂 build/classes/java/main/com/yourstudio/coredefense/common/contract/EnergyConsumer.class]
+│   │   │   │   │   │   │   │   │   ├── EnergyPriority.class [📂 build/classes/java/main/com/yourstudio/coredefense/common/contract/EnergyPriority.class]
+│   │   │   │   │   │   │   ├── CoreDefensePlugin.class [📂 build/classes/java/main/com/yourstudio/coredefense/CoreDefensePlugin.class]
+│   ├── libs/
+│   │   ├── desertcore-1.0-SNAPSHOT.jar [📂 build/libs/desertcore-1.0-SNAPSHOT.jar]
 │   ├── reports/
+│   │   ├── configuration-cache/
+│   │   │   ├── 25t8mf7ng0kl0xfjvz4t1il9c/
+│   │   │   │   ├── eiah886mx9y3vo92zysy39yv9/
+│   │   │   │   │   ├── configuration-cache-report.html [📂 build/reports/configuration-cache/25t8mf7ng0kl0xfjvz4t1il9c/eiah886mx9y3vo92zysy39yv9/configuration-cache-report.html]
+│   │   │   │   ├── tfjqybkpiz8sty58wr50tbfe/
+│   │   │   │   │   ├── configuration-cache-report.html [📂 build/reports/configuration-cache/25t8mf7ng0kl0xfjvz4t1il9c/tfjqybkpiz8sty58wr50tbfe/configuration-cache-report.html]
 │   │   ├── problems/
 │   │   │   ├── problems-report.html [📂 build/reports/problems/problems-report.html]
 │   ├── resources/
 │   │   ├── main/
+│   │   │   ├── config/
+│   │   │   │   ├── core.yml [📂 build/resources/main/config/core.yml]
+│   │   │   │   ├── core_visual_stages.yml [📂 build/resources/main/config/core_visual_stages.yml]
+│   │   │   │   ├── npc/
+│   │   │   │   │   ├── npc_job_promotions.yml [📂 build/resources/main/config/npc/npc_job_promotions.yml]
+│   │   │   │   │   ├── resonance_thresholds.yml [📂 build/resources/main/config/npc/resonance_thresholds.yml]
+│   │   │   │   ├── player_classes/
+│   │   │   │   │   ├── classes.yml [📂 build/resources/main/config/player_classes/classes.yml]
+│   │   │   │   │   ├── specializations.yml [📂 build/resources/main/config/player_classes/specializations.yml]
+│   │   │   │   ├── waves/
+│   │   │   │   │   ├── boss_waves.yml [📂 build/resources/main/config/waves/boss_waves.yml]
+│   │   │   │   │   ├── wave_definitions.yml [📂 build/resources/main/config/waves/wave_definitions.yml]
+│   │   │   ├── editor_objects.json [📂 build/resources/main/editor_objects.json]
 │   │   │   ├── plugin.yml [📂 build/resources/main/plugin.yml]
 │   ├── tmp/
 │   │   ├── compileJava/
@@ -140,6 +169,8 @@ project_root/
 │   │   ├── jar/
 │   │   │   ├── MANIFEST.MF [📂 build/tmp/jar/MANIFEST.MF]
 ├── build.gradle.kts [📂 build.gradle.kts]
+├── checklist.md [📂 checklist.md]
+├── File_Structure.md [📂 File_Structure.md]
 ├── gradle/
 │   ├── 8.5/
 │   │   ├── checksums/
@@ -253,6 +284,10 @@ project_root/
 │   │   │   │   │   │   ├── bootstrap/
 │   │   │   │   │   │   │   ├── ListenerRegistrar.java [📂 src/main/java/com/yourstudio/coredefense/bootstrap/ListenerRegistrar.java]
 │   │   │   │   │   │   │   ├── ModuleInitializer.java [📂 src/main/java/com/yourstudio/coredefense/bootstrap/ModuleInitializer.java] -> [🧬 class ModuleInitializer [L2-2]]
+│   │   │   │   │   │   ├── common/
+│   │   │   │   │   │   │   ├── contract/
+│   │   │   │   │   │   │   │   ├── EnergyConsumer.java [📂 src/main/java/com/yourstudio/coredefense/common/contract/EnergyConsumer.java] -> [🧬 class EnergyConsumer [L3-6] | 🎯 def getEnergyDemand() [L4-4] | 🎯 def onEnergyAllocated(int) [L5-5]]
+│   │   │   │   │   │   │   │   ├── EnergyPriority.java [📂 src/main/java/com/yourstudio/coredefense/common/contract/EnergyPriority.java] -> [🧬 class EnergyPriority [L3-8]]
 │   │   │   │   │   │   ├── CoreDefensePlugin.java [📂 src/main/java/com/yourstudio/coredefense/CoreDefensePlugin.java] -> [🧬 class CoreDefensePlugin [L2-2]]
 │   │   │   │   │   │   ├── data/
 │   │   │   │   │   │   │   ├── pipeline/
@@ -278,5 +313,3 @@ project_root/
 │   │   │   │   │   ├── wave_definitions.yml [📂 src/main/resources/config/waves/wave_definitions.yml]
 │   │   │   ├── editor_objects.json [📂 src/main/resources/editor_objects.json]
 │   │   │   ├── plugin.yml [📂 src/main/resources/plugin.yml]
-├── 구현현황판.md [📂 구현현황판.md]
-├── 파일구조_AI친화적_개정안.md [📂 파일구조_AI친화적_개정안.md]

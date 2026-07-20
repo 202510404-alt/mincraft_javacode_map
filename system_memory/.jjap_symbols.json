@@ -43,6 +43,50 @@
       "end_line": 2,
       "calls": [],
       "used_by": []
+    },
+    {
+      "symbol_id": "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/contract/EnergyConsumer.java::EnergyConsumer",
+      "name": "EnergyConsumer",
+      "full_name": "EnergyConsumer",
+      "type": "class",
+      "path": "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/contract/EnergyConsumer.java",
+      "start_line": 3,
+      "end_line": 6,
+      "calls": [],
+      "used_by": []
+    },
+    {
+      "symbol_id": "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/contract/EnergyConsumer.java::EnergyConsumer.getEnergyDemand",
+      "name": "getEnergyDemand",
+      "full_name": "EnergyConsumer.getEnergyDemand",
+      "type": "method",
+      "path": "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/contract/EnergyConsumer.java",
+      "start_line": 4,
+      "end_line": 4,
+      "calls": [],
+      "used_by": []
+    },
+    {
+      "symbol_id": "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/contract/EnergyConsumer.java::EnergyConsumer.onEnergyAllocated",
+      "name": "onEnergyAllocated",
+      "full_name": "EnergyConsumer.onEnergyAllocated",
+      "type": "method",
+      "path": "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/contract/EnergyConsumer.java",
+      "start_line": 5,
+      "end_line": 5,
+      "calls": [],
+      "used_by": []
+    },
+    {
+      "symbol_id": "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/contract/EnergyPriority.java::EnergyPriority",
+      "name": "EnergyPriority",
+      "full_name": "EnergyPriority",
+      "type": "class",
+      "path": "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/contract/EnergyPriority.java",
+      "start_line": 3,
+      "end_line": 8,
+      "calls": [],
+      "used_by": []
     }
   ]
 }
