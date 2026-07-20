@@ -178,3 +178,5 @@ C:\Users\COMLAB\Desktop\mincraft_javacode_map\extraction_target_project\src\main
 C:\Users\COMLAB\Desktop\mincraft_javacode_map\extraction_target_project\src\main\java\com\desertcore\session\GameSessionManager.java
 C:\Users\COMLAB\Desktop\mincraft_javacode_map\extraction_target_project\src\main\java\com\desertcore\Switch.java
 C:\Users\COMLAB\Desktop\mincraft_javacode_map\extraction_target_project\src\main\resources\plugin.yml
+C:\Users\COMLAB\Desktop\mincraft_javacode_map\extraction_target_project\구현현황판.md
+C:\Users\COMLAB\Desktop\mincraft_javacode_map\extraction_target_project\파일구조_AI친화적_개정안.md

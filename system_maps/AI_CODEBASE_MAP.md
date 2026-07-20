@@ -259,3 +259,5 @@ project_root/
 │   │   │   │   │   ├── Switch.java [📂 src/main/java/com/desertcore/Switch.java] -> [🎯 def Switch() [L10-10]]
 │   │   ├── resources/
 │   │   │   ├── plugin.yml [📂 src/main/resources/plugin.yml]
+├── 구현현황판.md [📂 구현현황판.md]
+├── 파일구조_AI친화적_개정안.md [📂 파일구조_AI친화적_개정안.md]
