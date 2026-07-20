@@ -1,7 +1,6 @@
 {
   "version": "extraction_target_project/.vscode/launch.json:1",
   "configurations": "extraction_target_project/.vscode/launch.json:1",
-  "CoreDefensePlugin": "extraction_target_project/src/main/java/com/yourstudio/coredefense/CoreDefensePlugin.java:2",
   "ModuleInitializer": "extraction_target_project/src/main/java/com/yourstudio/coredefense/bootstrap/ModuleInitializer.java:2",
   "EnergyConsumer": "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/contract/EnergyConsumer.java:3",
   "EnergyConsumer.getEnergyDemand": "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/contract/EnergyConsumer.java:4",

@@ -279,6 +279,25 @@ project_root/
 │   ├── main/
 │   │   ├── java/
 │   │   │   ├── com/
+│   │   │   │   ├── defense/
+│   │   │   │   │   ├── game/
+│   │   │   │   │   │   ├── common/
+│   │   │   │   │   │   │   ├── contract/
+│   │   │   │   │   │   │   │   ├── EnergyConsumer.java [📂 src/main/java/com/defense/game/common/contract/EnergyConsumer.java]
+│   │   │   │   │   │   │   │   ├── Healable.java [📂 src/main/java/com/defense/game/common/contract/Healable.java]
+│   │   │   │   │   │   │   │   ├── ModelAnchor.java [📂 src/main/java/com/defense/game/common/contract/ModelAnchor.java]
+│   │   │   │   │   │   ├── gui/
+│   │   │   │   │   │   │   ├── menus/
+│   │   │   │   │   │   │   │   ├── MetaUpgradeMenu.java [📂 src/main/java/com/defense/game/gui/menus/MetaUpgradeMenu.java]
+│   │   │   │   │   │   │   │   ├── NpcReplaceMenu.java [📂 src/main/java/com/defense/game/gui/menus/NpcReplaceMenu.java]
+│   │   │   │   │   │   │   │   ├── RecruitMenu.java [📂 src/main/java/com/defense/game/gui/menus/RecruitMenu.java]
+│   │   │   │   │   │   │   │   ├── SkillTreeMenu.java [📂 src/main/java/com/defense/game/gui/menus/SkillTreeMenu.java]
+│   │   │   │   │   │   ├── wave/
+│   │   │   │   │   │   │   ├── state/
+│   │   │   │   │   │   │   │   ├── SpawningStateHandler.java [📂 src/main/java/com/defense/game/wave/state/SpawningStateHandler.java]
+│   │   │   │   │   │   │   │   ├── WaitingStateHandler.java [📂 src/main/java/com/defense/game/wave/state/WaitingStateHandler.java]
+│   │   │   │   │   │   │   │   ├── WaveStateHandler.java [📂 src/main/java/com/defense/game/wave/state/WaveStateHandler.java]
+│   │   │   │   │   │   │   │   ├── WaveStateMachine.java [📂 src/main/java/com/defense/game/wave/state/WaveStateMachine.java]
 │   │   │   │   ├── yourstudio/
 │   │   │   │   │   ├── coredefense/
 │   │   │   │   │   │   ├── bootstrap/
@@ -288,16 +307,30 @@ project_root/
 │   │   │   │   │   │   │   ├── contract/
 │   │   │   │   │   │   │   │   ├── EnergyConsumer.java [📂 src/main/java/com/yourstudio/coredefense/common/contract/EnergyConsumer.java] -> [🧬 class EnergyConsumer [L3-6] | 🎯 def getEnergyDemand() [L4-4] | 🎯 def onEnergyAllocated(int) [L5-5]]
 │   │   │   │   │   │   │   │   ├── EnergyPriority.java [📂 src/main/java/com/yourstudio/coredefense/common/contract/EnergyPriority.java] -> [🧬 class EnergyPriority [L3-8]]
-│   │   │   │   │   │   ├── CoreDefensePlugin.java [📂 src/main/java/com/yourstudio/coredefense/CoreDefensePlugin.java] -> [🧬 class CoreDefensePlugin [L2-2]]
+│   │   │   │   │   │   │   ├── interfaces/
+│   │   │   │   │   │   │   │   ├── Identifiable.java [📂 src/main/java/com/yourstudio/coredefense/common/interfaces/Identifiable.java]
+│   │   │   │   │   │   ├── CoreDefensePlugin.java [📂 src/main/java/com/yourstudio/coredefense/CoreDefensePlugin.java]
 │   │   │   │   │   │   ├── data/
 │   │   │   │   │   │   │   ├── pipeline/
 │   │   │   │   │   │   │   │   ├── JsonSerializationPipeline.java [📂 src/main/java/com/yourstudio/coredefense/data/pipeline/JsonSerializationPipeline.java]
 │   │   │   │   │   │   │   ├── storage/
 │   │   │   │   │   │   │   │   ├── VariableStorage.java [📂 src/main/java/com/yourstudio/coredefense/data/storage/VariableStorage.java]
+│   │   │   │   │   │   ├── drone/
+│   │   │   │   │   │   │   ├── DroneEntity.java [📂 src/main/java/com/yourstudio/coredefense/drone/DroneEntity.java]
 │   │   │   │   │   │   ├── entity/
 │   │   │   │   │   │   │   ├── base/
 │   │   │   │   │   │   │   │   ├── BaseEntity.java [📂 src/main/java/com/yourstudio/coredefense/entity/base/BaseEntity.java]
 │   │   │   │   │   │   │   │   ├── EntityRegistry.java [📂 src/main/java/com/yourstudio/coredefense/entity/base/EntityRegistry.java]
+│   │   │   │   │   │   ├── npc/
+│   │   │   │   │   │   │   ├── NpcEntity.java [📂 src/main/java/com/yourstudio/coredefense/npc/NpcEntity.java]
+│   │   │   │   │   │   │   ├── vocation/
+│   │   │   │   │   │   │   │   ├── NpcVocation.java [📂 src/main/java/com/yourstudio/coredefense/npc/vocation/NpcVocation.java]
+│   │   │   │   │   │   ├── playerclass/
+│   │   │   │   │   │   │   ├── PlayerClass.java [📂 src/main/java/com/yourstudio/coredefense/playerclass/PlayerClass.java]
+│   │   │   │   │   │   │   ├── specialization/
+│   │   │   │   │   │   │   │   ├── Specialization.java [📂 src/main/java/com/yourstudio/coredefense/playerclass/specialization/Specialization.java]
+│   │   │   │   │   │   ├── render/
+│   │   │   │   │   │   │   ├── ModelRenderer.java [📂 src/main/java/com/yourstudio/coredefense/render/ModelRenderer.java]
 │   │   ├── resources/
 │   │   │   ├── config/
 │   │   │   │   ├── core.yml [📂 src/main/resources/config/core.yml]
@@ -305,6 +338,8 @@ project_root/
 │   │   │   │   ├── npc/
 │   │   │   │   │   ├── npc_job_promotions.yml [📂 src/main/resources/config/npc/npc_job_promotions.yml]
 │   │   │   │   │   ├── resonance_thresholds.yml [📂 src/main/resources/config/npc/resonance_thresholds.yml]
+│   │   │   │   │   ├── score_weights.yml [📂 src/main/resources/config/npc/score_weights.yml]
+│   │   │   │   │   ├── vocations.yml [📂 src/main/resources/config/npc/vocations.yml]
 │   │   │   │   ├── player_classes/
 │   │   │   │   │   ├── classes.yml [📂 src/main/resources/config/player_classes/classes.yml]
 │   │   │   │   │   ├── specializations.yml [📂 src/main/resources/config/player_classes/specializations.yml]
@@ -313,3 +348,6 @@ project_root/
 │   │   │   │   │   ├── wave_definitions.yml [📂 src/main/resources/config/waves/wave_definitions.yml]
 │   │   │   ├── editor_objects.json [📂 src/main/resources/editor_objects.json]
 │   │   │   ├── plugin.yml [📂 src/main/resources/plugin.yml]
+├── tools/
+│   ├── resourcepack-build/
+│   │   ├── build_pack.py [📂 tools/resourcepack-build/build_pack.py]

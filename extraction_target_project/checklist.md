@@ -2,7 +2,7 @@
 
 > 기준 문서: `plan.md` (기술 설계) + `파일구조_AI친화적_개정안.md` (파일구조 개정판)
 > 상태 기호: `[x]` 구현 완료 · `[-]` 구현 중 · `[ ]` 미구현
-> 최근 갱신: 파일구조 개정안에 렌더링(모델·애니메이션) 시스템 트리가 추가 반영됨에 따라 `render/` 패키지 및 관련 리소스 항목 신설
+> 최근 갱신: (1차) 파일구조 개정안에 렌더링(모델·애니메이션) 시스템 트리가 추가 반영됨에 따라 `render/` 패키지 및 관련 리소스 항목 신설 / (2차) plan.md 본문에만 있던 누락 클래스 4종 편입 및 명칭 불일치 통일 (하단 진행률 요약 참고)
 
 ---
 
@@ -205,6 +205,9 @@
     - [ ] `RayTraceUtil.java`
         - 📌 **상태:** 미구현
         - 📝 **변경 내역:** [트리 누락분 반영] 9.1 시퀀스에만 언급 → 유틸로 명시 편입
+    - [ ] `VfxThrottleService.java`
+        - 📌 **상태:** 미구현
+        - 📝 **변경 내역:** [2차 동기화: 트리 누락분 반영] plan.md 22.4에서만 언급("동일 틱 내 이펙트 발생량 상한 제어")되고 트리에는 없었음 → 편입
 - [ ] **`common/scheduling/`**
     - [ ] `GameScheduler.java`
         - 📌 **상태:** 미구현
@@ -382,6 +385,9 @@
     - [ ] `NpcOwnershipPolicy.java`
         - 📌 **상태:** 미구현
         - 📝 **변경 내역:** [트리 누락분 반영] 14.6 확장방향에서만 언급 → 편입
+    - [ ] `GameNpcFactory.java`
+        - 📌 **상태:** 미구현
+        - 📝 **변경 내역:** [2차 동기화: 트리 누락분 반영] plan.md 9.3 시퀀스에서 `GameNpcFactory.create(...)`로만 언급되고 트리에는 없었음 → 편입
     - [ ] **`npc/safezone/`** ← 신설 하위 패키지
         - 📝 **변경 내역:** [구조 변경] 14.2에서만 언급된 안전지대 로직을 하위 패키지로 명시
         - [ ] `SafeZoneService.java`
@@ -426,6 +432,9 @@
     - [ ] `MiningEfficiencyPolicy.java`
         - 📌 **상태:** 미구현
         - 📝 **변경 내역:** [트리 누락분 반영] 6.6/17.3에서만 언급 → 편입
+    - [ ] `MiningSessionManager.java`
+        - 📌 **상태:** 미구현
+        - 📝 **변경 내역:** [2차 동기화: 트리 누락분 반영] plan.md 9.2 시퀀스에서 `MiningSessionManager.onSystemUnlocked(...)`로만 언급되고 트리에는 없었음 → 편입
     - [ ] **`mining/event/`**
         - [ ] `OreMinedEvent.java`
             - 📌 **상태:** 미구현 / 📝 변경 내역: 없음
@@ -456,6 +465,9 @@
                 - 📌 **상태:** 미구현 / 📝 변경 내역: 없음
             - [ ] `NearestTargetStrategy.java` / `LowestHpTargetStrategy.java` / `HighestThreatTargetStrategy.java`
                 - 📌 **상태:** 미구현 / 📝 변경 내역: 없음
+            - [ ] `SpatialIndex.java`
+                - 📌 **상태:** 미구현
+                - 📝 **변경 내역:** [2차 동기화: 트리 누락분 반영] plan.md 23.1 성능 최적화 절("청크 기반 공간 분할")에서만 언급되고 트리에는 없었음 → 편입
         - [ ] **`structure/turret/types/`** ← 신설 하위 패키지 (9종)
             - 📝 **변경 내역:** [트리 누락분 반영] 18.3 표의 9개 포탑 구현체, 원본엔 트리 없이 본문에만 나열 → 편입
             - [ ] `ArrowSentryTurret.java` (활포탑) — 📌 미구현 / 📝 없음
@@ -647,8 +659,10 @@
 |---|---|---|---|---|
 | 리소스(config/yml 등) | 0 | 0 | 27 | 27 |
 | 리소스 디렉터리(모델/에셋 파이프라인, 파일 수 미확정) | 0 | 0 | `models/raw/*`, `animations/*`, `assets/*`, `tools/resourcepack-build/` | - |
-| Java 클래스/인터페이스 | 0 | 0 | 약 170+ | 약 170+ |
+| Java 클래스/인터페이스 | 0 | 0 | 약 174+ | 약 174+ |
 
 > 현재 초기 상태로 전 항목 미구현입니다. 실제 개발 착수 후 각 항목의 `[ ]`를 `[-]`(구현 중)/`[x]`(완료)로 갱신하고, 설계와 다르게 구현된 부분은 📝 변경 내역에 사유를 기록하세요.
 >
 > **이번 갱신 요약 (파일구조_AI친화적_개정안.md 반영):** 렌더링 시스템(plan.md 24장, Blockbench+Animated Java 파이프라인)이 파일구조 개정안에 새로 편입되어, `render/` 패키지(model/animation/display/asset/event, 총 20개 클래스) · `common/contract/ModelAnchor.java` · 리소스 트리의 `models/raw/`, `tools/resourcepack-build/`, `src/main/resources/animations/`, `src/main/resources/assets/`, `config/models/animation_triggers.yml`을 신규 항목으로 추가했습니다. 그 외 이미 반영되어 있던 기존 항목(playerclass/vocation 개명, common/contract 이동, drone/ 신설 등)은 변경 없이 유지했습니다.
+>
+> **2차 동기화 요약 (plan.md ↔ 파일구조 개정안 ↔ 체크리스트 3자 재검토):** plan.md 본문(9.2/9.3/22.4/23.1)에만 등장하고 트리·체크리스트 어디에도 없던 클래스 4종 — `GameNpcFactory`(npc/), `MiningSessionManager`(mining/), `VfxThrottleService`(common/util/), `SpatialIndex`(structure/turret/targeting/) — 를 신규 편입했습니다. 또한 plan.md 안에서 트리와 다른 이름으로 불리던 항목 — `NpcRecruitmentService`→`RecruitmentService`, `SessionStatsCollector`/`SessionStats`→`ProgressionStatsCollector`, 이벤트 카탈로그(10.2)의 구독 시스템명 `Job`→`PlayerClass` — 를 트리 기준 이름으로 통일해 plan.md를 수정했습니다.

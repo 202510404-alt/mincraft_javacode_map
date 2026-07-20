@@ -17,6 +17,8 @@
 | 소속 불명확 | `Healable`, `EnergyConsumer` — 코어/NPC/구조물/직업이 전부 구현하는데 `core/`에만 있음 | `common/contract/`로 이동 | "여러 도메인이 구현하는 공용 계약"은 특정 도메인 폴더에 두면 그 도메인 소유처럼 보여 AI가 참조 관계를 잘못 유추함 |
 | 로봇(드론) 소속 불명 | 메카닉 전문화 설명(6.8) 속에만 등장, 별도 패키지 없음 | 최상위 `drone/` 신설 | `GameNpc`와 별개의 엔티티라고 원문에 명시되어 있어 `npc/`나 `playerclass/mechanic/` 어디에도 넣으면 오해 소지 |
 | 모델링 파이프라인 누락 | Blockbench(.bbmodel) + Animated Java로 제작한 모델/애니메이션을 어디서 어떻게 관리하는지 트리에 전혀 없음 (plan.md 24장 신설분) | 최상위 `render/` 패키지 + 리소스 트리에 `models/raw/`(원본 보관, 빌드 산출물 아님) · `assets/`(리소스팩 빌드용) · `animations/`(런타임 파싱용) 신설 | 도메인(Core/Turret/Npc/Mob)과 렌더링을 `ModelAnchor` 계약으로 분리해야, 새 모델 추가 시 도메인 코드를 건드리지 않고 에셋+YAML만 추가하면 되는 구조가 트리에서도 보임 |
+| (2차 동기화) plan.md 시퀀스/성능 절에만 있고 트리·checklist엔 없던 클래스 4종 | `GameNpcFactory`(9.3), `MiningSessionManager`(9.2), `VfxThrottleService`(22.4), `SpatialIndex`(23.1) | 각각 `npc/`, `mining/`, `common/util/`, `structure/turret/targeting/`에 편입 | plan.md 본문 코드가 참조하는 클래스인데 트리에는 없어 "존재하는 클래스"로 인식되지 않던 문제 |
+| (2차 동기화) plan.md 내부 이름 불일치 | `NpcRecruitmentService`(9.2) vs 트리의 `RecruitmentService`(npc/recruit) · `SessionStatsCollector`/`SessionStats`(11.2, 19.1) vs 트리의 `ProgressionStatsCollector`(9.1, progression) · 이벤트 카탈로그(10.2)의 구독 시스템명 `Job` | plan.md 쪽 표현을 트리 기준 이름(`RecruitmentService`, `ProgressionStatsCollector`, `PlayerClass`)으로 통일 | 같은 클래스를 문서 안에서 서로 다른 이름으로 불러 AI가 동일 개체로 인식하지 못하는 문제 |
 
 ---
 
@@ -142,7 +144,8 @@ com.yourstudio.coredefense
 │   │   ├── MathUtils.java
 │   │   ├── ParticleUtils.java
 │   │   ├── CooldownTracker.java
-│   │   └── RayTraceUtil.java                  (9.1 시퀀스에서만 언급 → 유틸로 명시 편입)
+│   │   ├── RayTraceUtil.java                  (9.1 시퀀스에서만 언급 → 유틸로 명시 편입)
+│   │   └── VfxThrottleService.java            ← 22.4에서만 언급("동일 틱 내 이펙트 발생량 상한 제어") → 편입
 │   ├── scheduling/
 │   │   └── GameScheduler.java                 (22.3 Folia 대응 RegionizedScheduler 래퍼)
 │   ├── perf/
@@ -266,6 +269,7 @@ com.yourstudio.coredefense
 │   ├── NpcStatSheet.java
 │   ├── NpcCapacityPolicy.java                 ← 14.5에서만 언급 → 편입
 │   ├── NpcOwnershipPolicy.java                ← 14.6 확장방향에서만 언급 → 편입
+│   ├── GameNpcFactory.java                    ← 9.3 시퀀스("GameNpcFactory.create(...)")에서만 언급 → 편입
 │   ├── safezone/                              ← 14.2에서만 언급된 안전지대 로직을 하위 패키지로 명시
 │   │   ├── SafeZoneService.java
 │   │   └── event/
@@ -300,6 +304,7 @@ com.yourstudio.coredefense
 │   ├── ClickMiningHandler.java
 │   ├── AutoMiningTicker.java
 │   ├── MiningEfficiencyPolicy.java            ← 6.6/17.3에서만 언급 → 편입
+│   ├── MiningSessionManager.java              ← 9.2 시퀀스("MiningSessionManager.onSystemUnlocked(...)")에서만 언급 → 편입
 │   └── event/
 │       ├── OreMinedEvent.java
 │       └── OreUnlockedEvent.java              ← 17.2에서만 언급 → 편입
@@ -323,7 +328,8 @@ com.yourstudio.coredefense
 │   │   │   ├── TurretTargeting.java
 │   │   │   ├── NearestTargetStrategy.java
 │   │   │   ├── LowestHpTargetStrategy.java
-│   │   │   └── HighestThreatTargetStrategy.java
+│   │   │   ├── HighestThreatTargetStrategy.java
+│   │   │   └── SpatialIndex.java              ← 23.1 성능 최적화("청크 기반 공간 분할")에서만 언급 → 편입
 │   │   └── types/                             ← 18.3 표의 9개 포탑 구현체 (원본엔 트리에 없이 본문에만 나열) → 편입
 │   │       ├── ArrowSentryTurret.java
 │   │       ├── SlingshotTurret.java

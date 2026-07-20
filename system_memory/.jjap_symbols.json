@@ -23,17 +23,6 @@
       "used_by": []
     },
     {
-      "symbol_id": "extraction_target_project/src/main/java/com/yourstudio/coredefense/CoreDefensePlugin.java::CoreDefensePlugin",
-      "name": "CoreDefensePlugin",
-      "full_name": "CoreDefensePlugin",
-      "type": "class",
-      "path": "extraction_target_project/src/main/java/com/yourstudio/coredefense/CoreDefensePlugin.java",
-      "start_line": 2,
-      "end_line": 2,
-      "calls": [],
-      "used_by": []
-    },
-    {
       "symbol_id": "extraction_target_project/src/main/java/com/yourstudio/coredefense/bootstrap/ModuleInitializer.java::ModuleInitializer",
       "name": "ModuleInitializer",
       "full_name": "ModuleInitializer",
