@@ -1,20 +1,9 @@
 # 🏗️ 짭커서 프로젝트 CODEBASE MAP
 
-현재 인덱싱된 총 파일 수: **29개**
+현재 인덱싱된 총 파일 수: **18개**
 
 ## 🗂️ [Module Index]
 - `extraction_target_project/.vscode/launch.json`
-- `extraction_target_project/src/main/java/com/defense/game/common/contract/EnergyConsumer.java`
-- `extraction_target_project/src/main/java/com/defense/game/common/contract/Healable.java`
-- `extraction_target_project/src/main/java/com/defense/game/common/contract/ModelAnchor.java`
-- `extraction_target_project/src/main/java/com/defense/game/gui/menus/MetaUpgradeMenu.java`
-- `extraction_target_project/src/main/java/com/defense/game/gui/menus/NpcReplaceMenu.java`
-- `extraction_target_project/src/main/java/com/defense/game/gui/menus/RecruitMenu.java`
-- `extraction_target_project/src/main/java/com/defense/game/gui/menus/SkillTreeMenu.java`
-- `extraction_target_project/src/main/java/com/defense/game/wave/state/SpawningStateHandler.java`
-- `extraction_target_project/src/main/java/com/defense/game/wave/state/WaitingStateHandler.java`
-- `extraction_target_project/src/main/java/com/defense/game/wave/state/WaveStateHandler.java`
-- `extraction_target_project/src/main/java/com/defense/game/wave/state/WaveStateMachine.java`
 - `extraction_target_project/src/main/java/com/yourstudio/coredefense/CoreDefensePlugin.java`
 - `extraction_target_project/src/main/java/com/yourstudio/coredefense/bootstrap/ListenerRegistrar.java`
 - `extraction_target_project/src/main/java/com/yourstudio/coredefense/bootstrap/ModuleInitializer.java`
@@ -41,61 +30,6 @@
   ├── "version": str (val: 0.2.0)
   ├── "configurations": List (len: 2)
 ```
-
---------------------------------------------------
-
-### 📄 extraction_target_project/src/main/java/com/defense/game/common/contract/EnergyConsumer.java
-*선언된 클래스나 함수가 없는 파일이거나 모듈입니다.*
-
---------------------------------------------------
-
-### 📄 extraction_target_project/src/main/java/com/defense/game/common/contract/Healable.java
-*선언된 클래스나 함수가 없는 파일이거나 모듈입니다.*
-
---------------------------------------------------
-
-### 📄 extraction_target_project/src/main/java/com/defense/game/common/contract/ModelAnchor.java
-*선언된 클래스나 함수가 없는 파일이거나 모듈입니다.*
-
---------------------------------------------------
-
-### 📄 extraction_target_project/src/main/java/com/defense/game/gui/menus/MetaUpgradeMenu.java
-*선언된 클래스나 함수가 없는 파일이거나 모듈입니다.*
-
---------------------------------------------------
-
-### 📄 extraction_target_project/src/main/java/com/defense/game/gui/menus/NpcReplaceMenu.java
-*선언된 클래스나 함수가 없는 파일이거나 모듈입니다.*
-
---------------------------------------------------
-
-### 📄 extraction_target_project/src/main/java/com/defense/game/gui/menus/RecruitMenu.java
-*선언된 클래스나 함수가 없는 파일이거나 모듈입니다.*
-
---------------------------------------------------
-
-### 📄 extraction_target_project/src/main/java/com/defense/game/gui/menus/SkillTreeMenu.java
-*선언된 클래스나 함수가 없는 파일이거나 모듈입니다.*
-
---------------------------------------------------
-
-### 📄 extraction_target_project/src/main/java/com/defense/game/wave/state/SpawningStateHandler.java
-*선언된 클래스나 함수가 없는 파일이거나 모듈입니다.*
-
---------------------------------------------------
-
-### 📄 extraction_target_project/src/main/java/com/defense/game/wave/state/WaitingStateHandler.java
-*선언된 클래스나 함수가 없는 파일이거나 모듈입니다.*
-
---------------------------------------------------
-
-### 📄 extraction_target_project/src/main/java/com/defense/game/wave/state/WaveStateHandler.java
-*선언된 클래스나 함수가 없는 파일이거나 모듈입니다.*
-
---------------------------------------------------
-
-### 📄 extraction_target_project/src/main/java/com/defense/game/wave/state/WaveStateMachine.java
-*선언된 클래스나 함수가 없는 파일이거나 모듈입니다.*
 
 --------------------------------------------------
 

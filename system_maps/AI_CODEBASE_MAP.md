@@ -279,25 +279,6 @@ project_root/
 │   ├── main/
 │   │   ├── java/
 │   │   │   ├── com/
-│   │   │   │   ├── defense/
-│   │   │   │   │   ├── game/
-│   │   │   │   │   │   ├── common/
-│   │   │   │   │   │   │   ├── contract/
-│   │   │   │   │   │   │   │   ├── EnergyConsumer.java [📂 src/main/java/com/defense/game/common/contract/EnergyConsumer.java]
-│   │   │   │   │   │   │   │   ├── Healable.java [📂 src/main/java/com/defense/game/common/contract/Healable.java]
-│   │   │   │   │   │   │   │   ├── ModelAnchor.java [📂 src/main/java/com/defense/game/common/contract/ModelAnchor.java]
-│   │   │   │   │   │   ├── gui/
-│   │   │   │   │   │   │   ├── menus/
-│   │   │   │   │   │   │   │   ├── MetaUpgradeMenu.java [📂 src/main/java/com/defense/game/gui/menus/MetaUpgradeMenu.java]
-│   │   │   │   │   │   │   │   ├── NpcReplaceMenu.java [📂 src/main/java/com/defense/game/gui/menus/NpcReplaceMenu.java]
-│   │   │   │   │   │   │   │   ├── RecruitMenu.java [📂 src/main/java/com/defense/game/gui/menus/RecruitMenu.java]
-│   │   │   │   │   │   │   │   ├── SkillTreeMenu.java [📂 src/main/java/com/defense/game/gui/menus/SkillTreeMenu.java]
-│   │   │   │   │   │   ├── wave/
-│   │   │   │   │   │   │   ├── state/
-│   │   │   │   │   │   │   │   ├── SpawningStateHandler.java [📂 src/main/java/com/defense/game/wave/state/SpawningStateHandler.java]
-│   │   │   │   │   │   │   │   ├── WaitingStateHandler.java [📂 src/main/java/com/defense/game/wave/state/WaitingStateHandler.java]
-│   │   │   │   │   │   │   │   ├── WaveStateHandler.java [📂 src/main/java/com/defense/game/wave/state/WaveStateHandler.java]
-│   │   │   │   │   │   │   │   ├── WaveStateMachine.java [📂 src/main/java/com/defense/game/wave/state/WaveStateMachine.java]
 │   │   │   │   ├── yourstudio/
 │   │   │   │   │   ├── coredefense/
 │   │   │   │   │   │   ├── bootstrap/

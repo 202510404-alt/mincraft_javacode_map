@@ -186,17 +186,6 @@ C:\Users\COMLAB\Desktop\mincraft_javacode_map\extraction_target_project\gradlew.
 C:\Users\COMLAB\Desktop\mincraft_javacode_map\extraction_target_project\mincraft_javacode_map.code-workspace
 C:\Users\COMLAB\Desktop\mincraft_javacode_map\extraction_target_project\plan.md
 C:\Users\COMLAB\Desktop\mincraft_javacode_map\extraction_target_project\settings.gradle.kts
-C:\Users\COMLAB\Desktop\mincraft_javacode_map\extraction_target_project\src\main\java\com\defense\game\common\contract\EnergyConsumer.java
-C:\Users\COMLAB\Desktop\mincraft_javacode_map\extraction_target_project\src\main\java\com\defense\game\common\contract\Healable.java
-C:\Users\COMLAB\Desktop\mincraft_javacode_map\extraction_target_project\src\main\java\com\defense\game\common\contract\ModelAnchor.java
-C:\Users\COMLAB\Desktop\mincraft_javacode_map\extraction_target_project\src\main\java\com\defense\game\gui\menus\MetaUpgradeMenu.java
-C:\Users\COMLAB\Desktop\mincraft_javacode_map\extraction_target_project\src\main\java\com\defense\game\gui\menus\NpcReplaceMenu.java
-C:\Users\COMLAB\Desktop\mincraft_javacode_map\extraction_target_project\src\main\java\com\defense\game\gui\menus\RecruitMenu.java
-C:\Users\COMLAB\Desktop\mincraft_javacode_map\extraction_target_project\src\main\java\com\defense\game\gui\menus\SkillTreeMenu.java
-C:\Users\COMLAB\Desktop\mincraft_javacode_map\extraction_target_project\src\main\java\com\defense\game\wave\state\SpawningStateHandler.java
-C:\Users\COMLAB\Desktop\mincraft_javacode_map\extraction_target_project\src\main\java\com\defense\game\wave\state\WaitingStateHandler.java
-C:\Users\COMLAB\Desktop\mincraft_javacode_map\extraction_target_project\src\main\java\com\defense\game\wave\state\WaveStateHandler.java
-C:\Users\COMLAB\Desktop\mincraft_javacode_map\extraction_target_project\src\main\java\com\defense\game\wave\state\WaveStateMachine.java
 C:\Users\COMLAB\Desktop\mincraft_javacode_map\extraction_target_project\src\main\java\com\yourstudio\coredefense\bootstrap\ListenerRegistrar.java
 C:\Users\COMLAB\Desktop\mincraft_javacode_map\extraction_target_project\src\main\java\com\yourstudio\coredefense\bootstrap\ModuleInitializer.java
 C:\Users\COMLAB\Desktop\mincraft_javacode_map\extraction_target_project\src\main\java\com\yourstudio\coredefense\common\contract\EnergyConsumer.java

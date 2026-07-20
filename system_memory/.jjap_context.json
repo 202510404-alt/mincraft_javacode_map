@@ -5,61 +5,6 @@
       "symbols_summary": "💡 📦 json_keys: 2개 포착 | 🔑 \"version\" [str] | 🔑 \"configurations\" [list]",
       "skeleton": "📦 [JSON STRUCTURE MAP]\n  ├── \"version\": str (val: 0.2.0)\n  ├── \"configurations\": List (len: 2)"
     },
-    "extraction_target_project/src/main/java/com/defense/game/common/contract/EnergyConsumer.java": {
-      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "symbols_summary": "",
-      "skeleton": ""
-    },
-    "extraction_target_project/src/main/java/com/defense/game/common/contract/Healable.java": {
-      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "symbols_summary": "",
-      "skeleton": ""
-    },
-    "extraction_target_project/src/main/java/com/defense/game/common/contract/ModelAnchor.java": {
-      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "symbols_summary": "",
-      "skeleton": ""
-    },
-    "extraction_target_project/src/main/java/com/defense/game/gui/menus/MetaUpgradeMenu.java": {
-      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "symbols_summary": "",
-      "skeleton": ""
-    },
-    "extraction_target_project/src/main/java/com/defense/game/gui/menus/NpcReplaceMenu.java": {
-      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "symbols_summary": "",
-      "skeleton": ""
-    },
-    "extraction_target_project/src/main/java/com/defense/game/gui/menus/RecruitMenu.java": {
-      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "symbols_summary": "",
-      "skeleton": ""
-    },
-    "extraction_target_project/src/main/java/com/defense/game/gui/menus/SkillTreeMenu.java": {
-      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "symbols_summary": "",
-      "skeleton": ""
-    },
-    "extraction_target_project/src/main/java/com/defense/game/wave/state/SpawningStateHandler.java": {
-      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "symbols_summary": "",
-      "skeleton": ""
-    },
-    "extraction_target_project/src/main/java/com/defense/game/wave/state/WaitingStateHandler.java": {
-      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "symbols_summary": "",
-      "skeleton": ""
-    },
-    "extraction_target_project/src/main/java/com/defense/game/wave/state/WaveStateHandler.java": {
-      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "symbols_summary": "",
-      "skeleton": ""
-    },
-    "extraction_target_project/src/main/java/com/defense/game/wave/state/WaveStateMachine.java": {
-      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "symbols_summary": "",
-      "skeleton": ""
-    },
     "extraction_target_project/src/main/java/com/yourstudio/coredefense/CoreDefensePlugin.java": {
       "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "symbols_summary": "",
