@@ -289,14 +289,104 @@ extraction_target_project/
 │   │   │   │   ├── yourstudio/
 │   │   │   │   │   ├── coredefense/
 │   │   │   │   │   │   ├── bootstrap/
+│   │   │   │   │   │   │   ├── CommandRegistrar.java [📂 src/main/java/com/yourstudio/coredefense/bootstrap/CommandRegistrar.java]
 │   │   │   │   │   │   │   ├── ListenerRegistrar.java [📂 src/main/java/com/yourstudio/coredefense/bootstrap/ListenerRegistrar.java]
 │   │   │   │   │   │   │   ├── ModuleInitializer.java [📂 src/main/java/com/yourstudio/coredefense/bootstrap/ModuleInitializer.java] -> [🧬 class ModuleInitializer [L2-2]]
+│   │   │   │   │   │   ├── combat/
+│   │   │   │   │   │   │   ├── damage/
+│   │   │   │   │   │   │   │   ├── CombatDamageService.java [📂 src/main/java/com/yourstudio/coredefense/combat/damage/CombatDamageService.java]
+│   │   │   │   │   │   │   │   ├── DamageCalculator.java [📂 src/main/java/com/yourstudio/coredefense/combat/damage/DamageCalculator.java]
+│   │   │   │   │   │   │   │   ├── DamageModifier.java [📂 src/main/java/com/yourstudio/coredefense/combat/damage/DamageModifier.java]
+│   │   │   │   │   │   │   │   ├── DamageSource.java [📂 src/main/java/com/yourstudio/coredefense/combat/damage/DamageSource.java]
+│   │   │   │   │   │   │   ├── event/
+│   │   │   │   │   │   │   │   ├── EntityDamagedByGameEvent.java [📂 src/main/java/com/yourstudio/coredefense/combat/event/EntityDamagedByGameEvent.java]
+│   │   │   │   │   │   │   │   ├── WeaponFiredEvent.java [📂 src/main/java/com/yourstudio/coredefense/combat/event/WeaponFiredEvent.java]
+│   │   │   │   │   │   │   ├── melee/
+│   │   │   │   │   │   │   │   ├── MeleeAttackHandler.java [📂 src/main/java/com/yourstudio/coredefense/combat/melee/MeleeAttackHandler.java]
+│   │   │   │   │   │   │   │   ├── MeleeWeapon.java [📂 src/main/java/com/yourstudio/coredefense/combat/melee/MeleeWeapon.java]
+│   │   │   │   │   │   │   ├── vfx/
+│   │   │   │   │   │   │   │   ├── WeaponVfxService.java [📂 src/main/java/com/yourstudio/coredefense/combat/vfx/WeaponVfxService.java]
+│   │   │   │   │   │   │   ├── weapon/
+│   │   │   │   │   │   │   │   ├── AbstractFirearm.java [📂 src/main/java/com/yourstudio/coredefense/combat/weapon/AbstractFirearm.java]
+│   │   │   │   │   │   │   │   ├── ammo/
+│   │   │   │   │   │   │   │   │   ├── AmmoInventory.java [📂 src/main/java/com/yourstudio/coredefense/combat/weapon/ammo/AmmoInventory.java]
+│   │   │   │   │   │   │   │   │   ├── AmmoType.java [📂 src/main/java/com/yourstudio/coredefense/combat/weapon/ammo/AmmoType.java]
+│   │   │   │   │   │   │   │   ├── BurstFireFirearm.java [📂 src/main/java/com/yourstudio/coredefense/combat/weapon/BurstFireFirearm.java]
+│   │   │   │   │   │   │   │   ├── projectile/
+│   │   │   │   │   │   │   │   │   ├── ArcProjectile.java [📂 src/main/java/com/yourstudio/coredefense/combat/weapon/projectile/ArcProjectile.java]
+│   │   │   │   │   │   │   │   │   ├── BulletProjectile.java [📂 src/main/java/com/yourstudio/coredefense/combat/weapon/projectile/BulletProjectile.java]
+│   │   │   │   │   │   │   │   │   ├── ProjectileFactory.java [📂 src/main/java/com/yourstudio/coredefense/combat/weapon/projectile/ProjectileFactory.java]
+│   │   │   │   │   │   │   │   │   ├── ProjectileType.java [📂 src/main/java/com/yourstudio/coredefense/combat/weapon/projectile/ProjectileType.java]
+│   │   │   │   │   │   │   │   ├── SingleShotFirearm.java [📂 src/main/java/com/yourstudio/coredefense/combat/weapon/SingleShotFirearm.java]
+│   │   │   │   │   │   │   │   ├── SniperRifle.java [📂 src/main/java/com/yourstudio/coredefense/combat/weapon/SniperRifle.java]
+│   │   │   │   │   │   │   │   ├── strategy/
+│   │   │   │   │   │   │   │   │   ├── BurstFireStrategy.java [📂 src/main/java/com/yourstudio/coredefense/combat/weapon/strategy/BurstFireStrategy.java]
+│   │   │   │   │   │   │   │   │   ├── FireModeStrategy.java [📂 src/main/java/com/yourstudio/coredefense/combat/weapon/strategy/FireModeStrategy.java]
+│   │   │   │   │   │   │   │   │   ├── SingleShotStrategy.java [📂 src/main/java/com/yourstudio/coredefense/combat/weapon/strategy/SingleShotStrategy.java]
+│   │   │   │   │   │   │   │   │   ├── SniperShotStrategy.java [📂 src/main/java/com/yourstudio/coredefense/combat/weapon/strategy/SniperShotStrategy.java]
+│   │   │   │   │   │   │   │   │   ├── SpreadPolicy.java [📂 src/main/java/com/yourstudio/coredefense/combat/weapon/strategy/SpreadPolicy.java]
+│   │   │   │   │   │   │   │   ├── Weapon.java [📂 src/main/java/com/yourstudio/coredefense/combat/weapon/Weapon.java]
+│   │   │   │   │   │   │   │   ├── WeaponAcquisitionPolicy.java [📂 src/main/java/com/yourstudio/coredefense/combat/weapon/WeaponAcquisitionPolicy.java]
+│   │   │   │   │   │   │   │   ├── WeaponAttachment.java [📂 src/main/java/com/yourstudio/coredefense/combat/weapon/WeaponAttachment.java]
+│   │   │   │   │   │   │   │   ├── WeaponDefinition.java [📂 src/main/java/com/yourstudio/coredefense/combat/weapon/WeaponDefinition.java]
+│   │   │   │   │   │   │   │   ├── WeaponFactory.java [📂 src/main/java/com/yourstudio/coredefense/combat/weapon/WeaponFactory.java]
+│   │   │   │   │   │   │   │   ├── WeaponInputHandler.java [📂 src/main/java/com/yourstudio/coredefense/combat/weapon/WeaponInputHandler.java]
+│   │   │   │   │   │   │   │   ├── WeaponRegistry.java [📂 src/main/java/com/yourstudio/coredefense/combat/weapon/WeaponRegistry.java]
+│   │   │   │   │   │   ├── command/
+│   │   │   │   │   │   │   ├── CoreDefenseCommand.java [📂 src/main/java/com/yourstudio/coredefense/command/CoreDefenseCommand.java]
+│   │   │   │   │   │   │   ├── sub/
+│   │   │   │   │   │   │   │   ├── AdminReloadSubcommand.java [📂 src/main/java/com/yourstudio/coredefense/command/sub/AdminReloadSubcommand.java]
+│   │   │   │   │   │   │   │   ├── StartGameSubcommand.java [📂 src/main/java/com/yourstudio/coredefense/command/sub/StartGameSubcommand.java]
 │   │   │   │   │   │   ├── common/
+│   │   │   │   │   │   │   ├── config/
+│   │   │   │   │   │   │   │   ├── ConfigLoader.java [📂 src/main/java/com/yourstudio/coredefense/common/config/ConfigLoader.java]
+│   │   │   │   │   │   │   │   ├── ConfigParser.java [📂 src/main/java/com/yourstudio/coredefense/common/config/ConfigParser.java]
+│   │   │   │   │   │   │   │   ├── ConfigService.java [📂 src/main/java/com/yourstudio/coredefense/common/config/ConfigService.java]
+│   │   │   │   │   │   │   │   ├── ReloadableConfig.java [📂 src/main/java/com/yourstudio/coredefense/common/config/ReloadableConfig.java]
 │   │   │   │   │   │   │   ├── contract/
 │   │   │   │   │   │   │   │   ├── EnergyConsumer.java [📂 src/main/java/com/yourstudio/coredefense/common/contract/EnergyConsumer.java] -> [🧬 class EnergyConsumer [L3-6] | 🎯 def getEnergyDemand() [L4-4] | 🎯 def onEnergyAllocated(int) [L5-5]]
 │   │   │   │   │   │   │   │   ├── EnergyPriority.java [📂 src/main/java/com/yourstudio/coredefense/common/contract/EnergyPriority.java] -> [🧬 class EnergyPriority [L3-8]]
+│   │   │   │   │   │   │   │   ├── Healable.java [📂 src/main/java/com/yourstudio/coredefense/common/contract/Healable.java]
+│   │   │   │   │   │   │   │   ├── ModelAnchor.java [📂 src/main/java/com/yourstudio/coredefense/common/contract/ModelAnchor.java]
+│   │   │   │   │   │   │   ├── event/
+│   │   │   │   │   │   │   │   ├── AbstractGameEvent.java [📂 src/main/java/com/yourstudio/coredefense/common/event/AbstractGameEvent.java]
+│   │   │   │   │   │   │   │   ├── GameListener.java [📂 src/main/java/com/yourstudio/coredefense/common/event/GameListener.java]
 │   │   │   │   │   │   │   ├── interfaces/
 │   │   │   │   │   │   │   │   ├── Identifiable.java [📂 src/main/java/com/yourstudio/coredefense/common/interfaces/Identifiable.java]
+│   │   │   │   │   │   │   ├── perf/
+│   │   │   │   │   │   │   │   ├── PerformanceMonitor.java [📂 src/main/java/com/yourstudio/coredefense/common/perf/PerformanceMonitor.java]
+│   │   │   │   │   │   │   ├── registry/
+│   │   │   │   │   │   │   │   ├── AbstractRegistry.java [📂 src/main/java/com/yourstudio/coredefense/common/registry/AbstractRegistry.java]
+│   │   │   │   │   │   │   │   ├── Registry.java [📂 src/main/java/com/yourstudio/coredefense/common/registry/Registry.java]
+│   │   │   │   │   │   │   │   ├── RegistryKey.java [📂 src/main/java/com/yourstudio/coredefense/common/registry/RegistryKey.java]
+│   │   │   │   │   │   │   ├── result/
+│   │   │   │   │   │   │   │   ├── ActionResult.java [📂 src/main/java/com/yourstudio/coredefense/common/result/ActionResult.java]
+│   │   │   │   │   │   │   ├── scheduling/
+│   │   │   │   │   │   │   │   ├── GameScheduler.java [📂 src/main/java/com/yourstudio/coredefense/common/scheduling/GameScheduler.java]
+│   │   │   │   │   │   │   ├── util/
+│   │   │   │   │   │   │   │   ├── CooldownTracker.java [📂 src/main/java/com/yourstudio/coredefense/common/util/CooldownTracker.java]
+│   │   │   │   │   │   │   │   ├── MathUtils.java [📂 src/main/java/com/yourstudio/coredefense/common/util/MathUtils.java]
+│   │   │   │   │   │   │   │   ├── ParticleUtils.java [📂 src/main/java/com/yourstudio/coredefense/common/util/ParticleUtils.java]
+│   │   │   │   │   │   │   │   ├── RayTraceUtil.java [📂 src/main/java/com/yourstudio/coredefense/common/util/RayTraceUtil.java]
+│   │   │   │   │   │   │   │   ├── VfxThrottleService.java [📂 src/main/java/com/yourstudio/coredefense/common/util/VfxThrottleService.java]
+│   │   │   │   │   │   ├── core/
+│   │   │   │   │   │   │   ├── CoreEnergyManager.java [📂 src/main/java/com/yourstudio/coredefense/core/CoreEnergyManager.java]
+│   │   │   │   │   │   │   ├── CoreEntity.java [📂 src/main/java/com/yourstudio/coredefense/core/CoreEntity.java]
+│   │   │   │   │   │   │   ├── CoreLevel.java [📂 src/main/java/com/yourstudio/coredefense/core/CoreLevel.java]
+│   │   │   │   │   │   │   ├── CoreLevelListener.java [📂 src/main/java/com/yourstudio/coredefense/core/CoreLevelListener.java]
+│   │   │   │   │   │   │   ├── CoreLevelRegistry.java [📂 src/main/java/com/yourstudio/coredefense/core/CoreLevelRegistry.java]
+│   │   │   │   │   │   │   ├── CoreLevelUpService.java [📂 src/main/java/com/yourstudio/coredefense/core/CoreLevelUpService.java]
+│   │   │   │   │   │   │   ├── CoreState.java [📂 src/main/java/com/yourstudio/coredefense/core/CoreState.java]
+│   │   │   │   │   │   │   ├── CoreStateMachine.java [📂 src/main/java/com/yourstudio/coredefense/core/CoreStateMachine.java]
+│   │   │   │   │   │   │   ├── CoreUnlockConfig.java [📂 src/main/java/com/yourstudio/coredefense/core/CoreUnlockConfig.java]
+│   │   │   │   │   │   │   ├── CoreUnlockManager.java [📂 src/main/java/com/yourstudio/coredefense/core/CoreUnlockManager.java]
+│   │   │   │   │   │   │   ├── CoreVisualFeedbackService.java [📂 src/main/java/com/yourstudio/coredefense/core/CoreVisualFeedbackService.java]
+│   │   │   │   │   │   │   ├── event/
+│   │   │   │   │   │   │   │   ├── CoreDamagedEvent.java [📂 src/main/java/com/yourstudio/coredefense/core/event/CoreDamagedEvent.java]
+│   │   │   │   │   │   │   │   ├── CoreDestroyedEvent.java [📂 src/main/java/com/yourstudio/coredefense/core/event/CoreDestroyedEvent.java]
+│   │   │   │   │   │   │   │   ├── CoreLeveledUpEvent.java [📂 src/main/java/com/yourstudio/coredefense/core/event/CoreLeveledUpEvent.java]
+│   │   │   │   │   │   │   │   ├── CoreSystemUnlockedEvent.java [📂 src/main/java/com/yourstudio/coredefense/core/event/CoreSystemUnlockedEvent.java]
+│   │   │   │   │   │   │   ├── SchematicPasteService.java [📂 src/main/java/com/yourstudio/coredefense/core/SchematicPasteService.java]
 │   │   │   │   │   │   ├── CoreDefensePlugin.java [📂 src/main/java/com/yourstudio/coredefense/CoreDefensePlugin.java]
 │   │   │   │   │   │   ├── data/
 │   │   │   │   │   │   │   ├── pipeline/
@@ -304,21 +394,224 @@ extraction_target_project/
 │   │   │   │   │   │   │   ├── storage/
 │   │   │   │   │   │   │   │   ├── VariableStorage.java [📂 src/main/java/com/yourstudio/coredefense/data/storage/VariableStorage.java]
 │   │   │   │   │   │   ├── drone/
+│   │   │   │   │   │   │   ├── CombatDrone.java [📂 src/main/java/com/yourstudio/coredefense/drone/CombatDrone.java]
+│   │   │   │   │   │   │   ├── DroneCapacityPolicy.java [📂 src/main/java/com/yourstudio/coredefense/drone/DroneCapacityPolicy.java]
 │   │   │   │   │   │   │   ├── DroneEntity.java [📂 src/main/java/com/yourstudio/coredefense/drone/DroneEntity.java]
 │   │   │   │   │   │   ├── entity/
 │   │   │   │   │   │   │   ├── base/
 │   │   │   │   │   │   │   │   ├── BaseEntity.java [📂 src/main/java/com/yourstudio/coredefense/entity/base/BaseEntity.java]
 │   │   │   │   │   │   │   │   ├── EntityRegistry.java [📂 src/main/java/com/yourstudio/coredefense/entity/base/EntityRegistry.java]
+│   │   │   │   │   │   ├── gui/
+│   │   │   │   │   │   │   ├── GameMenu.java [📂 src/main/java/com/yourstudio/coredefense/gui/GameMenu.java]
+│   │   │   │   │   │   │   ├── MenuFactory.java [📂 src/main/java/com/yourstudio/coredefense/gui/MenuFactory.java]
+│   │   │   │   │   │   │   ├── menus/
+│   │   │   │   │   │   │   │   ├── MetaUpgradeMenu.java [📂 src/main/java/com/yourstudio/coredefense/gui/menus/MetaUpgradeMenu.java]
+│   │   │   │   │   │   │   │   ├── NpcReplaceMenu.java [📂 src/main/java/com/yourstudio/coredefense/gui/menus/NpcReplaceMenu.java]
+│   │   │   │   │   │   │   │   ├── RecruitMenu.java [📂 src/main/java/com/yourstudio/coredefense/gui/menus/RecruitMenu.java]
+│   │   │   │   │   │   │   │   ├── SkillTreeMenu.java [📂 src/main/java/com/yourstudio/coredefense/gui/menus/SkillTreeMenu.java]
+│   │   │   │   │   │   ├── mining/
+│   │   │   │   │   │   │   ├── AutoMiningTicker.java [📂 src/main/java/com/yourstudio/coredefense/mining/AutoMiningTicker.java]
+│   │   │   │   │   │   │   ├── ClickMiningHandler.java [📂 src/main/java/com/yourstudio/coredefense/mining/ClickMiningHandler.java]
+│   │   │   │   │   │   │   ├── event/
+│   │   │   │   │   │   │   │   ├── OreMinedEvent.java [📂 src/main/java/com/yourstudio/coredefense/mining/event/OreMinedEvent.java]
+│   │   │   │   │   │   │   │   ├── OreUnlockedEvent.java [📂 src/main/java/com/yourstudio/coredefense/mining/event/OreUnlockedEvent.java]
+│   │   │   │   │   │   │   ├── MiningEfficiencyPolicy.java [📂 src/main/java/com/yourstudio/coredefense/mining/MiningEfficiencyPolicy.java]
+│   │   │   │   │   │   │   ├── MiningSession.java [📂 src/main/java/com/yourstudio/coredefense/mining/MiningSession.java]
+│   │   │   │   │   │   │   ├── MiningSessionManager.java [📂 src/main/java/com/yourstudio/coredefense/mining/MiningSessionManager.java]
+│   │   │   │   │   │   │   ├── OreRegistry.java [📂 src/main/java/com/yourstudio/coredefense/mining/OreRegistry.java]
+│   │   │   │   │   │   │   ├── OreType.java [📂 src/main/java/com/yourstudio/coredefense/mining/OreType.java]
+│   │   │   │   │   │   ├── mob/
+│   │   │   │   │   │   │   ├── ai/
+│   │   │   │   │   │   │   │   ├── PathingStrategy.java [📂 src/main/java/com/yourstudio/coredefense/mob/ai/PathingStrategy.java]
+│   │   │   │   │   │   │   │   ├── TargetSelector.java [📂 src/main/java/com/yourstudio/coredefense/mob/ai/TargetSelector.java]
+│   │   │   │   │   │   │   ├── event/
+│   │   │   │   │   │   │   │   ├── MonsterKilledEvent.java [📂 src/main/java/com/yourstudio/coredefense/mob/event/MonsterKilledEvent.java]
+│   │   │   │   │   │   │   ├── MonsterAI.java [📂 src/main/java/com/yourstudio/coredefense/mob/MonsterAI.java]
+│   │   │   │   │   │   │   ├── MonsterDefinition.java [📂 src/main/java/com/yourstudio/coredefense/mob/MonsterDefinition.java]
+│   │   │   │   │   │   │   ├── MonsterFactory.java [📂 src/main/java/com/yourstudio/coredefense/mob/MonsterFactory.java]
+│   │   │   │   │   │   │   ├── MonsterRegistry.java [📂 src/main/java/com/yourstudio/coredefense/mob/MonsterRegistry.java]
 │   │   │   │   │   │   ├── npc/
+│   │   │   │   │   │   │   ├── death/
+│   │   │   │   │   │   │   │   ├── LegacyTransferService.java [📂 src/main/java/com/yourstudio/coredefense/npc/death/LegacyTransferService.java]
+│   │   │   │   │   │   │   │   ├── NpcDeathHandler.java [📂 src/main/java/com/yourstudio/coredefense/npc/death/NpcDeathHandler.java]
+│   │   │   │   │   │   │   │   ├── ReviveService.java [📂 src/main/java/com/yourstudio/coredefense/npc/death/ReviveService.java]
+│   │   │   │   │   │   │   ├── event/
+│   │   │   │   │   │   │   │   ├── NpcDiedEvent.java [📂 src/main/java/com/yourstudio/coredefense/npc/event/NpcDiedEvent.java]
+│   │   │   │   │   │   │   │   ├── NpcLeveledUpEvent.java [📂 src/main/java/com/yourstudio/coredefense/npc/event/NpcLeveledUpEvent.java]
+│   │   │   │   │   │   │   │   ├── NpcRecruitedEvent.java [📂 src/main/java/com/yourstudio/coredefense/npc/event/NpcRecruitedEvent.java]
+│   │   │   │   │   │   │   ├── GameNpcFactory.java [📂 src/main/java/com/yourstudio/coredefense/npc/GameNpcFactory.java]
+│   │   │   │   │   │   │   ├── NpcCapacityPolicy.java [📂 src/main/java/com/yourstudio/coredefense/npc/NpcCapacityPolicy.java]
 │   │   │   │   │   │   │   ├── NpcEntity.java [📂 src/main/java/com/yourstudio/coredefense/npc/NpcEntity.java]
+│   │   │   │   │   │   │   ├── NpcOwnershipPolicy.java [📂 src/main/java/com/yourstudio/coredefense/npc/NpcOwnershipPolicy.java]
+│   │   │   │   │   │   │   ├── NpcRole.java [📂 src/main/java/com/yourstudio/coredefense/npc/NpcRole.java]
+│   │   │   │   │   │   │   ├── NpcState.java [📂 src/main/java/com/yourstudio/coredefense/npc/NpcState.java]
+│   │   │   │   │   │   │   ├── NpcStateMachine.java [📂 src/main/java/com/yourstudio/coredefense/npc/NpcStateMachine.java]
+│   │   │   │   │   │   │   ├── NpcStatSheet.java [📂 src/main/java/com/yourstudio/coredefense/npc/NpcStatSheet.java]
+│   │   │   │   │   │   │   ├── recruit/
+│   │   │   │   │   │   │   │   ├── RecruitmentService.java [📂 src/main/java/com/yourstudio/coredefense/npc/recruit/RecruitmentService.java]
+│   │   │   │   │   │   │   │   ├── RecruitOffer.java [📂 src/main/java/com/yourstudio/coredefense/npc/recruit/RecruitOffer.java]
+│   │   │   │   │   │   │   │   ├── RecruitPool.java [📂 src/main/java/com/yourstudio/coredefense/npc/recruit/RecruitPool.java]
+│   │   │   │   │   │   │   │   ├── RecruitPoolWeightTable.java [📂 src/main/java/com/yourstudio/coredefense/npc/recruit/RecruitPoolWeightTable.java]
+│   │   │   │   │   │   │   ├── safezone/
+│   │   │   │   │   │   │   │   ├── event/
+│   │   │   │   │   │   │   │   │   ├── SafeZoneBreachedEvent.java [📂 src/main/java/com/yourstudio/coredefense/npc/safezone/event/SafeZoneBreachedEvent.java]
+│   │   │   │   │   │   │   │   ├── SafeZoneService.java [📂 src/main/java/com/yourstudio/coredefense/npc/safezone/SafeZoneService.java]
+│   │   │   │   │   │   │   ├── trait/
+│   │   │   │   │   │   │   │   ├── NpcCollaborationUnlockService.java [📂 src/main/java/com/yourstudio/coredefense/npc/trait/NpcCollaborationUnlockService.java]
+│   │   │   │   │   │   │   │   ├── NpcTrait.java [📂 src/main/java/com/yourstudio/coredefense/npc/trait/NpcTrait.java]
+│   │   │   │   │   │   │   │   ├── ResonanceCalculator.java [📂 src/main/java/com/yourstudio/coredefense/npc/trait/ResonanceCalculator.java]
+│   │   │   │   │   │   │   │   ├── TraitRegistry.java [📂 src/main/java/com/yourstudio/coredefense/npc/trait/TraitRegistry.java]
 │   │   │   │   │   │   │   ├── vocation/
 │   │   │   │   │   │   │   │   ├── NpcVocation.java [📂 src/main/java/com/yourstudio/coredefense/npc/vocation/NpcVocation.java]
+│   │   │   │   │   │   │   │   ├── NpcVocationPromotion.java [📂 src/main/java/com/yourstudio/coredefense/npc/vocation/NpcVocationPromotion.java]
+│   │   │   │   │   │   │   │   ├── NpcVocationSkillTree.java [📂 src/main/java/com/yourstudio/coredefense/npc/vocation/NpcVocationSkillTree.java]
+│   │   │   │   │   │   ├── persistence/
+│   │   │   │   │   │   │   ├── DataStoreType.java [📂 src/main/java/com/yourstudio/coredefense/persistence/DataStoreType.java]
+│   │   │   │   │   │   │   ├── FailedSaveRetryQueue.java [📂 src/main/java/com/yourstudio/coredefense/persistence/FailedSaveRetryQueue.java]
+│   │   │   │   │   │   │   ├── file/
+│   │   │   │   │   │   │   │   ├── JsonSessionSnapshotRepository.java [📂 src/main/java/com/yourstudio/coredefense/persistence/file/JsonSessionSnapshotRepository.java]
+│   │   │   │   │   │   │   │   ├── YamlPlayerRepository.java [📂 src/main/java/com/yourstudio/coredefense/persistence/file/YamlPlayerRepository.java]
+│   │   │   │   │   │   │   ├── PersistenceService.java [📂 src/main/java/com/yourstudio/coredefense/persistence/PersistenceService.java]
+│   │   │   │   │   │   │   ├── PlayerDataLock.java [📂 src/main/java/com/yourstudio/coredefense/persistence/PlayerDataLock.java]
+│   │   │   │   │   │   │   ├── Repository.java [📂 src/main/java/com/yourstudio/coredefense/persistence/Repository.java]
+│   │   │   │   │   │   │   ├── sql/
+│   │   │   │   │   │   │   │   ├── SqlPlayerRepository.java [📂 src/main/java/com/yourstudio/coredefense/persistence/sql/SqlPlayerRepository.java]
+│   │   │   │   │   │   │   │   ├── SqlSchemaMigrator.java [📂 src/main/java/com/yourstudio/coredefense/persistence/sql/SqlSchemaMigrator.java]
 │   │   │   │   │   │   ├── playerclass/
+│   │   │   │   │   │   │   ├── builder/
+│   │   │   │   │   │   │   │   ├── event/
+│   │   │   │   │   │   │   │   │   ├── OverclockActivatedEvent.java [📂 src/main/java/com/yourstudio/coredefense/playerclass/builder/event/OverclockActivatedEvent.java]
+│   │   │   │   │   │   │   │   │   ├── OverheatTriggeredEvent.java [📂 src/main/java/com/yourstudio/coredefense/playerclass/builder/event/OverheatTriggeredEvent.java]
+│   │   │   │   │   │   │   │   ├── OverclockPenaltyHandler.java [📂 src/main/java/com/yourstudio/coredefense/playerclass/builder/OverclockPenaltyHandler.java]
+│   │   │   │   │   │   │   │   ├── OverclockSkill.java [📂 src/main/java/com/yourstudio/coredefense/playerclass/builder/OverclockSkill.java]
+│   │   │   │   │   │   │   ├── ClassDefinition.java [📂 src/main/java/com/yourstudio/coredefense/playerclass/ClassDefinition.java]
+│   │   │   │   │   │   │   ├── ClassRegistry.java [📂 src/main/java/com/yourstudio/coredefense/playerclass/ClassRegistry.java]
+│   │   │   │   │   │   │   ├── event/
+│   │   │   │   │   │   │   │   ├── ClassSelectedEvent.java [📂 src/main/java/com/yourstudio/coredefense/playerclass/event/ClassSelectedEvent.java]
+│   │   │   │   │   │   │   │   ├── SkillUsedEvent.java [📂 src/main/java/com/yourstudio/coredefense/playerclass/event/SkillUsedEvent.java]
+│   │   │   │   │   │   │   ├── heal/
+│   │   │   │   │   │   │   │   ├── HealStrategy.java [📂 src/main/java/com/yourstudio/coredefense/playerclass/heal/HealStrategy.java]
 │   │   │   │   │   │   │   ├── PlayerClass.java [📂 src/main/java/com/yourstudio/coredefense/playerclass/PlayerClass.java]
+│   │   │   │   │   │   │   ├── skill/
+│   │   │   │   │   │   │   │   ├── ActiveSkill.java [📂 src/main/java/com/yourstudio/coredefense/playerclass/skill/ActiveSkill.java]
+│   │   │   │   │   │   │   │   ├── PassiveSkill.java [📂 src/main/java/com/yourstudio/coredefense/playerclass/skill/PassiveSkill.java]
+│   │   │   │   │   │   │   │   ├── Skill.java [📂 src/main/java/com/yourstudio/coredefense/playerclass/skill/Skill.java]
+│   │   │   │   │   │   │   │   ├── SkillInputHandler.java [📂 src/main/java/com/yourstudio/coredefense/playerclass/skill/SkillInputHandler.java]
+│   │   │   │   │   │   │   │   ├── SkillNode.java [📂 src/main/java/com/yourstudio/coredefense/playerclass/skill/SkillNode.java]
+│   │   │   │   │   │   │   │   ├── SkillTree.java [📂 src/main/java/com/yourstudio/coredefense/playerclass/skill/SkillTree.java]
+│   │   │   │   │   │   │   │   ├── UltimateCooldownPool.java [📂 src/main/java/com/yourstudio/coredefense/playerclass/skill/UltimateCooldownPool.java]
+│   │   │   │   │   │   │   │   ├── UltimateSkill.java [📂 src/main/java/com/yourstudio/coredefense/playerclass/skill/UltimateSkill.java]
 │   │   │   │   │   │   │   ├── specialization/
 │   │   │   │   │   │   │   │   ├── Specialization.java [📂 src/main/java/com/yourstudio/coredefense/playerclass/specialization/Specialization.java]
+│   │   │   │   │   │   │   ├── Specialization.java [📂 src/main/java/com/yourstudio/coredefense/playerclass/Specialization.java]
+│   │   │   │   │   │   ├── progression/
+│   │   │   │   │   │   │   ├── MetaCurrency.java [📂 src/main/java/com/yourstudio/coredefense/progression/MetaCurrency.java]
+│   │   │   │   │   │   │   ├── MetaUpgrade.java [📂 src/main/java/com/yourstudio/coredefense/progression/MetaUpgrade.java]
+│   │   │   │   │   │   │   ├── MetaUpgradeNode.java [📂 src/main/java/com/yourstudio/coredefense/progression/MetaUpgradeNode.java]
+│   │   │   │   │   │   │   ├── MetaUpgradeTree.java [📂 src/main/java/com/yourstudio/coredefense/progression/MetaUpgradeTree.java]
+│   │   │   │   │   │   │   ├── PlayerProgressionData.java [📂 src/main/java/com/yourstudio/coredefense/progression/PlayerProgressionData.java]
+│   │   │   │   │   │   │   ├── ProgressionService.java [📂 src/main/java/com/yourstudio/coredefense/progression/ProgressionService.java]
+│   │   │   │   │   │   │   ├── ProgressionStatsCollector.java [📂 src/main/java/com/yourstudio/coredefense/progression/ProgressionStatsCollector.java]
+│   │   │   │   │   │   │   ├── ScoreCalculator.java [📂 src/main/java/com/yourstudio/coredefense/progression/ScoreCalculator.java]
+│   │   │   │   │   │   │   ├── UpgradeEffectType.java [📂 src/main/java/com/yourstudio/coredefense/progression/UpgradeEffectType.java]
 │   │   │   │   │   │   ├── render/
+│   │   │   │   │   │   │   ├── animation/
+│   │   │   │   │   │   │   │   ├── AnimationDefinition.java [📂 src/main/java/com/yourstudio/coredefense/render/animation/AnimationDefinition.java]
+│   │   │   │   │   │   │   │   ├── AnimationLodPolicy.java [📂 src/main/java/com/yourstudio/coredefense/render/animation/AnimationLodPolicy.java]
+│   │   │   │   │   │   │   │   ├── AnimationPlayer.java [📂 src/main/java/com/yourstudio/coredefense/render/animation/AnimationPlayer.java]
+│   │   │   │   │   │   │   │   ├── AnimationRegistry.java [📂 src/main/java/com/yourstudio/coredefense/render/animation/AnimationRegistry.java]
+│   │   │   │   │   │   │   │   ├── AnimationTicker.java [📂 src/main/java/com/yourstudio/coredefense/render/animation/AnimationTicker.java]
+│   │   │   │   │   │   │   │   ├── BoneKeyframeTrack.java [📂 src/main/java/com/yourstudio/coredefense/render/animation/BoneKeyframeTrack.java]
+│   │   │   │   │   │   │   │   ├── BoneTransformComposer.java [📂 src/main/java/com/yourstudio/coredefense/render/animation/BoneTransformComposer.java]
+│   │   │   │   │   │   │   │   ├── InterpolationType.java [📂 src/main/java/com/yourstudio/coredefense/render/animation/InterpolationType.java]
+│   │   │   │   │   │   │   │   ├── Keyframe.java [📂 src/main/java/com/yourstudio/coredefense/render/animation/Keyframe.java]
+│   │   │   │   │   │   │   │   ├── TransformInterpolator.java [📂 src/main/java/com/yourstudio/coredefense/render/animation/TransformInterpolator.java]
+│   │   │   │   │   │   │   │   ├── trigger/
+│   │   │   │   │   │   │   │   │   ├── AnimationTriggerListener.java [📂 src/main/java/com/yourstudio/coredefense/render/animation/trigger/AnimationTriggerListener.java]
+│   │   │   │   │   │   │   │   │   ├── AnimationTriggerMapping.java [📂 src/main/java/com/yourstudio/coredefense/render/animation/trigger/AnimationTriggerMapping.java]
+│   │   │   │   │   │   │   ├── asset/
+│   │   │   │   │   │   │   │   ├── ModelAssetValidator.java [📂 src/main/java/com/yourstudio/coredefense/render/asset/ModelAssetValidator.java]
+│   │   │   │   │   │   │   ├── display/
+│   │   │   │   │   │   │   │   ├── DisplayModelFactory.java [📂 src/main/java/com/yourstudio/coredefense/render/display/DisplayModelFactory.java]
+│   │   │   │   │   │   │   │   ├── DisplayModelInstance.java [📂 src/main/java/com/yourstudio/coredefense/render/display/DisplayModelInstance.java]
+│   │   │   │   │   │   │   ├── event/
+│   │   │   │   │   │   │   │   ├── AnimationStateChangedEvent.java [📂 src/main/java/com/yourstudio/coredefense/render/event/AnimationStateChangedEvent.java]
+│   │   │   │   │   │   │   │   ├── ModelSpawnedEvent.java [📂 src/main/java/com/yourstudio/coredefense/render/event/ModelSpawnedEvent.java]
+│   │   │   │   │   │   │   ├── model/
+│   │   │   │   │   │   │   │   ├── AnimatedJavaAssetLoader.java [📂 src/main/java/com/yourstudio/coredefense/render/model/AnimatedJavaAssetLoader.java]
+│   │   │   │   │   │   │   │   ├── BoneDefinition.java [📂 src/main/java/com/yourstudio/coredefense/render/model/BoneDefinition.java]
+│   │   │   │   │   │   │   │   ├── ModelDefinition.java [📂 src/main/java/com/yourstudio/coredefense/render/model/ModelDefinition.java]
+│   │   │   │   │   │   │   │   ├── ModelRegistry.java [📂 src/main/java/com/yourstudio/coredefense/render/model/ModelRegistry.java]
 │   │   │   │   │   │   │   ├── ModelRenderer.java [📂 src/main/java/com/yourstudio/coredefense/render/ModelRenderer.java]
+│   │   │   │   │   │   ├── session/
+│   │   │   │   │   │   │   ├── event/
+│   │   │   │   │   │   │   │   ├── GameSessionEndedEvent.java [📂 src/main/java/com/yourstudio/coredefense/session/event/GameSessionEndedEvent.java]
+│   │   │   │   │   │   │   ├── GameSession.java [📂 src/main/java/com/yourstudio/coredefense/session/GameSession.java]
+│   │   │   │   │   │   │   ├── GameSessionManager.java [📂 src/main/java/com/yourstudio/coredefense/session/GameSessionManager.java]
+│   │   │   │   │   │   │   ├── GameSessionState.java [📂 src/main/java/com/yourstudio/coredefense/session/GameSessionState.java]
+│   │   │   │   │   │   │   ├── GameTeam.java [📂 src/main/java/com/yourstudio/coredefense/session/GameTeam.java]
+│   │   │   │   │   │   ├── structure/
+│   │   │   │   │   │   │   ├── BuildableZoneService.java [📂 src/main/java/com/yourstudio/coredefense/structure/BuildableZoneService.java]
+│   │   │   │   │   │   │   ├── BuildPermissionPolicy.java [📂 src/main/java/com/yourstudio/coredefense/structure/BuildPermissionPolicy.java]
+│   │   │   │   │   │   │   ├── event/
+│   │   │   │   │   │   │   │   ├── StructureDestroyedEvent.java [📂 src/main/java/com/yourstudio/coredefense/structure/event/StructureDestroyedEvent.java]
+│   │   │   │   │   │   │   │   ├── StructurePlacedEvent.java [📂 src/main/java/com/yourstudio/coredefense/structure/event/StructurePlacedEvent.java]
+│   │   │   │   │   │   │   ├── StructurePlacementService.java [📂 src/main/java/com/yourstudio/coredefense/structure/StructurePlacementService.java]
+│   │   │   │   │   │   │   ├── StructureRegistry.java [📂 src/main/java/com/yourstudio/coredefense/structure/StructureRegistry.java]
+│   │   │   │   │   │   │   ├── turret/
+│   │   │   │   │   │   │   │   ├── targeting/
+│   │   │   │   │   │   │   │   │   ├── HighestThreatTargetStrategy.java [📂 src/main/java/com/yourstudio/coredefense/structure/turret/targeting/HighestThreatTargetStrategy.java]
+│   │   │   │   │   │   │   │   │   ├── LowestHpTargetStrategy.java [📂 src/main/java/com/yourstudio/coredefense/structure/turret/targeting/LowestHpTargetStrategy.java]
+│   │   │   │   │   │   │   │   │   ├── NearestTargetStrategy.java [📂 src/main/java/com/yourstudio/coredefense/structure/turret/targeting/NearestTargetStrategy.java]
+│   │   │   │   │   │   │   │   │   ├── SpatialIndex.java [📂 src/main/java/com/yourstudio/coredefense/structure/turret/targeting/SpatialIndex.java]
+│   │   │   │   │   │   │   │   │   ├── TurretTargeting.java [📂 src/main/java/com/yourstudio/coredefense/structure/turret/targeting/TurretTargeting.java]
+│   │   │   │   │   │   │   │   ├── Turret.java [📂 src/main/java/com/yourstudio/coredefense/structure/turret/Turret.java]
+│   │   │   │   │   │   │   │   ├── TurretAmmoSupply.java [📂 src/main/java/com/yourstudio/coredefense/structure/turret/TurretAmmoSupply.java]
+│   │   │   │   │   │   │   │   ├── TurretDefinition.java [📂 src/main/java/com/yourstudio/coredefense/structure/turret/TurretDefinition.java]
+│   │   │   │   │   │   │   │   ├── TurretFactory.java [📂 src/main/java/com/yourstudio/coredefense/structure/turret/TurretFactory.java]
+│   │   │   │   │   │   │   │   ├── types/
+│   │   │   │   │   │   │   │   │   ├── ArrowSentryTurret.java [📂 src/main/java/com/yourstudio/coredefense/structure/turret/types/ArrowSentryTurret.java]
+│   │   │   │   │   │   │   │   │   ├── AutoCannonTurret.java [📂 src/main/java/com/yourstudio/coredefense/structure/turret/types/AutoCannonTurret.java]
+│   │   │   │   │   │   │   │   │   ├── BuffTowerTurret.java [📂 src/main/java/com/yourstudio/coredefense/structure/turret/types/BuffTowerTurret.java]
+│   │   │   │   │   │   │   │   │   ├── FlamethrowerTurret.java [📂 src/main/java/com/yourstudio/coredefense/structure/turret/types/FlamethrowerTurret.java]
+│   │   │   │   │   │   │   │   │   ├── LightGunTurret.java [📂 src/main/java/com/yourstudio/coredefense/structure/turret/types/LightGunTurret.java]
+│   │   │   │   │   │   │   │   │   ├── MinigunTurret.java [📂 src/main/java/com/yourstudio/coredefense/structure/turret/types/MinigunTurret.java]
+│   │   │   │   │   │   │   │   │   ├── MissileTurret.java [📂 src/main/java/com/yourstudio/coredefense/structure/turret/types/MissileTurret.java]
+│   │   │   │   │   │   │   │   │   ├── NukeMissileTurret.java [📂 src/main/java/com/yourstudio/coredefense/structure/turret/types/NukeMissileTurret.java]
+│   │   │   │   │   │   │   │   │   ├── SlingshotTurret.java [📂 src/main/java/com/yourstudio/coredefense/structure/turret/types/SlingshotTurret.java]
+│   │   │   │   │   │   │   ├── wall/
+│   │   │   │   │   │   │   │   ├── WallDefinition.java [📂 src/main/java/com/yourstudio/coredefense/structure/wall/WallDefinition.java]
+│   │   │   │   │   │   │   │   ├── WallInstance.java [📂 src/main/java/com/yourstudio/coredefense/structure/wall/WallInstance.java]
+│   │   │   │   │   │   │   │   ├── WallMaterialTier.java [📂 src/main/java/com/yourstudio/coredefense/structure/wall/WallMaterialTier.java]
+│   │   │   │   │   │   │   │   ├── WallModule.java [📂 src/main/java/com/yourstudio/coredefense/structure/wall/WallModule.java]
+│   │   │   │   │   │   ├── wave/
+│   │   │   │   │   │   │   ├── boss/
+│   │   │   │   │   │   │   │   ├── BossWaveHandler.java [📂 src/main/java/com/yourstudio/coredefense/wave/boss/BossWaveHandler.java]
+│   │   │   │   │   │   │   ├── BossWaveDefinition.java [📂 src/main/java/com/yourstudio/coredefense/wave/BossWaveDefinition.java]
+│   │   │   │   │   │   │   ├── condition/
+│   │   │   │   │   │   │   │   ├── AllMonstersClearedCondition.java [📂 src/main/java/com/yourstudio/coredefense/wave/condition/AllMonstersClearedCondition.java]
+│   │   │   │   │   │   │   │   ├── BossDefeatedCondition.java [📂 src/main/java/com/yourstudio/coredefense/wave/condition/BossDefeatedCondition.java]
+│   │   │   │   │   │   │   │   ├── WaveClearCondition.java [📂 src/main/java/com/yourstudio/coredefense/wave/condition/WaveClearCondition.java]
+│   │   │   │   │   │   │   ├── event/
+│   │   │   │   │   │   │   │   ├── WaveClearedEvent.java [📂 src/main/java/com/yourstudio/coredefense/wave/event/WaveClearedEvent.java]
+│   │   │   │   │   │   │   │   ├── WaveSpawnEvent.java [📂 src/main/java/com/yourstudio/coredefense/wave/event/WaveSpawnEvent.java]
+│   │   │   │   │   │   │   │   ├── WaveStartedEvent.java [📂 src/main/java/com/yourstudio/coredefense/wave/event/WaveStartedEvent.java]
+│   │   │   │   │   │   │   ├── MonsterSpawnEntry.java [📂 src/main/java/com/yourstudio/coredefense/wave/MonsterSpawnEntry.java]
+│   │   │   │   │   │   │   ├── ReadyVoteService.java [📂 src/main/java/com/yourstudio/coredefense/wave/ReadyVoteService.java]
+│   │   │   │   │   │   │   ├── spawn/
+│   │   │   │   │   │   │   │   ├── SpawnPointGroup.java [📂 src/main/java/com/yourstudio/coredefense/wave/spawn/SpawnPointGroup.java]
+│   │   │   │   │   │   │   ├── state/
+│   │   │   │   │   │   │   │   ├── ClearedStateHandler.java [📂 src/main/java/com/yourstudio/coredefense/wave/state/ClearedStateHandler.java]
+│   │   │   │   │   │   │   │   ├── InProgressStateHandler.java [📂 src/main/java/com/yourstudio/coredefense/wave/state/InProgressStateHandler.java]
+│   │   │   │   │   │   │   │   ├── RewardStateHandler.java [📂 src/main/java/com/yourstudio/coredefense/wave/state/RewardStateHandler.java]
+│   │   │   │   │   │   │   │   ├── SpawningStateHandler.java [📂 src/main/java/com/yourstudio/coredefense/wave/state/SpawningStateHandler.java]
+│   │   │   │   │   │   │   │   ├── WaitingStateHandler.java [📂 src/main/java/com/yourstudio/coredefense/wave/state/WaitingStateHandler.java]
+│   │   │   │   │   │   │   │   ├── WaveStateHandler.java [📂 src/main/java/com/yourstudio/coredefense/wave/state/WaveStateHandler.java]
+│   │   │   │   │   │   │   ├── WaveDefinition.java [📂 src/main/java/com/yourstudio/coredefense/wave/WaveDefinition.java]
+│   │   │   │   │   │   │   ├── WaveManager.java [📂 src/main/java/com/yourstudio/coredefense/wave/WaveManager.java]
+│   │   │   │   │   │   │   ├── WaveScalingPolicy.java [📂 src/main/java/com/yourstudio/coredefense/wave/WaveScalingPolicy.java]
+│   │   │   │   │   │   │   ├── WaveSpawnScheduler.java [📂 src/main/java/com/yourstudio/coredefense/wave/WaveSpawnScheduler.java]
+│   │   │   │   │   │   │   ├── WaveState.java [📂 src/main/java/com/yourstudio/coredefense/wave/WaveState.java]
 │   │   ├── resources/
 │   │   │   ├── config/
 │   │   │   │   ├── core.yml [📂 src/main/resources/config/core.yml]

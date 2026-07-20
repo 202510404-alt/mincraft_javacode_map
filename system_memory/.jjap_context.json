@@ -10,6 +10,11 @@
       "symbols_summary": "",
       "skeleton": ""
     },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/bootstrap/CommandRegistrar.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
     "extraction_target_project/src/main/java/com/yourstudio/coredefense/bootstrap/ListenerRegistrar.java": {
       "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "symbols_summary": "",
@@ -19,6 +24,196 @@
       "hash": "c1fced3186758ba730907eaf30bd30b225a7bb452555f6f56ff79be13e8c03ee",
       "symbols_summary": "🧬 class ModuleInitializer [L2-2]",
       "skeleton": "class ModuleInitializer { // L2-2"
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/damage/CombatDamageService.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/damage/DamageCalculator.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/damage/DamageModifier.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/damage/DamageSource.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/event/EntityDamagedByGameEvent.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/event/WeaponFiredEvent.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/melee/MeleeAttackHandler.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/melee/MeleeWeapon.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/vfx/WeaponVfxService.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/weapon/AbstractFirearm.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/weapon/BurstFireFirearm.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/weapon/SingleShotFirearm.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/weapon/SniperRifle.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/weapon/Weapon.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/weapon/WeaponAcquisitionPolicy.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/weapon/WeaponAttachment.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/weapon/WeaponDefinition.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/weapon/WeaponFactory.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/weapon/WeaponInputHandler.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/weapon/WeaponRegistry.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/weapon/ammo/AmmoInventory.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/weapon/ammo/AmmoType.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/weapon/projectile/ArcProjectile.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/weapon/projectile/BulletProjectile.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/weapon/projectile/ProjectileFactory.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/weapon/projectile/ProjectileType.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/weapon/strategy/BurstFireStrategy.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/weapon/strategy/FireModeStrategy.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/weapon/strategy/SingleShotStrategy.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/weapon/strategy/SniperShotStrategy.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/combat/weapon/strategy/SpreadPolicy.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/command/CoreDefenseCommand.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/command/sub/AdminReloadSubcommand.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/command/sub/StartGameSubcommand.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/config/ConfigLoader.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/config/ConfigParser.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/config/ConfigService.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/config/ReloadableConfig.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
     },
     "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/contract/EnergyConsumer.java": {
       "hash": "aa5bf9a576daf9c2f74f0d0ef07584a4dc8c870401342400b392c2bb59f8ea2c",
@@ -30,7 +225,162 @@
       "symbols_summary": "🧬 class EnergyPriority [L3-8]",
       "skeleton": "class EnergyPriority { // L3-8"
     },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/contract/Healable.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/contract/ModelAnchor.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/event/AbstractGameEvent.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/event/GameListener.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
     "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/interfaces/Identifiable.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/perf/PerformanceMonitor.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/registry/AbstractRegistry.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/registry/Registry.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/registry/RegistryKey.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/result/ActionResult.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/scheduling/GameScheduler.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/util/CooldownTracker.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/util/MathUtils.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/util/ParticleUtils.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/util/RayTraceUtil.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/common/util/VfxThrottleService.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/core/CoreEnergyManager.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/core/CoreEntity.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/core/CoreLevel.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/core/CoreLevelListener.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/core/CoreLevelRegistry.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/core/CoreLevelUpService.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/core/CoreState.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/core/CoreStateMachine.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/core/CoreUnlockConfig.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/core/CoreUnlockManager.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/core/CoreVisualFeedbackService.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/core/SchematicPasteService.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/core/event/CoreDamagedEvent.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/core/event/CoreDestroyedEvent.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/core/event/CoreLeveledUpEvent.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/core/event/CoreSystemUnlockedEvent.java": {
       "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "symbols_summary": "",
       "skeleton": ""
@@ -41,6 +391,16 @@
       "skeleton": ""
     },
     "extraction_target_project/src/main/java/com/yourstudio/coredefense/data/storage/VariableStorage.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/drone/CombatDrone.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/drone/DroneCapacityPolicy.java": {
       "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "symbols_summary": "",
       "skeleton": ""
@@ -60,7 +420,232 @@
       "symbols_summary": "",
       "skeleton": ""
     },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/gui/GameMenu.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/gui/MenuFactory.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/gui/menus/MetaUpgradeMenu.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/gui/menus/NpcReplaceMenu.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/gui/menus/RecruitMenu.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/gui/menus/SkillTreeMenu.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/mining/AutoMiningTicker.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/mining/ClickMiningHandler.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/mining/MiningEfficiencyPolicy.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/mining/MiningSession.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/mining/MiningSessionManager.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/mining/OreRegistry.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/mining/OreType.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/mining/event/OreMinedEvent.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/mining/event/OreUnlockedEvent.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/mob/MonsterAI.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/mob/MonsterDefinition.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/mob/MonsterFactory.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/mob/MonsterRegistry.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/mob/ai/PathingStrategy.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/mob/ai/TargetSelector.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/mob/event/MonsterKilledEvent.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/npc/GameNpcFactory.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/npc/NpcCapacityPolicy.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
     "extraction_target_project/src/main/java/com/yourstudio/coredefense/npc/NpcEntity.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/npc/NpcOwnershipPolicy.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/npc/NpcRole.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/npc/NpcState.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/npc/NpcStateMachine.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/npc/NpcStatSheet.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/npc/death/LegacyTransferService.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/npc/death/NpcDeathHandler.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/npc/death/ReviveService.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/npc/event/NpcDiedEvent.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/npc/event/NpcLeveledUpEvent.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/npc/event/NpcRecruitedEvent.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/npc/recruit/RecruitmentService.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/npc/recruit/RecruitOffer.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/npc/recruit/RecruitPool.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/npc/recruit/RecruitPoolWeightTable.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/npc/safezone/SafeZoneService.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/npc/safezone/event/SafeZoneBreachedEvent.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/npc/trait/NpcCollaborationUnlockService.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/npc/trait/NpcTrait.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/npc/trait/ResonanceCalculator.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/npc/trait/TraitRegistry.java": {
       "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "symbols_summary": "",
       "skeleton": ""
@@ -70,7 +655,152 @@
       "symbols_summary": "",
       "skeleton": ""
     },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/npc/vocation/NpcVocationPromotion.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/npc/vocation/NpcVocationSkillTree.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/persistence/DataStoreType.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/persistence/FailedSaveRetryQueue.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/persistence/PersistenceService.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/persistence/PlayerDataLock.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/persistence/Repository.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/persistence/file/JsonSessionSnapshotRepository.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/persistence/file/YamlPlayerRepository.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/persistence/sql/SqlPlayerRepository.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/persistence/sql/SqlSchemaMigrator.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/ClassDefinition.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/ClassRegistry.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
     "extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/PlayerClass.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/Specialization.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/builder/OverclockPenaltyHandler.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/builder/OverclockSkill.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/builder/event/OverclockActivatedEvent.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/builder/event/OverheatTriggeredEvent.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/event/ClassSelectedEvent.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/event/SkillUsedEvent.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/heal/HealStrategy.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/skill/ActiveSkill.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/skill/PassiveSkill.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/skill/Skill.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/skill/SkillInputHandler.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/skill/SkillNode.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/skill/SkillTree.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/skill/UltimateCooldownPool.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/skill/UltimateSkill.java": {
       "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "symbols_summary": "",
       "skeleton": ""
@@ -80,7 +810,432 @@
       "symbols_summary": "",
       "skeleton": ""
     },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/progression/MetaCurrency.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/progression/MetaUpgrade.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/progression/MetaUpgradeNode.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/progression/MetaUpgradeTree.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/progression/PlayerProgressionData.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/progression/ProgressionService.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/progression/ProgressionStatsCollector.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/progression/ScoreCalculator.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/progression/UpgradeEffectType.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
     "extraction_target_project/src/main/java/com/yourstudio/coredefense/render/ModelRenderer.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/render/animation/AnimationDefinition.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/render/animation/AnimationLodPolicy.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/render/animation/AnimationPlayer.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/render/animation/AnimationRegistry.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/render/animation/AnimationTicker.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/render/animation/BoneKeyframeTrack.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/render/animation/BoneTransformComposer.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/render/animation/InterpolationType.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/render/animation/Keyframe.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/render/animation/TransformInterpolator.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/render/animation/trigger/AnimationTriggerListener.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/render/animation/trigger/AnimationTriggerMapping.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/render/asset/ModelAssetValidator.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/render/display/DisplayModelFactory.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/render/display/DisplayModelInstance.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/render/event/AnimationStateChangedEvent.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/render/event/ModelSpawnedEvent.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/render/model/AnimatedJavaAssetLoader.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/render/model/BoneDefinition.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/render/model/ModelDefinition.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/render/model/ModelRegistry.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/session/GameSession.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/session/GameSessionManager.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/session/GameSessionState.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/session/GameTeam.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/session/event/GameSessionEndedEvent.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/BuildableZoneService.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/BuildPermissionPolicy.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/StructurePlacementService.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/StructureRegistry.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/event/StructureDestroyedEvent.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/event/StructurePlacedEvent.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/turret/Turret.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/turret/TurretAmmoSupply.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/turret/TurretDefinition.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/turret/TurretFactory.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/turret/targeting/HighestThreatTargetStrategy.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/turret/targeting/LowestHpTargetStrategy.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/turret/targeting/NearestTargetStrategy.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/turret/targeting/SpatialIndex.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/turret/targeting/TurretTargeting.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/turret/types/ArrowSentryTurret.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/turret/types/AutoCannonTurret.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/turret/types/BuffTowerTurret.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/turret/types/FlamethrowerTurret.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/turret/types/LightGunTurret.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/turret/types/MinigunTurret.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/turret/types/MissileTurret.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/turret/types/NukeMissileTurret.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/turret/types/SlingshotTurret.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/wall/WallDefinition.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/wall/WallInstance.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/wall/WallMaterialTier.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/structure/wall/WallModule.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/wave/BossWaveDefinition.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/wave/MonsterSpawnEntry.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/wave/ReadyVoteService.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/wave/WaveDefinition.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/wave/WaveManager.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/wave/WaveScalingPolicy.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/wave/WaveSpawnScheduler.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/wave/WaveState.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/wave/boss/BossWaveHandler.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/wave/condition/AllMonstersClearedCondition.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/wave/condition/BossDefeatedCondition.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/wave/condition/WaveClearCondition.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/wave/event/WaveClearedEvent.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/wave/event/WaveSpawnEvent.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/wave/event/WaveStartedEvent.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/wave/spawn/SpawnPointGroup.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/wave/state/ClearedStateHandler.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/wave/state/InProgressStateHandler.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/wave/state/RewardStateHandler.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/wave/state/SpawningStateHandler.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/wave/state/WaitingStateHandler.java": {
+      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "symbols_summary": "",
+      "skeleton": ""
+    },
+    "extraction_target_project/src/main/java/com/yourstudio/coredefense/wave/state/WaveStateHandler.java": {
       "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "symbols_summary": "",
       "skeleton": ""
