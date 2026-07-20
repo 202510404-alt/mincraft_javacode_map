@@ -725,11 +725,6 @@
       "symbols_summary": "",
       "skeleton": ""
     },
-    "extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/Specialization.java": {
-      "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "symbols_summary": "",
-      "skeleton": ""
-    },
     "extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/builder/OverclockPenaltyHandler.java": {
       "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "symbols_summary": "",

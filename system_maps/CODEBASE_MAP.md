@@ -1,6 +1,6 @@
 # 🏗️ 짭커서 프로젝트 CODEBASE MAP
 
-현재 인덱싱된 총 파일 수: **249개**
+현재 인덱싱된 총 파일 수: **248개**
 
 ## 🗂️ [Module Index]
 - `extraction_target_project/.vscode/launch.json`
@@ -148,7 +148,6 @@
 - `extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/ClassDefinition.java`
 - `extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/ClassRegistry.java`
 - `extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/PlayerClass.java`
-- `extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/Specialization.java`
 - `extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/builder/OverclockPenaltyHandler.java`
 - `extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/builder/OverclockSkill.java`
 - `extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/builder/event/OverclockActivatedEvent.java`
@@ -991,11 +990,6 @@ class EnergyPriority { // L3-8
 --------------------------------------------------
 
 ### 📄 extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/PlayerClass.java
-*선언된 클래스나 함수가 없는 파일이거나 모듈입니다.*
-
---------------------------------------------------
-
-### 📄 extraction_target_project/src/main/java/com/yourstudio/coredefense/playerclass/Specialization.java
 *선언된 클래스나 함수가 없는 파일이거나 모듈입니다.*
 
 --------------------------------------------------

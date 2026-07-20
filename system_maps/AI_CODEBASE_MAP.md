@@ -116,14 +116,17 @@ extraction_target_project/
 │   │   ├── config/
 │   │   │   ├── core.yml [📂 bin/main/config/core.yml]
 │   │   │   ├── core_visual_stages.yml [📂 bin/main/config/core_visual_stages.yml]
+│   │   │   ├── models/
+│   │   │   │   ├── animation_triggers.yml [📂 bin/main/config/models/animation_triggers.yml]
 │   │   │   ├── npc/
 │   │   │   │   ├── npc_job_promotions.yml [📂 bin/main/config/npc/npc_job_promotions.yml]
+│   │   │   │   ├── npc_traits.yml [📂 bin/main/config/npc/npc_traits.yml]
 │   │   │   │   ├── resonance_thresholds.yml [📂 bin/main/config/npc/resonance_thresholds.yml]
-│   │   │   │   ├── score_weights.yml [📂 bin/main/config/npc/score_weights.yml]
-│   │   │   │   ├── vocations.yml [📂 bin/main/config/npc/vocations.yml]
 │   │   │   ├── player_classes/
 │   │   │   │   ├── classes.yml [📂 bin/main/config/player_classes/classes.yml]
 │   │   │   │   ├── specializations.yml [📂 bin/main/config/player_classes/specializations.yml]
+│   │   │   ├── progression/
+│   │   │   │   ├── score_weights.yml [📂 bin/main/config/progression/score_weights.yml]
 │   │   │   ├── waves/
 │   │   │   │   ├── boss_waves.yml [📂 bin/main/config/waves/boss_waves.yml]
 │   │   │   │   ├── wave_definitions.yml [📂 bin/main/config/waves/wave_definitions.yml]
@@ -503,7 +506,6 @@ extraction_target_project/
 │   │   │   │   │   │   │   │   ├── UltimateSkill.java [📂 src/main/java/com/yourstudio/coredefense/playerclass/skill/UltimateSkill.java]
 │   │   │   │   │   │   │   ├── specialization/
 │   │   │   │   │   │   │   │   ├── Specialization.java [📂 src/main/java/com/yourstudio/coredefense/playerclass/specialization/Specialization.java]
-│   │   │   │   │   │   │   ├── Specialization.java [📂 src/main/java/com/yourstudio/coredefense/playerclass/Specialization.java]
 │   │   │   │   │   │   ├── progression/
 │   │   │   │   │   │   │   ├── MetaCurrency.java [📂 src/main/java/com/yourstudio/coredefense/progression/MetaCurrency.java]
 │   │   │   │   │   │   │   ├── MetaUpgrade.java [📂 src/main/java/com/yourstudio/coredefense/progression/MetaUpgrade.java]
@@ -616,14 +618,17 @@ extraction_target_project/
 │   │   │   ├── config/
 │   │   │   │   ├── core.yml [📂 src/main/resources/config/core.yml]
 │   │   │   │   ├── core_visual_stages.yml [📂 src/main/resources/config/core_visual_stages.yml]
+│   │   │   │   ├── models/
+│   │   │   │   │   ├── animation_triggers.yml [📂 src/main/resources/config/models/animation_triggers.yml]
 │   │   │   │   ├── npc/
 │   │   │   │   │   ├── npc_job_promotions.yml [📂 src/main/resources/config/npc/npc_job_promotions.yml]
+│   │   │   │   │   ├── npc_traits.yml [📂 src/main/resources/config/npc/npc_traits.yml]
 │   │   │   │   │   ├── resonance_thresholds.yml [📂 src/main/resources/config/npc/resonance_thresholds.yml]
-│   │   │   │   │   ├── score_weights.yml [📂 src/main/resources/config/npc/score_weights.yml]
-│   │   │   │   │   ├── vocations.yml [📂 src/main/resources/config/npc/vocations.yml]
 │   │   │   │   ├── player_classes/
 │   │   │   │   │   ├── classes.yml [📂 src/main/resources/config/player_classes/classes.yml]
 │   │   │   │   │   ├── specializations.yml [📂 src/main/resources/config/player_classes/specializations.yml]
+│   │   │   │   ├── progression/
+│   │   │   │   │   ├── score_weights.yml [📂 src/main/resources/config/progression/score_weights.yml]
 │   │   │   │   ├── waves/
 │   │   │   │   │   ├── boss_waves.yml [📂 src/main/resources/config/waves/boss_waves.yml]
 │   │   │   │   │   ├── wave_definitions.yml [📂 src/main/resources/config/waves/wave_definitions.yml]
