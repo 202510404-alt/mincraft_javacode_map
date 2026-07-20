@@ -4,7 +4,7 @@
 > AI 비서는 절대 눈치로 경로를 추측하지 말고, 파일명 뒤에 박혀있는 `[📂 실제경로]` 규격을 그대로 복사하여 agent_navigator를 호출하십시오.
 
 ```markdown
-project_root/
+extraction_target_project/
 ├── .gitignore [📂 .gitignore]
 ├── .gradle/
 │   ├── 8.10.2/
@@ -105,22 +105,29 @@ project_root/
 ├── bin/
 │   ├── main/
 │   │   ├── com/
-│   │   │   ├── desertcore/
-│   │   │   │   ├── DesertCore.class [📂 bin/main/com/desertcore/DesertCore.class]
-│   │   │   │   ├── DesertCoreTester.class [📂 bin/main/com/desertcore/DesertCoreTester.class]
-│   │   │   │   ├── legacy/
-│   │   │   │   │   ├── deathevent$1.class [📂 bin/main/com/desertcore/legacy/deathevent$1.class]
-│   │   │   │   │   ├── deathevent$2.class [📂 bin/main/com/desertcore/legacy/deathevent$2.class]
-│   │   │   │   │   ├── deathevent.class [📂 bin/main/com/desertcore/legacy/deathevent.class]
-│   │   │   │   │   ├── marendumbul.class [📂 bin/main/com/desertcore/legacy/marendumbul.class]
-│   │   │   │   │   ├── samakportal$1.class [📂 bin/main/com/desertcore/legacy/samakportal$1.class]
-│   │   │   │   │   ├── samakportal$2.class [📂 bin/main/com/desertcore/legacy/samakportal$2.class]
-│   │   │   │   │   ├── samakportal.class [📂 bin/main/com/desertcore/legacy/samakportal.class]
-│   │   │   │   ├── lobbycmd.class [📂 bin/main/com/desertcore/lobbycmd.class]
-│   │   │   │   ├── session/
-│   │   │   │   │   ├── GameSession.class [📂 bin/main/com/desertcore/session/GameSession.class]
-│   │   │   │   │   ├── GameSessionManager.class [📂 bin/main/com/desertcore/session/GameSessionManager.class]
-│   │   │   │   ├── Switch.class [📂 bin/main/com/desertcore/Switch.class]
+│   │   │   ├── yourstudio/
+│   │   │   │   ├── coredefense/
+│   │   │   │   │   ├── bootstrap/
+│   │   │   │   │   │   ├── ModuleInitializer.class [📂 bin/main/com/yourstudio/coredefense/bootstrap/ModuleInitializer.class]
+│   │   │   │   │   ├── common/
+│   │   │   │   │   │   ├── contract/
+│   │   │   │   │   │   │   ├── EnergyConsumer.class [📂 bin/main/com/yourstudio/coredefense/common/contract/EnergyConsumer.class]
+│   │   │   │   │   │   │   ├── EnergyPriority.class [📂 bin/main/com/yourstudio/coredefense/common/contract/EnergyPriority.class]
+│   │   ├── config/
+│   │   │   ├── core.yml [📂 bin/main/config/core.yml]
+│   │   │   ├── core_visual_stages.yml [📂 bin/main/config/core_visual_stages.yml]
+│   │   │   ├── npc/
+│   │   │   │   ├── npc_job_promotions.yml [📂 bin/main/config/npc/npc_job_promotions.yml]
+│   │   │   │   ├── resonance_thresholds.yml [📂 bin/main/config/npc/resonance_thresholds.yml]
+│   │   │   │   ├── score_weights.yml [📂 bin/main/config/npc/score_weights.yml]
+│   │   │   │   ├── vocations.yml [📂 bin/main/config/npc/vocations.yml]
+│   │   │   ├── player_classes/
+│   │   │   │   ├── classes.yml [📂 bin/main/config/player_classes/classes.yml]
+│   │   │   │   ├── specializations.yml [📂 bin/main/config/player_classes/specializations.yml]
+│   │   │   ├── waves/
+│   │   │   │   ├── boss_waves.yml [📂 bin/main/config/waves/boss_waves.yml]
+│   │   │   │   ├── wave_definitions.yml [📂 bin/main/config/waves/wave_definitions.yml]
+│   │   ├── editor_objects.json [📂 bin/main/editor_objects.json]
 │   │   ├── plugin.yml [📂 bin/main/plugin.yml]
 ├── build/
 │   ├── classes/

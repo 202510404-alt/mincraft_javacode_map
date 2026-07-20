@@ -268,7 +268,12 @@ def main():
         f.write("# 🏗️ AI-OPTIMIZED ULTRA COMPACT CODEBASE MAP (INTELLIGENT SCAN)\n\n")
         f.write("> **[AI 프로토콜 매뉴얼]** 이 문서는 다른 AI 비서들의 경로 오해를 차단하기 위해 파일마다 **실제 하드디스크 상대 경로 `[📂 실제경로]`**를 강제 명시해 둔 특수 지도입니다.\n")
         f.write("> AI 비서는 절대 눈치로 경로를 추측하지 말고, 파일명 뒤에 박혀있는 `[📂 실제경로]` 규격을 그대로 복사하여 agent_navigator를 호출하십시오.\n\n")
-        f.write("```markdown\nproject_root/\n")
+        
+        # 🎯 [스위치 모드 대응] SCAN_MODE 상태에 따라 최상단 루트 디렉토리 이름을 유연하게 가변 출력합니다.
+        if SCAN_MODE == "EXTRACTION_TARGET_PROJECT":
+            f.write("```markdown\nextraction_target_project/\n")
+        else:
+            f.write("```markdown\nproject_root/\n")
         
         # 파일 스캔 및 맵 생성 순회 루프
         for file_path in target_files:
