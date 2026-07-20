@@ -128,6 +128,9 @@ project_root/
 │   │   │   │   │   │   │   ├── GameSession.class [📂 build/classes/java/main/com/desertcore/session/GameSession.class]
 │   │   │   │   │   │   │   ├── GameSessionManager.class [📂 build/classes/java/main/com/desertcore/session/GameSessionManager.class]
 │   │   │   │   │   │   ├── Switch.class [📂 build/classes/java/main/com/desertcore/Switch.class]
+│   ├── reports/
+│   │   ├── problems/
+│   │   │   ├── problems-report.html [📂 build/reports/problems/problems-report.html]
 │   ├── resources/
 │   │   ├── main/
 │   │   │   ├── plugin.yml [📂 build/resources/main/plugin.yml]
@@ -245,19 +248,35 @@ project_root/
 │   ├── main/
 │   │   ├── java/
 │   │   │   ├── com/
-│   │   │   │   ├── desertcore/
-│   │   │   │   │   ├── DesertCore.java [📂 src/main/java/com/desertcore/DesertCore.java] -> [💡 📦 imp: com.desertcore.legacy.LobbyCommand, com.desertcore.session.GameSessionManager, java.io.File, java.net.URL, org.bukkit.event.Listener, org.bukkit.plugin.java.JavaPlugin | 🎯 def onEnable() [L15-30] | 🎯 def registerAllListenersInPackage("com.desertcore.legacy") [L20-25] | 🎯 def getCommand("로비") [L24-27] | 🎯 def getLogger() [L28-33] | 🎯 def onDisable() [L33-35] | 🎯 def getLogger() [L34-37] | 🎯 def getGameSessionManager() [L37-39] | 🎯 def registerAllListenersInPackage(String) [L41-78] | 🎯 def getServer() [L64-68] | 🎯 def getLogger() [L67-69] | 🎯 def getLogger() [L70-75] | 🎯 def getLogger() [L76-76]]
-│   │   │   │   │   ├── DesertCoreTester.java [📂 src/main/java/com/desertcore/DesertCoreTester.java] -> [💡 📦 imp: java.io.File, java.lang.reflect.Constructor, java.net.URL, org.bukkit.event.Listener | 🧬 class DesertCoreTester [L12-90] | 🎯 def main(String[]) [L14-89]]
-│   │   │   │   │   ├── legacy/
-│   │   │   │   │   │   ├── DeathEvent.java [📂 src/main/java/com/desertcore/legacy/DeathEvent.java] -> [💡 📦 imp: com.desertcore.DesertCore, com.desertcore.Switch, com.desertcore.session.GameSession, java.io.File, java.io.IOException, java.nio.file.FileVisitResult, java.nio.file.Files, java.nio.file.Path, java.nio.file.SimpleFileVisitor, java.nio.file.attribute.BasicFileAttributes, java.util.HashSet, java.util.UUID, net.kyori.adventure.text.Component, net.kyori.adventure.text.event.ClickEvent, net.kyori.adventure.text.format.NamedTextColor, net.kyori.adventure.text.format.TextDecoration, org.bukkit.Bukkit, org.bukkit.GameMode, org.bukkit.Location, org.bukkit.World, org.bukkit.entity.Player, org.bukkit.event.EventHandler, org.bukkit.event.Listener, org.bukkit.event.entity.PlayerDeathEvent, org.bukkit.event.player.PlayerCommandPreprocessEvent, org.bukkit.event.player.PlayerJoinEvent, org.bukkit.event.player.PlayerMoveEvent, org.bukkit.event.player.PlayerRespawnEvent, org.bukkit.scheduler.BukkitRunnable, org.bukkit.scheduler.BukkitTask | 🧬 class DeathEvent [L35-223] | 🎯 def DeathEvent(DesertCore) [L40-42] | 🎯 def onPlayerDeath(PlayerDeathEvent) [L45-59] | 🎯 def onPlayerRespawn(PlayerRespawnEvent) [L62-84] | 🎯 def onPlayerMove(PlayerMoveEvent) [L87-149] | 🎯 def run() [L111-138] | 🎯 def onPlayerJoin(PlayerJoinEvent) [L152-173] | 🎯 def unloadAndDeleteInstance(previousWorldName) [L170-175] | 🎯 def unloadAndDeleteInstance(String) [L175-206] | 🎯 def deleteDirectoryNative(instanceDir.toPath() [L196-198] | 🎯 def deleteDirectoryNative(Path) [L208-222] | 🎯 def visitFile(Path, BasicFileAttributes) [L211-214] | 🎯 def postVisitDirectory(Path, IOException) [L217-220]]
-│   │   │   │   │   │   ├── DesertPortal.java [📂 src/main/java/com/desertcore/legacy/DesertPortal.java] -> [💡 📦 imp: com.desertcore.DesertCore, com.desertcore.Switch, java.io.File, java.io.IOException, java.nio.file.*, java.nio.file.attribute.BasicFileAttributes, java.util.logging.Level, net.kyori.adventure.text.Component, net.kyori.adventure.text.format.NamedTextColor, org.bukkit.Bukkit, org.bukkit.GameMode, org.bukkit.Location, org.bukkit.World, org.bukkit.WorldCreator, org.bukkit.entity.Player, org.bukkit.entity.Villager, org.bukkit.event.EventHandler, org.bukkit.event.Listener, org.bukkit.event.player.PlayerInteractEntityEvent | 🧬 class DesertPortal [L24-135] | 🎯 def DesertPortal(DesertCore) [L29-31] | 🎯 def onVillagerClick(PlayerInteractEntityEvent) [L34-99] | 🎯 def deleteDirectoryNative(instanceDir.toPath() [L69-75] | 🎯 def copyDirectoryNative(templateDir.toPath() [L72-77] | 🎯 def copyDirectoryNative(Path, Path) [L101-118] | 🎯 def preVisitDirectory(Path, BasicFileAttributes) [L104-110] | 🎯 def visitFile(Path, BasicFileAttributes) [L113-116] | 🎯 def deleteDirectoryNative(Path) [L120-134] | 🎯 def visitFile(Path, BasicFileAttributes) [L123-126] | 🎯 def postVisitDirectory(Path, IOException) [L129-132]]
-│   │   │   │   │   │   ├── LobbyCommand.java [📂 src/main/java/com/desertcore/legacy/LobbyCommand.java] -> [💡 📦 imp: net.kyori.adventure.text.Component, net.kyori.adventure.text.format.NamedTextColor, org.bukkit.Bukkit, org.bukkit.GameMode, org.bukkit.Location, org.bukkit.World, org.bukkit.command.Command, org.bukkit.command.CommandExecutor, org.bukkit.command.CommandSender, org.bukkit.entity.Player, org.jetbrains.annotations.NotNull | 🧬 class LobbyCommand [L15-46] | 🎯 def onCommand(@NotNull, @NotNull, @NotNull, @NotNull) [L18-45]]
-│   │   │   │   │   │   ├── Marendumbul.java [📂 src/main/java/com/desertcore/legacy/Marendumbul.java] -> [💡 📦 imp: com.desertcore.DesertCore, java.util.Random, org.bukkit.Bukkit, org.bukkit.Material, org.bukkit.World, org.bukkit.block.Block, org.bukkit.entity.Player, org.bukkit.event.EventHandler, org.bukkit.event.Listener, org.bukkit.event.player.PlayerJoinEvent | 🧬 class Marendumbul [L14-68] | 🎯 def Marendumbul(DesertCore) [L20-22] | 🎯 def onPlayerJoin(PlayerJoinEvent) [L25-67]]
-│   │   │   │   │   ├── session/
-│   │   │   │   │   │   ├── GameSession.java [📂 src/main/java/com/desertcore/session/GameSession.java] -> [💡 📦 imp: java.util.ArrayList, java.util.Collections, java.util.List, java.util.UUID, org.bukkit.Bukkit, org.bukkit.World, org.bukkit.scheduler.BukkitTask | 🧬 class GameSession [L11-71] | 🎯 def GameSession(String, UUID) [L21-26] | 🎯 def getSessionId() [L29-29] | 🎯 def getWorldName() [L30-30] | 🎯 def getPlayers() [L33-33] | 🎯 def getCurrentWave() [L35-35] | 🎯 def incrementWave() [L36-36] | 🎯 def isTerminating() [L38-38] | 🎯 def setTerminating(boolean) [L39-39] | 🎯 def setActiveTimer(BukkitTask) [L46-49] | 🎯 def clearActiveTimer() [L47-54] | 🎯 def clearActiveTimer() [L54-63] | 🎯 def getBukkitWorld() [L68-70]]
-│   │   │   │   │   │   ├── GameSessionManager.java [📂 src/main/java/com/desertcore/session/GameSessionManager.java] -> [💡 📦 imp: java.util.HashMap, java.util.Map, java.util.UUID, org.bukkit.entity.Player, org.bukkit.plugin.java.JavaPlugin | 🧬 class GameSessionManager [L9-63] | 🎯 def GameSessionManager(JavaPlugin) [L16-18] | 🎯 def createSession(String, Player) [L23-31] | 🎯 def getSessionByPlayer(Player) [L36-38] | 🎯 def getSessionByWorld(String) [L43-45] | 🎯 def terminateSession(String) [L50-62]]
-│   │   │   │   │   ├── Switch.java [📂 src/main/java/com/desertcore/Switch.java] -> [🎯 def Switch() [L10-10]]
+│   │   │   │   ├── yourstudio/
+│   │   │   │   │   ├── coredefense/
+│   │   │   │   │   │   ├── bootstrap/
+│   │   │   │   │   │   │   ├── ListenerRegistrar.java [📂 src/main/java/com/yourstudio/coredefense/bootstrap/ListenerRegistrar.java]
+│   │   │   │   │   │   │   ├── ModuleInitializer.java [📂 src/main/java/com/yourstudio/coredefense/bootstrap/ModuleInitializer.java] -> [🧬 class ModuleInitializer [L2-2]]
+│   │   │   │   │   │   ├── CoreDefensePlugin.java [📂 src/main/java/com/yourstudio/coredefense/CoreDefensePlugin.java] -> [🧬 class CoreDefensePlugin [L2-2]]
+│   │   │   │   │   │   ├── data/
+│   │   │   │   │   │   │   ├── pipeline/
+│   │   │   │   │   │   │   │   ├── JsonSerializationPipeline.java [📂 src/main/java/com/yourstudio/coredefense/data/pipeline/JsonSerializationPipeline.java]
+│   │   │   │   │   │   │   ├── storage/
+│   │   │   │   │   │   │   │   ├── VariableStorage.java [📂 src/main/java/com/yourstudio/coredefense/data/storage/VariableStorage.java]
+│   │   │   │   │   │   ├── entity/
+│   │   │   │   │   │   │   ├── base/
+│   │   │   │   │   │   │   │   ├── BaseEntity.java [📂 src/main/java/com/yourstudio/coredefense/entity/base/BaseEntity.java]
+│   │   │   │   │   │   │   │   ├── EntityRegistry.java [📂 src/main/java/com/yourstudio/coredefense/entity/base/EntityRegistry.java]
 │   │   ├── resources/
+│   │   │   ├── config/
+│   │   │   │   ├── core.yml [📂 src/main/resources/config/core.yml]
+│   │   │   │   ├── core_visual_stages.yml [📂 src/main/resources/config/core_visual_stages.yml]
+│   │   │   │   ├── npc/
+│   │   │   │   │   ├── npc_job_promotions.yml [📂 src/main/resources/config/npc/npc_job_promotions.yml]
+│   │   │   │   │   ├── resonance_thresholds.yml [📂 src/main/resources/config/npc/resonance_thresholds.yml]
+│   │   │   │   ├── player_classes/
+│   │   │   │   │   ├── classes.yml [📂 src/main/resources/config/player_classes/classes.yml]
+│   │   │   │   │   ├── specializations.yml [📂 src/main/resources/config/player_classes/specializations.yml]
+│   │   │   │   ├── waves/
+│   │   │   │   │   ├── boss_waves.yml [📂 src/main/resources/config/waves/boss_waves.yml]
+│   │   │   │   │   ├── wave_definitions.yml [📂 src/main/resources/config/waves/wave_definitions.yml]
+│   │   │   ├── editor_objects.json [📂 src/main/resources/editor_objects.json]
 │   │   │   ├── plugin.yml [📂 src/main/resources/plugin.yml]
 ├── 구현현황판.md [📂 구현현황판.md]
 ├── 파일구조_AI친화적_개정안.md [📂 파일구조_AI친화적_개정안.md]
