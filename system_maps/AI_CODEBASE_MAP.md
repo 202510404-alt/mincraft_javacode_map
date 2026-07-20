@@ -108,12 +108,34 @@ project_root/
 │   │   │   │   ├── Switch.class [📂 bin/main/com/desertcore/Switch.class]
 │   │   ├── plugin.yml [📂 bin/main/plugin.yml]
 ├── build/
-│   ├── reports/
-│   │   ├── problems/
-│   │   │   ├── problems-report.html [📂 build/reports/problems/problems-report.html]
+│   ├── classes/
+│   │   ├── java/
+│   │   │   ├── main/
+│   │   │   │   ├── com/
+│   │   │   │   │   ├── desertcore/
+│   │   │   │   │   │   ├── DesertCore.class [📂 build/classes/java/main/com/desertcore/DesertCore.class]
+│   │   │   │   │   │   ├── DesertCoreTester.class [📂 build/classes/java/main/com/desertcore/DesertCoreTester.class]
+│   │   │   │   │   │   ├── legacy/
+│   │   │   │   │   │   │   ├── DeathEvent$1.class [📂 build/classes/java/main/com/desertcore/legacy/DeathEvent$1.class]
+│   │   │   │   │   │   │   ├── DeathEvent$2.class [📂 build/classes/java/main/com/desertcore/legacy/DeathEvent$2.class]
+│   │   │   │   │   │   │   ├── DeathEvent.class [📂 build/classes/java/main/com/desertcore/legacy/DeathEvent.class]
+│   │   │   │   │   │   │   ├── DesertPortal$1.class [📂 build/classes/java/main/com/desertcore/legacy/DesertPortal$1.class]
+│   │   │   │   │   │   │   ├── DesertPortal$2.class [📂 build/classes/java/main/com/desertcore/legacy/DesertPortal$2.class]
+│   │   │   │   │   │   │   ├── DesertPortal.class [📂 build/classes/java/main/com/desertcore/legacy/DesertPortal.class]
+│   │   │   │   │   │   │   ├── LobbyCommand.class [📂 build/classes/java/main/com/desertcore/legacy/LobbyCommand.class]
+│   │   │   │   │   │   │   ├── Marendumbul.class [📂 build/classes/java/main/com/desertcore/legacy/Marendumbul.class]
+│   │   │   │   │   │   ├── session/
+│   │   │   │   │   │   │   ├── GameSession.class [📂 build/classes/java/main/com/desertcore/session/GameSession.class]
+│   │   │   │   │   │   │   ├── GameSessionManager.class [📂 build/classes/java/main/com/desertcore/session/GameSessionManager.class]
+│   │   │   │   │   │   ├── Switch.class [📂 build/classes/java/main/com/desertcore/Switch.class]
 │   ├── resources/
 │   │   ├── main/
 │   │   │   ├── plugin.yml [📂 build/resources/main/plugin.yml]
+│   ├── tmp/
+│   │   ├── compileJava/
+│   │   │   ├── previous-compilation-data.bin [📂 build/tmp/compileJava/previous-compilation-data.bin]
+│   │   ├── jar/
+│   │   │   ├── MANIFEST.MF [📂 build/tmp/jar/MANIFEST.MF]
 ├── build.gradle.kts [📂 build.gradle.kts]
 ├── gradle/
 │   ├── 8.5/
@@ -216,6 +238,7 @@ project_root/
 ├── gradle.properties [📂 gradle.properties]
 ├── gradlew [📂 gradlew]
 ├── gradlew.bat [📂 gradlew.bat]
+├── mincraft_javacode_map.code-workspace [📂 mincraft_javacode_map.code-workspace]
 ├── plan.md [📂 plan.md]
 ├── settings.gradle.kts [📂 settings.gradle.kts]
 ├── src/
@@ -223,11 +246,11 @@ project_root/
 │   │   ├── java/
 │   │   │   ├── com/
 │   │   │   │   ├── desertcore/
-│   │   │   │   │   ├── DesertCore.java [📂 src/main/java/com/desertcore/DesertCore.java] -> [💡 📦 imp: com.desertcore.legacy.Marendumbul, com.desertcore.session.GameSessionManager, org.bukkit.plugin.java.JavaPlugin | 🎯 def onEnable() [L16-30] | 🎯 def getServer() [L22-33] | 🎯 def getServer() [L23-33] | 🎯 def getServer() [L24-33] | 🎯 def getCommand("로비") [L27-33] | 🎯 def getLogger() [L29-33] | 🎯 def onDisable() [L33-35] | 🎯 def getLogger() [L34-38] | 🎯 def getGameSessionManager() [L38-40]]
+│   │   │   │   │   ├── DesertCore.java [📂 src/main/java/com/desertcore/DesertCore.java] -> [💡 📦 imp: com.desertcore.legacy.LobbyCommand, com.desertcore.session.GameSessionManager, java.io.File, java.net.URL, org.bukkit.event.Listener, org.bukkit.plugin.java.JavaPlugin | 🎯 def onEnable() [L15-30] | 🎯 def registerAllListenersInPackage("com.desertcore.legacy") [L20-25] | 🎯 def getCommand("로비") [L24-27] | 🎯 def getLogger() [L28-33] | 🎯 def onDisable() [L33-35] | 🎯 def getLogger() [L34-37] | 🎯 def getGameSessionManager() [L37-39] | 🎯 def registerAllListenersInPackage(String) [L41-78] | 🎯 def getServer() [L64-68] | 🎯 def getLogger() [L67-69] | 🎯 def getLogger() [L70-75] | 🎯 def getLogger() [L76-76]]
 │   │   │   │   │   ├── DesertCoreTester.java [📂 src/main/java/com/desertcore/DesertCoreTester.java] -> [💡 📦 imp: java.io.File, java.lang.reflect.Constructor, java.net.URL, org.bukkit.event.Listener | 🧬 class DesertCoreTester [L12-90] | 🎯 def main(String[]) [L14-89]]
 │   │   │   │   │   ├── legacy/
 │   │   │   │   │   │   ├── DeathEvent.java [📂 src/main/java/com/desertcore/legacy/DeathEvent.java] -> [💡 📦 imp: com.desertcore.DesertCore, com.desertcore.Switch, com.desertcore.session.GameSession, java.io.File, java.io.IOException, java.nio.file.FileVisitResult, java.nio.file.Files, java.nio.file.Path, java.nio.file.SimpleFileVisitor, java.nio.file.attribute.BasicFileAttributes, java.util.HashSet, java.util.UUID, net.kyori.adventure.text.Component, net.kyori.adventure.text.event.ClickEvent, net.kyori.adventure.text.format.NamedTextColor, net.kyori.adventure.text.format.TextDecoration, org.bukkit.Bukkit, org.bukkit.GameMode, org.bukkit.Location, org.bukkit.World, org.bukkit.entity.Player, org.bukkit.event.EventHandler, org.bukkit.event.Listener, org.bukkit.event.entity.PlayerDeathEvent, org.bukkit.event.player.PlayerCommandPreprocessEvent, org.bukkit.event.player.PlayerJoinEvent, org.bukkit.event.player.PlayerMoveEvent, org.bukkit.event.player.PlayerRespawnEvent, org.bukkit.scheduler.BukkitRunnable, org.bukkit.scheduler.BukkitTask | 🧬 class DeathEvent [L35-223] | 🎯 def DeathEvent(DesertCore) [L40-42] | 🎯 def onPlayerDeath(PlayerDeathEvent) [L45-59] | 🎯 def onPlayerRespawn(PlayerRespawnEvent) [L62-84] | 🎯 def onPlayerMove(PlayerMoveEvent) [L87-149] | 🎯 def run() [L111-138] | 🎯 def onPlayerJoin(PlayerJoinEvent) [L152-173] | 🎯 def unloadAndDeleteInstance(previousWorldName) [L170-175] | 🎯 def unloadAndDeleteInstance(String) [L175-206] | 🎯 def deleteDirectoryNative(instanceDir.toPath() [L196-198] | 🎯 def deleteDirectoryNative(Path) [L208-222] | 🎯 def visitFile(Path, BasicFileAttributes) [L211-214] | 🎯 def postVisitDirectory(Path, IOException) [L217-220]]
-│   │   │   │   │   │   ├── DesertPortal.java [📂 src/main/java/com/desertcore/legacy/DesertPortal.java] -> [💡 📦 imp: com.desertcore.session.GameSessionManager, java.io.File, java.net.URL, org.bukkit.event.Listener, org.bukkit.plugin.java.JavaPlugin | 🎯 def onEnable() [L15-33] | 🎯 def registerAllListenersInPackage("com.desertcore.legacy") [L20-28] | 🎯 def getCommand("로비") [L25-26] | 🎯 def getLogger() [L27-30] | 🎯 def getLogger() [L31-36] | 🎯 def onDisable() [L36-38] | 🎯 def getLogger() [L37-40] | 🎯 def getGameSessionManager() [L40-42] | 🎯 def registerAllListenersInPackage(String) [L47-85] | 🎯 def getServer() [L70-74] | 🎯 def getLogger() [L73-75] | 🎯 def getLogger() [L77-82] | 🎯 def getLogger() [L83-83]]
+│   │   │   │   │   │   ├── DesertPortal.java [📂 src/main/java/com/desertcore/legacy/DesertPortal.java] -> [💡 📦 imp: com.desertcore.DesertCore, com.desertcore.Switch, java.io.File, java.io.IOException, java.nio.file.*, java.nio.file.attribute.BasicFileAttributes, java.util.logging.Level, net.kyori.adventure.text.Component, net.kyori.adventure.text.format.NamedTextColor, org.bukkit.Bukkit, org.bukkit.GameMode, org.bukkit.Location, org.bukkit.World, org.bukkit.WorldCreator, org.bukkit.entity.Player, org.bukkit.entity.Villager, org.bukkit.event.EventHandler, org.bukkit.event.Listener, org.bukkit.event.player.PlayerInteractEntityEvent | 🧬 class DesertPortal [L24-135] | 🎯 def DesertPortal(DesertCore) [L29-31] | 🎯 def onVillagerClick(PlayerInteractEntityEvent) [L34-99] | 🎯 def deleteDirectoryNative(instanceDir.toPath() [L69-75] | 🎯 def copyDirectoryNative(templateDir.toPath() [L72-77] | 🎯 def copyDirectoryNative(Path, Path) [L101-118] | 🎯 def preVisitDirectory(Path, BasicFileAttributes) [L104-110] | 🎯 def visitFile(Path, BasicFileAttributes) [L113-116] | 🎯 def deleteDirectoryNative(Path) [L120-134] | 🎯 def visitFile(Path, BasicFileAttributes) [L123-126] | 🎯 def postVisitDirectory(Path, IOException) [L129-132]]
 │   │   │   │   │   │   ├── LobbyCommand.java [📂 src/main/java/com/desertcore/legacy/LobbyCommand.java] -> [💡 📦 imp: net.kyori.adventure.text.Component, net.kyori.adventure.text.format.NamedTextColor, org.bukkit.Bukkit, org.bukkit.GameMode, org.bukkit.Location, org.bukkit.World, org.bukkit.command.Command, org.bukkit.command.CommandExecutor, org.bukkit.command.CommandSender, org.bukkit.entity.Player, org.jetbrains.annotations.NotNull | 🧬 class LobbyCommand [L15-46] | 🎯 def onCommand(@NotNull, @NotNull, @NotNull, @NotNull) [L18-45]]
 │   │   │   │   │   │   ├── Marendumbul.java [📂 src/main/java/com/desertcore/legacy/Marendumbul.java] -> [💡 📦 imp: com.desertcore.DesertCore, java.util.Random, org.bukkit.Bukkit, org.bukkit.Material, org.bukkit.World, org.bukkit.block.Block, org.bukkit.entity.Player, org.bukkit.event.EventHandler, org.bukkit.event.Listener, org.bukkit.event.player.PlayerJoinEvent | 🧬 class Marendumbul [L14-68] | 🎯 def Marendumbul(DesertCore) [L20-22] | 🎯 def onPlayerJoin(PlayerJoinEvent) [L25-67]]
 │   │   │   │   │   ├── session/

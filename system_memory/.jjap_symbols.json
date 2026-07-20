@@ -28,87 +28,31 @@
       "full_name": "onEnable",
       "type": "method",
       "path": "extraction_target_project/src/main/java/com/desertcore/DesertCore.java",
-      "start_line": 16,
+      "start_line": 15,
       "end_line": 30,
       "calls": [
-        "marendumbul",
-        "getCommand",
-        "DesertPortal",
         "info",
-        "registerEvents",
-        "DeathEvent",
-        "getServer",
-        "setExecutor",
-        "getPluginManager",
         "getLogger",
         "GameSessionManager",
-        "LobbyCommand"
+        "LobbyCommand",
+        "setExecutor",
+        "registerAllListenersInPackage",
+        "getCommand"
       ],
       "used_by": []
     },
     {
-      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/DesertCore.java::getServer",
-      "name": "getServer",
-      "full_name": "getServer",
+      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/DesertCore.java::registerAllListenersInPackage",
+      "name": "registerAllListenersInPackage",
+      "full_name": "registerAllListenersInPackage",
       "type": "method",
       "path": "extraction_target_project/src/main/java/com/desertcore/DesertCore.java",
-      "start_line": 22,
-      "end_line": 33,
+      "start_line": 20,
+      "end_line": 25,
       "calls": [
-        "marendumbul",
+        "LobbyCommand",
         "getCommand",
-        "DesertPortal",
-        "info",
-        "onDisable",
-        "DeathEvent",
-        "registerEvents",
-        "setExecutor",
-        "getPluginManager",
-        "getLogger",
-        "LobbyCommand"
-      ],
-      "used_by": []
-    },
-    {
-      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/DesertCore.java::getServer",
-      "name": "getServer",
-      "full_name": "getServer",
-      "type": "method",
-      "path": "extraction_target_project/src/main/java/com/desertcore/DesertCore.java",
-      "start_line": 23,
-      "end_line": 33,
-      "calls": [
-        "getCommand",
-        "DesertPortal",
-        "info",
-        "onDisable",
-        "DeathEvent",
-        "registerEvents",
-        "setExecutor",
-        "getPluginManager",
-        "getLogger",
-        "LobbyCommand"
-      ],
-      "used_by": []
-    },
-    {
-      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/DesertCore.java::getServer",
-      "name": "getServer",
-      "full_name": "getServer",
-      "type": "method",
-      "path": "extraction_target_project/src/main/java/com/desertcore/DesertCore.java",
-      "start_line": 24,
-      "end_line": 33,
-      "calls": [
-        "getCommand",
-        "info",
-        "onDisable",
-        "DeathEvent",
-        "registerEvents",
-        "setExecutor",
-        "getPluginManager",
-        "getLogger",
-        "LobbyCommand"
+        "setExecutor"
       ],
       "used_by": []
     },
@@ -118,14 +62,11 @@
       "full_name": "getCommand",
       "type": "method",
       "path": "extraction_target_project/src/main/java/com/desertcore/DesertCore.java",
-      "start_line": 27,
-      "end_line": 33,
+      "start_line": 24,
+      "end_line": 27,
       "calls": [
-        "info",
-        "onDisable",
-        "setExecutor",
-        "getLogger",
-        "LobbyCommand"
+        "LobbyCommand",
+        "setExecutor"
       ],
       "used_by": []
     },
@@ -135,11 +76,11 @@
       "full_name": "getLogger",
       "type": "method",
       "path": "extraction_target_project/src/main/java/com/desertcore/DesertCore.java",
-      "start_line": 29,
+      "start_line": 28,
       "end_line": 33,
       "calls": [
-        "info",
-        "onDisable"
+        "onDisable",
+        "info"
       ],
       "used_by": []
     },
@@ -152,8 +93,8 @@
       "start_line": 33,
       "end_line": 35,
       "calls": [
-        "info",
-        "getLogger"
+        "getLogger",
+        "info"
       ],
       "used_by": []
     },
@@ -164,7 +105,7 @@
       "type": "method",
       "path": "extraction_target_project/src/main/java/com/desertcore/DesertCore.java",
       "start_line": 34,
-      "end_line": 38,
+      "end_line": 37,
       "calls": [
         "info",
         "getGameSessionManager"
@@ -177,9 +118,102 @@
       "full_name": "getGameSessionManager",
       "type": "method",
       "path": "extraction_target_project/src/main/java/com/desertcore/DesertCore.java",
-      "start_line": 38,
-      "end_line": 40,
+      "start_line": 37,
+      "end_line": 39,
       "calls": [],
+      "used_by": []
+    },
+    {
+      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/DesertCore.java::registerAllListenersInPackage",
+      "name": "registerAllListenersInPackage",
+      "full_name": "registerAllListenersInPackage",
+      "type": "method",
+      "path": "extraction_target_project/src/main/java/com/desertcore/DesertCore.java",
+      "start_line": 41,
+      "end_line": 78,
+      "calls": [
+        "substring",
+        "length",
+        "newInstance",
+        "getPluginManager",
+        "exists",
+        "getName",
+        "getLogger",
+        "replace",
+        "getContextClassLoader",
+        "getMessage",
+        "severe",
+        "toURI",
+        "isInterface",
+        "getServer",
+        "info",
+        "forName",
+        "isAssignableFrom",
+        "currentThread",
+        "registerEvents",
+        "getConstructor",
+        "File",
+        "warning",
+        "getResource",
+        "endsWith",
+        "listFiles"
+      ],
+      "used_by": []
+    },
+    {
+      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/DesertCore.java::getServer",
+      "name": "getServer",
+      "full_name": "getServer",
+      "type": "method",
+      "path": "extraction_target_project/src/main/java/com/desertcore/DesertCore.java",
+      "start_line": 64,
+      "end_line": 68,
+      "calls": [
+        "getLogger",
+        "registerEvents",
+        "info",
+        "getPluginManager"
+      ],
+      "used_by": []
+    },
+    {
+      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/DesertCore.java::getLogger",
+      "name": "getLogger",
+      "full_name": "getLogger",
+      "type": "method",
+      "path": "extraction_target_project/src/main/java/com/desertcore/DesertCore.java",
+      "start_line": 67,
+      "end_line": 69,
+      "calls": [
+        "info"
+      ],
+      "used_by": []
+    },
+    {
+      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/DesertCore.java::getLogger",
+      "name": "getLogger",
+      "full_name": "getLogger",
+      "type": "method",
+      "path": "extraction_target_project/src/main/java/com/desertcore/DesertCore.java",
+      "start_line": 70,
+      "end_line": 75,
+      "calls": [
+        "warning"
+      ],
+      "used_by": []
+    },
+    {
+      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/DesertCore.java::getLogger",
+      "name": "getLogger",
+      "full_name": "getLogger",
+      "type": "method",
+      "path": "extraction_target_project/src/main/java/com/desertcore/DesertCore.java",
+      "start_line": 76,
+      "end_line": 76,
+      "calls": [
+        "severe",
+        "getMessage"
+      ],
       "used_by": []
     },
     {
@@ -202,27 +236,27 @@
       "start_line": 14,
       "end_line": 89,
       "calls": [
-        "replace",
-        "currentThread",
-        "File",
-        "printStackTrace",
-        "endsWith",
-        "listFiles",
-        "exists",
-        "getResource",
-        "getName",
-        "getMessage",
-        "length",
-        "getConstructor",
-        "getSimpleName",
-        "isInterface",
         "substring",
-        "getContextClassLoader",
-        "forName",
+        "length",
+        "getSimpleName",
+        "exists",
+        "getName",
+        "printStackTrace",
         "getPath",
-        "isAssignableFrom",
+        "replace",
+        "getContextClassLoader",
+        "println",
+        "getMessage",
         "toURI",
-        "println"
+        "isInterface",
+        "forName",
+        "isAssignableFrom",
+        "currentThread",
+        "getConstructor",
+        "File",
+        "getResource",
+        "endsWith",
+        "listFiles"
       ],
       "used_by": []
     },
@@ -268,19 +302,19 @@
       "start_line": 45,
       "end_line": 59,
       "calls": [
-        "getScheduler",
-        "spigot",
-        "runTaskLater",
-        "respawn",
         "info",
+        "spigot",
         "getName",
-        "clear",
-        "getDrops",
-        "getEntity",
         "getLogger",
-        "getWorld",
+        "clear",
+        "startsWith",
+        "respawn",
+        "getEntity",
         "setKeepInventory",
-        "startsWith"
+        "getScheduler",
+        "runTaskLater",
+        "getDrops",
+        "getWorld"
       ],
       "used_by": []
     },
@@ -293,25 +327,25 @@
       "start_line": 62,
       "end_line": 84,
       "calls": [
+        "getUniqueId",
+        "setRespawnLocation",
+        "getSessionByPlayer",
+        "clearActiveTimer",
+        "setGameMode",
+        "getName",
+        "getLogger",
         "sendMessage",
+        "color",
         "getWorld",
-        "text",
-        "getScheduler",
         "getPlayer",
         "info",
         "remove",
-        "setRespawnLocation",
-        "runTaskLater",
-        "getName",
-        "setGameMode",
-        "getUniqueId",
         "getLocation",
-        "color",
+        "startsWith",
         "getGameSessionManager",
-        "getSessionByPlayer",
-        "clearActiveTimer",
-        "getLogger",
-        "startsWith"
+        "getScheduler",
+        "text",
+        "runTaskLater"
       ],
       "used_by": []
     },
@@ -324,33 +358,33 @@
       "start_line": 87,
       "end_line": 149,
       "calls": [
-        "sendMessage",
-        "getWorld",
-        "text",
-        "getPlayer",
-        "runTaskTimer",
-        "info",
-        "isSneaking",
         "append",
-        "contains",
-        "runCommand",
-        "getName",
-        "run",
-        "BukkitRunnable",
         "getUniqueId",
+        "getSessionByPlayer",
+        "isSneaking",
+        "runTaskTimer",
+        "clearActiveTimer",
+        "isTerminating",
+        "getName",
+        "getLogger",
         "isOnline",
+        "sendMessage",
         "color",
         "setActiveTimer",
-        "getGameSessionManager",
-        "getSessionByPlayer",
-        "clearActiveTimer",
-        "add",
-        "decorate",
-        "getLogger",
-        "isTerminating",
-        "getGameMode",
+        "contains",
         "clickEvent",
-        "startsWith"
+        "getWorld",
+        "getPlayer",
+        "info",
+        "add",
+        "BukkitRunnable",
+        "startsWith",
+        "getGameSessionManager",
+        "run",
+        "decorate",
+        "text",
+        "runCommand",
+        "getGameMode"
       ],
       "used_by": []
     },
@@ -364,20 +398,20 @@
       "end_line": 138,
       "calls": [
         "info",
-        "clearActiveTimer",
-        "isSneaking",
-        "getName",
-        "add",
-        "runCommand",
-        "sendMessage",
-        "append",
-        "decorate",
-        "getLogger",
         "text",
-        "getGameMode",
+        "add",
+        "append",
+        "getName",
+        "runCommand",
+        "getLogger",
         "isOnline",
+        "sendMessage",
         "color",
-        "clickEvent"
+        "getGameMode",
+        "decorate",
+        "clickEvent",
+        "isSneaking",
+        "clearActiveTimer"
       ],
       "used_by": []
     },
@@ -390,19 +424,19 @@
       "start_line": 152,
       "end_line": 173,
       "calls": [
-        "getGameSessionManager",
-        "getSessionByPlayer",
-        "info",
-        "clearActiveTimer",
-        "getName",
-        "Location",
-        "unloadAndDeleteInstance",
-        "setGameMode",
-        "getLogger",
-        "teleport",
-        "getWorld",
         "getPlayer",
-        "startsWith"
+        "info",
+        "setGameMode",
+        "getName",
+        "clearActiveTimer",
+        "getLogger",
+        "getGameSessionManager",
+        "startsWith",
+        "unloadAndDeleteInstance",
+        "teleport",
+        "getSessionByPlayer",
+        "Location",
+        "getWorld"
       ],
       "used_by": []
     },
@@ -426,26 +460,26 @@
       "start_line": 175,
       "end_line": 206,
       "calls": [
-        "getWorld",
-        "getSessionByWorld",
-        "getScheduler",
-        "File",
-        "setTerminating",
-        "warning",
-        "info",
-        "deleteDirectoryNative",
-        "isEmpty",
-        "toPath",
-        "exists",
-        "terminateSession",
-        "runTaskLater",
-        "getPlayers",
         "runTaskAsynchronously",
-        "unloadWorld",
-        "getGameSessionManager",
+        "setTerminating",
         "clearActiveTimer",
+        "exists",
+        "getLogger",
         "getWorldContainer",
-        "getLogger"
+        "getWorld",
+        "info",
+        "getGameSessionManager",
+        "terminateSession",
+        "getScheduler",
+        "toPath",
+        "getPlayers",
+        "File",
+        "isEmpty",
+        "getSessionByWorld",
+        "warning",
+        "deleteDirectoryNative",
+        "runTaskLater",
+        "unloadWorld"
       ],
       "used_by": []
     },
@@ -458,8 +492,8 @@
       "start_line": 196,
       "end_line": 198,
       "calls": [
-        "info",
         "getLogger",
+        "info",
         "toPath"
       ],
       "used_by": []
@@ -473,10 +507,10 @@
       "start_line": 208,
       "end_line": 222,
       "calls": [
-        "postVisitDirectory",
-        "walkFileTree",
+        "visitFile",
         "delete",
-        "visitFile"
+        "postVisitDirectory",
+        "walkFileTree"
       ],
       "used_by": []
     },
@@ -507,212 +541,196 @@
       "used_by": []
     },
     {
-      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java::onEnable",
-      "name": "onEnable",
-      "full_name": "onEnable",
-      "type": "method",
+      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java::DesertPortal",
+      "name": "DesertPortal",
+      "full_name": "DesertPortal",
+      "type": "class",
       "path": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java",
-      "start_line": 15,
-      "end_line": 33,
-      "calls": [
-        "warning",
-        "getCommand",
-        "info",
-        "setExecutor",
-        "getLogger",
-        "registerAllListenersInPackage",
-        "GameSessionManager",
-        "LobbyCommand"
-      ],
-      "used_by": []
-    },
-    {
-      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java::registerAllListenersInPackage",
-      "name": "registerAllListenersInPackage",
-      "full_name": "registerAllListenersInPackage",
-      "type": "method",
-      "path": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java",
-      "start_line": 20,
-      "end_line": 28,
-      "calls": [
-        "warning",
-        "getCommand",
-        "setExecutor",
-        "getLogger",
-        "LobbyCommand"
-      ],
-      "used_by": []
-    },
-    {
-      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java::getCommand",
-      "name": "getCommand",
-      "full_name": "getCommand",
-      "type": "method",
-      "path": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java",
-      "start_line": 25,
-      "end_line": 26,
-      "calls": [
-        "setExecutor",
-        "LobbyCommand"
-      ],
-      "used_by": []
-    },
-    {
-      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java::getLogger",
-      "name": "getLogger",
-      "full_name": "getLogger",
-      "type": "method",
-      "path": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java",
-      "start_line": 27,
-      "end_line": 30,
-      "calls": [
-        "warning"
-      ],
-      "used_by": []
-    },
-    {
-      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java::getLogger",
-      "name": "getLogger",
-      "full_name": "getLogger",
-      "type": "method",
-      "path": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java",
-      "start_line": 31,
-      "end_line": 36,
-      "calls": [
-        "info",
-        "onDisable"
-      ],
-      "used_by": []
-    },
-    {
-      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java::onDisable",
-      "name": "onDisable",
-      "full_name": "onDisable",
-      "type": "method",
-      "path": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java",
-      "start_line": 36,
-      "end_line": 38,
-      "calls": [
-        "info",
-        "getLogger"
-      ],
-      "used_by": []
-    },
-    {
-      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java::getLogger",
-      "name": "getLogger",
-      "full_name": "getLogger",
-      "type": "method",
-      "path": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java",
-      "start_line": 37,
-      "end_line": 40,
-      "calls": [
-        "info",
-        "getGameSessionManager"
-      ],
-      "used_by": []
-    },
-    {
-      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java::getGameSessionManager",
-      "name": "getGameSessionManager",
-      "full_name": "getGameSessionManager",
-      "type": "method",
-      "path": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java",
-      "start_line": 40,
-      "end_line": 42,
+      "start_line": 24,
+      "end_line": 135,
       "calls": [],
       "used_by": []
     },
     {
-      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java::registerAllListenersInPackage",
-      "name": "registerAllListenersInPackage",
-      "full_name": "registerAllListenersInPackage",
+      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java::DesertPortal.DesertPortal",
+      "name": "DesertPortal",
+      "full_name": "DesertPortal.DesertPortal",
       "type": "method",
       "path": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java",
-      "start_line": 47,
-      "end_line": 85,
+      "start_line": 29,
+      "end_line": 31,
+      "calls": [],
+      "used_by": []
+    },
+    {
+      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java::DesertPortal.onVillagerClick",
+      "name": "onVillagerClick",
+      "full_name": "DesertPortal.onVillagerClick",
+      "type": "method",
+      "path": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java",
+      "start_line": 34,
+      "end_line": 99,
       "calls": [
-        "replace",
-        "currentThread",
-        "File",
-        "newInstance",
-        "warning",
-        "info",
-        "endsWith",
-        "listFiles",
-        "exists",
-        "getResource",
-        "getName",
-        "getMessage",
-        "severe",
-        "length",
-        "getConstructor",
-        "isInterface",
         "substring",
-        "getContextClassLoader",
-        "forName",
-        "registerEvents",
-        "getServer",
-        "getPluginManager",
+        "runTaskAsynchronously",
+        "getUniqueId",
+        "getSessionByPlayer",
+        "exists",
+        "setGameMode",
+        "getName",
         "getLogger",
-        "isAssignableFrom",
-        "toURI"
-      ],
-      "used_by": []
-    },
-    {
-      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java::getServer",
-      "name": "getServer",
-      "full_name": "getServer",
-      "type": "method",
-      "path": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java",
-      "start_line": 70,
-      "end_line": 74,
-      "calls": [
+        "sendMessage",
+        "copyDirectoryNative",
+        "color",
+        "WorldCreator",
+        "createSession",
+        "contains",
+        "getWorldContainer",
+        "Location",
+        "getWorld",
+        "getPlayer",
         "info",
-        "getPluginManager",
-        "getLogger",
-        "registerEvents"
+        "delete",
+        "getScoreboardTags",
+        "toString",
+        "getGameSessionManager",
+        "startsWith",
+        "getScheduler",
+        "toPath",
+        "File",
+        "getRightClicked",
+        "text",
+        "runTask",
+        "setCancelled",
+        "log",
+        "deleteDirectoryNative",
+        "createWorld",
+        "teleport"
       ],
       "used_by": []
     },
     {
-      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java::getLogger",
-      "name": "getLogger",
-      "full_name": "getLogger",
+      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java::DesertPortal.deleteDirectoryNative",
+      "name": "deleteDirectoryNative",
+      "full_name": "DesertPortal.deleteDirectoryNative",
       "type": "method",
       "path": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java",
-      "start_line": 73,
+      "start_line": 69,
       "end_line": 75,
       "calls": [
-        "info"
+        "exists",
+        "File",
+        "copyDirectoryNative",
+        "toPath"
       ],
       "used_by": []
     },
     {
-      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java::getLogger",
-      "name": "getLogger",
-      "full_name": "getLogger",
+      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java::DesertPortal.copyDirectoryNative",
+      "name": "copyDirectoryNative",
+      "full_name": "DesertPortal.copyDirectoryNative",
       "type": "method",
       "path": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java",
-      "start_line": 77,
-      "end_line": 82,
+      "start_line": 72,
+      "end_line": 77,
       "calls": [
-        "warning"
+        "exists",
+        "File",
+        "toPath",
+        "delete"
       ],
       "used_by": []
     },
     {
-      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java::getLogger",
-      "name": "getLogger",
-      "full_name": "getLogger",
+      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java::DesertPortal.copyDirectoryNative",
+      "name": "copyDirectoryNative",
+      "full_name": "DesertPortal.copyDirectoryNative",
       "type": "method",
       "path": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java",
-      "start_line": 83,
-      "end_line": 83,
+      "start_line": 101,
+      "end_line": 118,
       "calls": [
-        "severe",
-        "getMessage"
+        "exists",
+        "visitFile",
+        "walkFileTree",
+        "preVisitDirectory",
+        "copy",
+        "createDirectories",
+        "relativize",
+        "resolve"
+      ],
+      "used_by": []
+    },
+    {
+      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java::DesertPortal.preVisitDirectory",
+      "name": "preVisitDirectory",
+      "full_name": "DesertPortal.preVisitDirectory",
+      "type": "method",
+      "path": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java",
+      "start_line": 104,
+      "end_line": 110,
+      "calls": [
+        "exists",
+        "relativize",
+        "createDirectories",
+        "resolve"
+      ],
+      "used_by": []
+    },
+    {
+      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java::DesertPortal.visitFile",
+      "name": "visitFile",
+      "full_name": "DesertPortal.visitFile",
+      "type": "method",
+      "path": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java",
+      "start_line": 113,
+      "end_line": 116,
+      "calls": [
+        "relativize",
+        "copy",
+        "resolve"
+      ],
+      "used_by": []
+    },
+    {
+      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java::DesertPortal.deleteDirectoryNative",
+      "name": "deleteDirectoryNative",
+      "full_name": "DesertPortal.deleteDirectoryNative",
+      "type": "method",
+      "path": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java",
+      "start_line": 120,
+      "end_line": 134,
+      "calls": [
+        "visitFile",
+        "delete",
+        "postVisitDirectory",
+        "walkFileTree"
+      ],
+      "used_by": []
+    },
+    {
+      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java::DesertPortal.visitFile",
+      "name": "visitFile",
+      "full_name": "DesertPortal.visitFile",
+      "type": "method",
+      "path": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java",
+      "start_line": 123,
+      "end_line": 126,
+      "calls": [
+        "delete"
+      ],
+      "used_by": []
+    },
+    {
+      "symbol_id": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java::DesertPortal.postVisitDirectory",
+      "name": "postVisitDirectory",
+      "full_name": "DesertPortal.postVisitDirectory",
+      "type": "method",
+      "path": "extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java",
+      "start_line": 129,
+      "end_line": 132,
+      "calls": [
+        "delete"
       ],
       "used_by": []
     },
@@ -736,14 +754,14 @@
       "start_line": 18,
       "end_line": 45,
       "calls": [
-        "isOp",
-        "Location",
-        "sendMessage",
-        "setGameMode",
-        "teleport",
         "text",
-        "getWorld",
-        "color"
+        "setGameMode",
+        "sendMessage",
+        "color",
+        "isOp",
+        "teleport",
+        "Location",
+        "getWorld"
       ],
       "used_by": []
     },
@@ -778,19 +796,19 @@
       "start_line": 25,
       "end_line": 67,
       "calls": [
-        "max",
+        "getPlayer",
+        "info",
+        "getLogger",
+        "isOnline",
         "getType",
+        "max",
         "getBlockAt",
         "setType",
-        "getScheduler",
         "runTaskLater",
-        "info",
-        "abs",
+        "getScheduler",
         "nextDouble",
-        "getLogger",
-        "getWorld",
-        "isOnline",
-        "getPlayer"
+        "abs",
+        "getWorld"
       ],
       "used_by": []
     },
@@ -979,11 +997,11 @@
       "start_line": 23,
       "end_line": 31,
       "calls": [
-        "GameSession",
         "info",
         "getName",
-        "getUniqueId",
         "getLogger",
+        "GameSession",
+        "getUniqueId",
         "put"
       ],
       "used_by": []
@@ -997,8 +1015,8 @@
       "start_line": 36,
       "end_line": 38,
       "calls": [
-        "get",
-        "getUniqueId"
+        "getUniqueId",
+        "get"
       ],
       "used_by": []
     },
@@ -1024,11 +1042,11 @@
       "start_line": 50,
       "end_line": 62,
       "calls": [
-        "clearActiveTimer",
         "info",
         "remove",
+        "getLogger",
         "getPlayers",
-        "getLogger"
+        "clearActiveTimer"
       ],
       "used_by": []
     }

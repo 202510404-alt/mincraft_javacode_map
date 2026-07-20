@@ -28,15 +28,18 @@
 ### 📄 extraction_target_project/src/main/java/com/desertcore/DesertCore.java
 #### 🧱 Code Skeleton:
 ```python
-public void onEnable() { // L16-30
-getServer().getPluginManager().registerEvents(new marendumbul(this), this); // L22-33
-getServer().getPluginManager().registerEvents(new DesertPortal(this), this); // L23-33
-getServer().getPluginManager().registerEvents(new DeathEvent(this), this); // L24-33
-getCommand("로비").setExecutor(new LobbyCommand()); // L27-33
-getLogger().info("desertcore 플러그인이 성공적으로 켜졌습니다!"); // L29-33
+public void onEnable() { // L15-30
+registerAllListenersInPackage("com.desertcore.legacy"); // L20-25
+getCommand("로비").setExecutor(new LobbyCommand()); // L24-27
+getLogger().info("[DEBUG] 패키지 자동 스캔 및 리스너 일괄 등록 프로세스 완료."); // L28-33
 public void onDisable() { // L33-35
-getLogger().info("desertcore 플러그인이 비활성화되었습니다."); // L34-38
-public GameSessionManager getGameSessionManager() { // L38-40
+getLogger().info("DesertCore가 비활성화되었습니다."); // L34-37
+public GameSessionManager getGameSessionManager() { // L37-39
+private void registerAllListenersInPackage(String packageName) { // L41-78
+getServer().getPluginManager().registerEvents(listener, this); // L64-68
+getLogger().info("[DEBUG] 자동 로드 성공: " + className); // L67-69
+getLogger().warning("클래스 동적 생성 실패 (생성자 규격 확인 필요): " + className); // L70-75
+getLogger().severe("패키지 스캔 중 치명적 오류 발생: " + e.getMessage()); // L76-76
 ```
 
 --------------------------------------------------
@@ -81,19 +84,17 @@ class DeathEvent { // L35-223
 ### 📄 extraction_target_project/src/main/java/com/desertcore/legacy/DesertPortal.java
 #### 🧱 Code Skeleton:
 ```python
-public void onEnable() { // L15-33
-registerAllListenersInPackage("com.desertcore.legacy"); // L20-28
-getCommand("로비").setExecutor(new LobbyCommand()); // L25-26
-getLogger().warning("⚠ plugin.yml에 '로비' 명령어가 등록되어 있는지 확인해 주세요."); // L27-30
-getLogger().info("[DEBUG] 패키지 자동 스캔 및 예외 명령어 등록 완료."); // L31-36
-public void onDisable() { // L36-38
-getLogger().info("DesertCore가 비활성화되었습니다."); // L37-40
-public GameSessionManager getGameSessionManager() { // L40-42
-private void registerAllListenersInPackage(String packageName) { // L47-85
-getServer().getPluginManager().registerEvents(listener, this); // L70-74
-getLogger().info("[DEBUG] 자동 로드 성공: " + className); // L73-75
-getLogger().warning("⚠ 자동 스캔 예외 발생 (수동 확인 필요): " + className); // L77-82
-getLogger().severe("패키지 스캔 중 치명적 오류 발생: " + e.getMessage()); // L83-83
+class DesertPortal { // L24-135
+    public DesertPortal(DesertCore plugin) { // L29-31
+    public void onVillagerClick(PlayerInteractEntityEvent event) { // L34-99
+    deleteDirectoryNative(instanceDir.toPath()); // L69-75
+    copyDirectoryNative(templateDir.toPath(), instanceDir.toPath()); // L72-77
+    private void copyDirectoryNative(Path source, Path target) throws IOException { // L101-118
+    public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException { // L104-110
+    public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException { // L113-116
+    private void deleteDirectoryNative(Path path) throws IOException { // L120-134
+    public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException { // L123-126
+    public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException { // L129-132
 ```
 
 --------------------------------------------------
