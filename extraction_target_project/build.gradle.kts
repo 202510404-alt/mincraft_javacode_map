@@ -24,8 +24,8 @@ java {
 
 tasks {
     runServer {
-        // ⭕ 여기도 1.21.11로 수정
-        minecraftVersion("1.21.11")
+        // ⭕ 여기도 1.21.1로 수정
+        minecraftVersion("1.21.1")
         jvmArgs("-Xms2G", "-Xmx2G")
     }
 
