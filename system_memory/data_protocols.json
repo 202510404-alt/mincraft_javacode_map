@@ -1,3 +1,19 @@
 {
-  "protocols": {}
+  "protocols": {
+    "newPoint": {
+      "x": "Any (기본값: e.clientX - rect.left)",
+      "y": "Any (기본값: e.clientY - rect.top)",
+      "color": "Any (기본값: shapeColor)",
+      "size": "Any (기본값: width)"
+    },
+    "options": {
+      "reconnectionAttempt": "Any (기본값: infinity)",
+      "timeout": "Any (기본값: 10000)",
+      "transports": "Any (기본값: [\"websocket\"])"
+    },
+    "ICE_SERVERS": {
+      "iceServers": "Any (기본값: [)",
+      "urls": "Any (기본값: stun:stun.l.google.com:19302)"
+    }
+  }
 }
