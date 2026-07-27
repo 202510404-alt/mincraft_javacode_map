@@ -23,5 +23,6 @@
     "files.exclude": {
         "**/__pycache__": true
     },
-    "python.createEnvironment.trigger": "external"
+    "python.createEnvironment.trigger": "external",
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
