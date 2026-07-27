@@ -7,7 +7,7 @@
       "type": "function",
       "path": "extraction_target_project/index.js",
       "start_line": 22,
-      "end_line": 22,
+      "end_line": 28,
       "calls": [],
       "used_by": []
     },
@@ -381,7 +381,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/Button.js",
       "start_line": 4,
-      "end_line": 4,
+      "end_line": 24,
       "calls": [],
       "used_by": []
     },
@@ -392,7 +392,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/Canvas.js",
       "start_line": 24,
-      "end_line": 24,
+      "end_line": 32,
       "calls": [],
       "used_by": []
     },
@@ -403,7 +403,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/Canvas.js",
       "start_line": 34,
-      "end_line": 34,
+      "end_line": 433,
       "calls": [],
       "used_by": []
     },
@@ -414,7 +414,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/Canvas.js",
       "start_line": 61,
-      "end_line": 61,
+      "end_line": 64,
       "calls": [],
       "used_by": []
     },
@@ -425,7 +425,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/Canvas.js",
       "start_line": 66,
-      "end_line": 66,
+      "end_line": 72,
       "calls": [],
       "used_by": []
     },
@@ -436,7 +436,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/Canvas.js",
       "start_line": 74,
-      "end_line": 74,
+      "end_line": 82,
       "calls": [],
       "used_by": []
     },
@@ -447,7 +447,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/Canvas.js",
       "start_line": 85,
-      "end_line": 85,
+      "end_line": 133,
       "calls": [],
       "used_by": []
     },
@@ -458,7 +458,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/Canvas.js",
       "start_line": 96,
-      "end_line": 96,
+      "end_line": 100,
       "calls": [],
       "used_by": []
     },
@@ -469,7 +469,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/Canvas.js",
       "start_line": 165,
-      "end_line": 165,
+      "end_line": 175,
       "calls": [],
       "used_by": []
     },
@@ -480,7 +480,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/Canvas.js",
       "start_line": 177,
-      "end_line": 177,
+      "end_line": 191,
       "calls": [],
       "used_by": []
     },
@@ -491,7 +491,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/Canvas.js",
       "start_line": 193,
-      "end_line": 193,
+      "end_line": 200,
       "calls": [],
       "used_by": []
     },
@@ -502,7 +502,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/Canvas.js",
       "start_line": 202,
-      "end_line": 202,
+      "end_line": 210,
       "calls": [],
       "used_by": []
     },
@@ -513,7 +513,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/Canvas.js",
       "start_line": 212,
-      "end_line": 212,
+      "end_line": 230,
       "calls": [],
       "used_by": []
     },
@@ -524,7 +524,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/Canvas.js",
       "start_line": 236,
-      "end_line": 236,
+      "end_line": 241,
       "calls": [],
       "used_by": []
     },
@@ -535,7 +535,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/Canvas.js",
       "start_line": 250,
-      "end_line": 250,
+      "end_line": 257,
       "calls": [],
       "used_by": []
     },
@@ -546,7 +546,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/Canvas.js",
       "start_line": 259,
-      "end_line": 259,
+      "end_line": 262,
       "calls": [],
       "used_by": []
     },
@@ -557,7 +557,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/Canvas.js",
       "start_line": 264,
-      "end_line": 264,
+      "end_line": 266,
       "calls": [],
       "used_by": []
     },
@@ -568,7 +568,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/Home.js",
       "start_line": 8,
-      "end_line": 8,
+      "end_line": 63,
       "calls": [],
       "used_by": []
     },
@@ -579,7 +579,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/Home.js",
       "start_line": 14,
-      "end_line": 14,
+      "end_line": 18,
       "calls": [],
       "used_by": []
     },
@@ -590,7 +590,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/Home.js",
       "start_line": 20,
-      "end_line": 20,
+      "end_line": 22,
       "calls": [],
       "used_by": []
     },
@@ -601,7 +601,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/Home.js",
       "start_line": 24,
-      "end_line": 24,
+      "end_line": 29,
       "calls": [],
       "used_by": []
     },
@@ -612,7 +612,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/Home.js",
       "start_line": 31,
-      "end_line": 31,
+      "end_line": 39,
       "calls": [],
       "used_by": []
     },
@@ -623,7 +623,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/Input.js",
       "start_line": 3,
-      "end_line": 3,
+      "end_line": 9,
       "calls": [],
       "used_by": []
     },
@@ -634,7 +634,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/socket.js",
       "start_line": 3,
-      "end_line": 3,
+      "end_line": 19,
       "calls": [],
       "used_by": []
     },
@@ -645,7 +645,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/UploadFile.js",
       "start_line": 5,
-      "end_line": 5,
+      "end_line": 31,
       "calls": [],
       "used_by": []
     },
@@ -656,7 +656,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/UploadFile.js",
       "start_line": 8,
-      "end_line": 8,
+      "end_line": 15,
       "calls": [],
       "used_by": []
     },
@@ -667,7 +667,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/hooks/useWebRTC.js",
       "start_line": 11,
-      "end_line": 11,
+      "end_line": 278,
       "calls": [],
       "used_by": []
     }

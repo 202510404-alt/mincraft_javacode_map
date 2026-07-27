@@ -24,8 +24,8 @@ LANG_MAP = {
 
 def extract_symbols(file_path: Path, project_root: Path):
     """
-    🌳 [Universal Tree-sitter AST Parser v2.0]
-    완전한 문법 트리를 기반으로 어떤 언어든 100% 정밀하게 5대 장부 규격을 추출합니다.
+    🌳 [Universal Tree-sitter AST Parser v2.1 - Range Formatting Fixed]
+    완전한 문법 트리를 기반으로 어떤 언어든 100% 정밀하게 5대 장부 규격 및 시작-끝 줄 범위를 추출합니다.
     """
     symbols = []
     file_context = {}
@@ -59,7 +59,6 @@ def extract_symbols(file_path: Path, project_root: Path):
     lang_name = LANG_MAP[ext]
     parser = get_parser(lang_name)
     tree = parser.parse(bytes(content, "utf8"))
-    cursor = tree.walk()
 
     symbols_summary_list = []
     KEYWORDS = ["entity", "platform", "camera", "sensor", "agent", "navigator", "indexer", "retriever", "handler", "service", "controller"]
@@ -77,7 +76,10 @@ def extract_symbols(file_path: Path, project_root: Path):
                 end_line = node.end_point[0] + 1
                 
                 c_id = f"{rel_path_str}::{c_name}"
-                symbols_summary_list.append(f"🧬 class {c_name} [L{start_line}]")
+                
+                # 🎯 [수정 완료] 시작줄-끝줄 범위 포맷팅
+                line_range = f"L{start_line}-L{end_line}" if start_line != end_line else f"L{start_line}"
+                symbols_summary_list.append(f"🧬 class {c_name} [{line_range}]")
                 
                 symbols.append({
                     "symbol_id": c_id, "name": c_name, "full_name": c_name, "type": "class",
@@ -103,7 +105,10 @@ def extract_symbols(file_path: Path, project_root: Path):
                 end_line = node.end_point[0] + 1
 
                 f_id = f"{rel_path_str}::{f_name}"
-                symbols_summary_list.append(f"🎯 def {f_name}() [L{start_line}]")
+                
+                # 🎯 [수정 완료] 시작줄-끝줄 범위 포맷팅
+                line_range = f"L{start_line}-L{end_line}" if start_line != end_line else f"L{start_line}"
+                symbols_summary_list.append(f"🎯 def {f_name}() [{line_range}]")
 
                 symbols.append({
                     "symbol_id": f_id, "name": f_name, "full_name": f_name, "type": "function",
