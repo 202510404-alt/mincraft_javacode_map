@@ -12,6 +12,7 @@ try:
 except ImportError:
     SCAN_MODE = "ROOT"
 
+
 # 🎛️ [인덱서 코어 전용] 디버깅 로그 On/Off 마스터 스위치
 DEBUG_LOG = True
 
@@ -196,7 +197,7 @@ class AdvancedIndexerV2:
 
             print(f"🧬 [Jjap-Indexer Universal] 5대 장부 전체 동기화 성공! 보관된 총 파일 수: {len(self.files_context)}개")
         except Exception as write_err:
-            log(f"💥 [디스크 파일 쓰기 치명적 실패] 장부 동동화 중 에러 발생: {write_err}")
+            log(f"💥 [디스크 파일 쓰기 치명적 실패] 장부 동기화 중 에러 발생: {write_err}")
 
 if __name__ == "__main__":
     indexer = AdvancedIndexerV2(PROJECT_ROOT)

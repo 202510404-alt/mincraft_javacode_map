@@ -47,9 +47,48 @@ class SemanticNavigator:
         except Exception:
             return {"symbols": []}
 
+    def resolve_file_path(self, raw_path_str: str) -> Path | None:
+        """
+        [경로 구제 통합 레이더]
+        SCAN_MODE, 상대 경로, extraction_target_project, tools 등 
+        다양한 디렉토리 변수를 추적하여 실제 존재하는 파일의 Absolute Path를 반환합니다.
+        """
+        clean_path_str = raw_path_str.strip().replace("\\", "/")
+        
+        # 1차 시도: 모드별 스펙에 맞춘 경로 조립
+        if self.scan_mode == "SRC":
+            if clean_path_str.startswith("src/src/"):
+                candidate = self.raw_root_dir / clean_path_str
+            elif clean_path_str.startswith("src/"):
+                candidate = self.raw_root_dir / clean_path_str
+            else:
+                candidate = self.raw_root_dir / "src" / clean_path_str
+        else:
+            candidate = self.raw_root_dir / clean_path_str
+
+        if candidate.exists() and candidate.is_file():
+            return candidate
+
+        # 2차 시도 (구제금융): raw_root_dir 기준 직접 탐색
+        candidate_raw = self.raw_root_dir / clean_path_str
+        if candidate_raw.exists() and candidate_raw.is_file():
+            return candidate_raw
+
+        # 3차 시도 (구제금융): extraction_target_project 하위 탐색
+        candidate_target = self.raw_root_dir / "extraction_target_project" / clean_path_str
+        if candidate_target.exists() and candidate_target.is_file():
+            return candidate_target
+
+        # 4차 시도 (구제금융): tools 하위 탐색
+        candidate_tools = self.raw_root_dir / "tools" / clean_path_str
+        if candidate_tools.exists() and candidate_tools.is_file():
+            return candidate_tools
+
+        return None
+
     def extract_multi_slices(self, raw_prompt: str):
         """
-        [Multi-Target Protocol Parser - 경로 및 클래스명 종속성 완전 격파 버전]
+        [Multi-Target Protocol Parser - 정규식 통합 및 경로 구제 완전판]
         """
         print("\n" + "="*60)
         print("🚨 [DEBUGGER ON] 내비게이터 멀티 슬라이싱 파이프라인 기동!!!")
@@ -57,7 +96,8 @@ class SemanticNavigator:
         print(f"⚙️ 현재 매핑 모드: {self.scan_mode} (기준 경로: {self.root_dir})")
         print("="*60)
 
-        pattern = r"([a-zA-Z0-9_\-\./]+)\s*:\s*(\d+)(?:\s*-\s*(\d+))?"
+        # 🛠️ [정규식 고도화]: 파일명, [📂 ...] 데코레이터, L32-L60 라인 패턴까지 완벽 파싱
+        pattern = r"([a-zA-Z0-9_\-\./\\]+\.[a-zA-Z0-9]+)[\s:]+(?:L)?(\d+)(?:\s*-\s*(?:L)?(\d+))?"
         matches = re.findall(pattern, raw_prompt)
 
         print(f"🔍 정규식 1차 타겟 스캔 결과: {matches}")
@@ -69,38 +109,20 @@ class SemanticNavigator:
         req_num = 1
 
         for match in matches:
-            file_rel_path = match[0].strip()
+            file_rel_path = match[0].strip().replace("\\", "/")
             start_line = int(match[1])
             end_line = int(match[2]) if match[2] else start_line
 
             print(f"\n🎯 [요청 #{req_num}] 메인 타겟 분석 시작 -> {file_rel_path} ({start_line} ~ {end_line} 라인)")
 
-            # 🛠️ 형님의 설계 의도 전면 반영 구역
-            if self.scan_mode == "SRC":
-                # AI가 'src/main/java/...' 처럼 가장 바깥 'src/'가 잘린 채로 요청하므로, 
-                # 하드디스크의 실제 격리 구조와 맞추기 위해 앞에 'src/'를 추가 빌드합니다.
-                # (혹시 이미 src/src/ 형태로 들어온 경우를 대비해 안전장치 추가)
-                if not file_rel_path.startswith("src/src/"):
-                    target_file_path = self.raw_root_dir / "src" / file_rel_path
-                else:
-                    target_file_path = self.raw_root_dir / file_rel_path
-                
-                print(f"   📁 [MODE: SRC] 경로 보정 적용 완료 -> {target_file_path}")
-            else:
-                # ROOT 모드일 때는 AI가 'src/src/main/java/...' 규격 그대로 던져주므로 
-                # 기존과 동일하게 원본 루트 디렉토리에 그대로 결합합니다.
-                target_file_path = self.raw_root_dir / file_rel_path
-                print(f"   📁 [MODE: ROOT] 원본 경로 유지 -> {target_file_path}")
+            # 🛠️ 신규 resolve_file_path() 헬퍼를 통한 실제 경로 추적
+            target_file_path = self.resolve_file_path(file_rel_path)
             
-            if not target_file_path.exists():
-                # 2차 구제금융: 혹시 모르니 raw_root 기준이나 tools 프리픽스도 함께 스캔
-                alt_path = self.raw_root_dir / file_rel_path
-                if alt_path.exists():
-                    target_file_path = alt_path
-                    print(f"   ♻️ [SRC 모드 구제] 프로젝트 전체 원본 경로에서 파일 포착 완료: {target_file_path}")
-                else:
-                    print(f"   ❌ [ERROR] 해당 파일이 실제 경로에 존재하지 않습니다! 패스합니다.")
-                    continue
+            if not target_file_path:
+                print(f"   ❌ [ERROR] 해당 파일이 실제 경로에 존재하지 않습니다! 패스합니다: {file_rel_path}")
+                continue
+
+            print(f"   🟢 [경로 확정] 디스크 실체 발견: {target_file_path}")
 
             try:
                 with open(target_file_path, "r", encoding="utf-8") as f:
@@ -123,7 +145,7 @@ class SemanticNavigator:
                 })
 
                 # [2단계] 🔗 제이슨 기반 2차 심볼 탐색기 가동
-                print(f"   📡 [형님의 2차 사냥기] 잘려 나온 텍스트 내부에서 양방향 심볼 식별 개시...")
+                print(f"   📡 [2차 사냥기] 잘려 나온 텍스트 내부에서 양방향 심볼 식별 개시...")
 
                 defined_names = re.findall(r"(?:def|class)\s+([a-zA-Z0-9_]+)", slice_code)
                 called_names = re.findall(r"(?:[a-zA-Z0-9_]+\.)?([a-zA-Z0-9_]+)\s*\(", slice_code)
@@ -141,34 +163,18 @@ class SemanticNavigator:
                     match_found = False
                     
                     for s in symbols_list:
-                        json_file_path = s.get("file", "")
-                        
                         if s.get("name") == target_name:
                             match_found = True
                             t_file = s.get("file", "")
                             s_start = s.get("start_line", 1)
                             s_end = s.get("end_line", 1)
 
+                            # 정방향 연관 심볼 추적
                             if t_file != file_rel_path:
                                 print(f"         ➡️ [정방향] 내가 불러온 함수 본체 포착 -> {t_file} ({s_start}~{s_end}라인)")
-                                
-                                # 🎛️ 형님의 모드별 경로 보정 룰 적용
-                                if self.scan_mode == "SRC":
-                                    if not t_file.startswith("src/src/"):
-                                        callee_file_path = self.raw_root_dir / "src" / t_file
-                                    else:
-                                        callee_file_path = self.raw_root_dir / t_file
-                                else:
-                                    # ROOT 모드일 때는 장부 경로 그대로 조립
-                                    callee_file_path = self.raw_root_dir / t_file
+                                callee_file_path = self.resolve_file_path(t_file)
                                     
-                                # [구제금융 버퍼] 혹시 모를 경로 예외 대비
-                                if not callee_file_path.exists():
-                                    callee_file_path = self.raw_root_dir / t_file
-                                if not callee_file_path.exists():
-                                    callee_file_path = self.raw_root_dir / "tools" / t_file
-                                    
-                                if callee_file_path.exists():
+                                if callee_file_path:
                                     with open(callee_file_path, "r", encoding="utf-8") as cf:
                                         cf_lines = cf.readlines()
                                     
@@ -184,6 +190,7 @@ class SemanticNavigator:
                                             "code": callee_code
                                         })
 
+                            # 역방향 연관 심볼 추적 (used_by)
                             if (target_name in defined_names) or (s.get("file") == file_rel_path):
                                 ub_list = s.get("used_by", [])
                                 if ub_list:
@@ -202,24 +209,9 @@ class SemanticNavigator:
                                                 
                                                 if (s_id == ub_id) or (ub_id.endswith(s_id)) or (sub_s_name == ub_symbol_name and (sub_t_file == ub_file or ub_file.endswith(sub_t_file) or sub_t_file.endswith(ub_file))):
                                                     sub_match_found = True
-                                                    
-                                                    # 🎛️ [역방향 탐색 경로 보정] 형님의 모드별 설계 반영
-                                                    if self.scan_mode == "SRC":
-                                                        # AI가 바깥쪽 'src/'를 생략하고 볼 때를 대비해, 'src/src/' 형태가 아니라면 앞에 'src/'를 강제 결합합니다.
-                                                        if not sub_t_file.startswith("src/src/"):
-                                                            ub_file_path = self.raw_root_dir / "src" / sub_t_file
-                                                        else:
-                                                            ub_file_path = self.raw_root_dir / sub_t_file
-                                                    else:
-                                                        # ROOT 모드일 때는 AI가 전체 경로 규격 그대로 던져주므로 원본대로 조립
-                                                        ub_file_path = self.raw_root_dir / sub_t_file
+                                                    ub_file_path = self.resolve_file_path(sub_t_file)
                                                         
-                                                    # ♻️ [구제금융 버퍼] 혹시 모를 장부상의 경로 미스매치 예외 방어
-                                                    if not ub_file_path.exists():
-                                                        ub_file_path = self.raw_root_dir / sub_t_file
-                                                    if not ub_file_path.exists():
-                                                        ub_file_path = self.raw_root_dir / "tools" / sub_t_file
-                                                    if ub_file_path.exists():
+                                                    if ub_file_path:
                                                         with open(ub_file_path, "r", encoding="utf-8") as ubf:
                                                             ub_lines = ubf.readlines()
                                                         
@@ -251,7 +243,7 @@ class SemanticNavigator:
         print(f"🏁 [DEBUG] 최종 반환할 총 슬라이스 묶음 개수: {len(extracted_slices)}개")
         print("="*60 + "\n")
         return extracted_slices
-
+    
 # =====================================================================
 # 🎨 GUI INTERFACE LAYER (UPGRADED VERSION)
 # =====================================================================
