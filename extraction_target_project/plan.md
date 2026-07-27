@@ -13,10 +13,7 @@
 
 0.2 핵심 설계 원칙과 적용 방식
 
-원칙이 프로젝트에서의 구체적 적용SOLID모든 "직업", "총기", "적", "포탑"은 인터페이스(계약)로 추상화하고, 구체 구현은 별도 클래스+데이터 정의
-│   │       │   │   ├── classes.yml
-│   │       │   │   └── specializations.yml
-│   │       │   ├── npc/(Config/Registry)로 분리한다. 새 총기 하나를 추가할 때 기존 코드를 수정하지 않고 새 클래스+등록 한 줄만 추가되도록 한다 (OCP).이벤트 기반 구조Bukkit/Paper의 Event/Listener 체계를 게임 자체 로직에도 그대로 확장한다. 코어 피격, NPC 사망, 웨이브 종료, 광물 채굴 등 모든 상태 변화는 커스텀 이벤트를 발행(fire)하고, 각 시스템은 그 이벤트를 구독(subscribe)하는 방식으로만 상호작용한다. 시스템 간 직접 참조(강결합)를 최소화한다.데이터/로직 분리총기 스탯, 몬스터 스탯, 웨이브 구성, 직업 트리 수치 등은 전부 YAML Config 또는 JSON 데이터 파일로 외부화하고, 로직 클래스는 그 데이터를 "해석"만 한다. 밸런스 수정 시 재컴파일이 필요 없도록 한다.Registry 패턴총기, 직업, 전문화, 포탑, NPC 종류, 웨이브 등 "종류가 계속 늘어나는" 모든 요소는 중앙 Registry에 등록하고 ID로 조회한다.Factory 패턴몬스터, 총알(Projectile), NPC, 포탑 등 반복 생성되는 객체는 Factory를 통해 생성하여 생성 로직을 한 곳에 모은다.Strategy 패턴총기 발사 방식(단발/연발/저격), 힐 방식(지속/범위/집중), AI 행동(공격/도주/채굴) 등 "같은 부모 아래 동작 방식이 갈리는" 요소에 적용한다.State 패턴웨이브 상태(대기/진행/보상/휴식), 코어 상태(정상/위험/파괴), NPC 상태(대기/작업/전투/사망) 등 명확한 상태 전이가 있는 도메인에 적용한다.확장 전제 설계모든 Enum 대신 가능하면 문자열 ID + Registry 조회 방식을 사용하여, 서버 재시작 없이 데이터팩/애드온 형태로 콘텐츠를 추가할 수 있는 여지를 남긴다.
+원칙이 프로젝트에서의 구체적 적용SOLID모든 "직업", "총기", "적", "포탑"은 인터페이스(계약)로 추상화하고, 구체 구현은 별도 클래스+데이터(Config/Registry)로 분리한다. 새 총기 하나를 추가할 때 기존 코드를 수정하지 않고 새 클래스+등록 한 줄만 추가되도록 한다 (OCP).이벤트 기반 구조Bukkit/Paper의 Event/Listener 체계를 게임 자체 로직에도 그대로 확장한다. 코어 피격, NPC 사망, 웨이브 종료, 광물 채굴 등 모든 상태 변화는 커스텀 이벤트를 발행(fire)하고, 각 시스템은 그 이벤트를 구독(subscribe)하는 방식으로만 상호작용한다. 시스템 간 직접 참조(강결합)를 최소화한다.데이터/로직 분리총기 스탯, 몬스터 스탯, 웨이브 구성, 직업 트리 수치 등은 전부 YAML Config 또는 JSON 데이터 파일로 외부화하고, 로직 클래스는 그 데이터를 "해석"만 한다. 밸런스 수정 시 재컴파일이 필요 없도록 한다.Registry 패턴총기, 직업, 전문화, 포탑, NPC 종류, 웨이브 등 "종류가 계속 늘어나는" 모든 요소는 중앙 Registry에 등록하고 ID로 조회한다.Factory 패턴몬스터, 총알(Projectile), NPC, 포탑 등 반복 생성되는 객체는 Factory를 통해 생성하여 생성 로직을 한 곳에 모은다.Strategy 패턴총기 발사 방식(단발/연발/저격), 힐 방식(지속/범위/집중), AI 행동(공격/도주/채굴) 등 "같은 부모 아래 동작 방식이 갈리는" 요소에 적용한다.State 패턴웨이브 상태(대기/진행/보상/휴식), 코어 상태(정상/위험/파괴), NPC 상태(대기/작업/전투/사망) 등 명확한 상태 전이가 있는 도메인에 적용한다.확장 전제 설계모든 Enum 대신 가능하면 문자열 ID + Registry 조회 방식을 사용하여, 서버 재시작 없이 데이터팩/애드온 형태로 콘텐츠를 추가할 수 있는 여지를 남긴다.
 
 0.3 기술 스택 확정
 
@@ -27,6 +24,7 @@ Gradle (Shadow 플러그인으로 의존성 셰이딩)
 영속성: 1차는 YAML/JSON 기반 파일 저장, 2차 확장으로 SQLite→MySQL/MariaDB (JDBC 추상화 계층을 처음부터 둠)
 비동기 처리: Paper의 BukkitScheduler/Folia 호환 스레드 정책 고려 (리전 스레딩 대비)
 커맨드/GUI: Paper Adventure API 기반 텍스트, Inventory GUI 프레임워크 자체 제작 (경량 커스텀 GUI 매니저)
+모델/애니메이션: Blockbench + Animated Java 플러그인으로 .bbmodel을 제작하고, 뼈대(Bone)별 Item Display용 리소스팩 에셋(1.21+ item_model 컴포넌트)과 애니메이션 키프레임 JSON을 추출. 별도 모델링 모드/플러그인(ModelEngine 등) 없이, 순수 Paper Display Entity API(ItemDisplay + Transformation 행렬)를 우리 플러그인이 직접 틱 단위로 제어하여 재생하는 자체 렌더링 엔진을 둔다 (상세는 24장).
 
 
 
@@ -119,6 +117,9 @@ REWARD: 코어 경험치/레벨업 판정, NPC 모집소 갱신, 스킬포인트
 │  │ Structure││ Class    ││ Progres- ││ Persis-  │         │
 │  │ (장벽/포탑)│(직업)   ││ sion(성장)││ tence(저장)│        │
 │  └──────────┘└──────────┘└──────────┘└──────────┘         │
+│  ┌──────────────────────────────────────────────┐         │
+│  │ Render (모델/애니메이션 — Core/Turret/Npc/Mob 공용) │         │
+│  └──────────────────────────────────────────────┘         │
 ├───────────────────────────────────────────────────────────┤
 │  Data/Config Layer (YAML/JSON, Registry, Repository)        │
 └───────────────────────┬─────────────────────────────────┘
@@ -137,6 +138,7 @@ REWARD: 코어 경험치/레벨업 판정, NPC 모집소 갱신, 스킬포인트
 
 
 예외: 순수 조회(read-only) 성격의 공용 서비스(예: PlayerProgressionService, ConfigService)는 인터페이스를 통해 직접 주입받아 호출 가능. 단 상태 변경(write)은 반드시 이벤트를 통해야 한다.
+Render 시스템도 이 예외에 해당한다: Core/Turret/Npc/Mob은 자신의 시각적 표현을 직접 구현하지 않고, 공용 계약 ModelAnchor(위치·회전·현재 애니메이션 상태 제공)만 구현하면 Render 시스템이 이를 조회하여 DisplayModelInstance를 동기화한다. Render 시스템은 도메인 로직을 전혀 모르며, 도메인 시스템도 Display Entity API를 직접 다루지 않는다(둘 다 ModelAnchor 계약을 경계로 완전히 분리).
 이 원칙 덕분에 시스템 하나를 통째로 교체(예: 광산 시스템을 다른 미니게임으로 교체)해도 다른 시스템은 이벤트 스펙만 유지하면 영향받지 않는다.
 
 
@@ -149,269 +151,9 @@ AbstractGameEvent는 GameSession 참조, 발생 시각, 취소 가능 여부(Can
 
 
 
-4. 프로젝트 디렉터리 구조 (Gradle 프로젝트 루트 기준)
+4~5. 프로젝트 디렉터리 구조 & Java 패키지 구조
 
-core-defense-plugin/
-├── build.gradle.kts
-├── settings.gradle.kts
-├── gradle.properties
-├── gradle/wrapper/
-├── README.md
-├── docs/
-│   └── design/                     ← 본 설계 문서 및 하위 상세 문서
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/yourstudio/coredefense/   (5장 패키지 구조 참고)
-│   │   └── resources/
-│   │       ├── plugin.yml
-│   │       ├── config/
-│   │       │   ├── core.yml
-│   │       │   ├── waves/
-│   │       │   │   ├── wave_definitions.yml
-│   │       │   │   └── boss_waves.yml
-│   │       │   ├── weapons/
-│   │       │   │   ├── guns.yml
-│   │       │   │   └── melee.yml
-│   │       │   ├── classes/
-│   │       │   │   ├── npc_traits.yml
-│   │       │   │   └── npc_recruit_pool.yml
-│   │       │   ├── mining/
-│   │       │   │   └── ores.yml
-│   │       │   ├── structures/
-│   │       │   │   ├── walls.yml
-│   │       │   │   └── turrets.yml
-│   │       │   └── progression/
-│   │       │       └── meta_upgrades.yml
-│   │       ├── lang/
-│   │       │   ├── en_US.yml
-│   │       │   └── ko_KR.yml
-│   │       └── schematics/           ← 코어/포탑/장벽 구조물 스키매틱(WorldEdit .schem 등)
-│   └── test/
-│       └── java/                     ← 단위 테스트 (JUnit5 + MockBukkit)
-└── libs/                             ← 외부 비공개 의존성(있을 경우)
-
-4.1 설계 근거
-
-
-resources/config 하위를 도메인별 폴더로 나누어, 밸런스 담당자가 코드 지식 없이도 YAML만 수정할 수 있게 한다.
-docs/design에 본 문서와 이후 파생 문서(예: weapon-balance.md, wave-table.md)를 함께 버전관리하여 기획-개발 싱크를 유지한다.
-schematics 폴더를 별도로 두어, 코어/포탑/장벽의 월드 구조물을 코드가 아닌 데이터(스키매틱 파일)로 배치할 수 있게 한다 → 레벨 디자이너가 코드 재컴파일 없이 구조물 모양을 수정 가능.
-test에 MockBukkit 기반 유닛 테스트를 처음부터 편성하여, 총기 데미지 계산·웨이브 스폰 로직·코어 레벨업 계산 등 순수 로직을 서버 구동 없이 검증 가능하게 한다.
-
-
-
-5. Java 패키지 구조
-
-루트 패키지: com.yourstudio.coredefense
-
-com.yourstudio.coredefense
-├── CoreDefensePlugin.java          (JavaPlugin 진입점, 부트스트랩만 담당)
-├── bootstrap/
-│   ├── ModuleInitializer.java      (각 도메인 모듈 초기화 순서 관리)
-│   ├── ListenerRegistrar.java
-│   └── CommandRegistrar.java
-├── api/                            (다른 플러그인/애드온이 참조할 공개 API, 향후 확장 대비)
-│   ├── event/                      (외부 공개용 이벤트 인터페이스)
-│   └── service/                    (외부 공개용 서비스 인터페이스)
-├── common/
-│   ├── event/
-│   │   ├── AbstractGameEvent.java
-│   │   └── GameListener.java
-│   ├── registry/
-│   │   ├── Registry.java                  (제네릭 Registry<K,V> 인터페이스)
-│   │   ├── AbstractRegistry.java
-│   │   └── RegistryKey.java
-│   ├── config/
-│   │   ├── ConfigService.java
-│   │   ├── ConfigLoader.java
-│   │   └── ReloadableConfig.java
-│   ├── util/
-│   │   ├── MathUtils.java
-│   │   ├── ParticleUtils.java
-│   │   └── CooldownTracker.java
-│   └── result/
-│       └── ActionResult.java              (성공/실패/사유를 담는 공용 결과 타입)
-│
-├── session/
-│   ├── GameSession.java
-│   ├── GameSessionManager.java
-│   ├── GameTeam.java
-│   └── SessionState.java                  (State 패턴: LOBBY/RUNNING/ENDED)
-│
-├── core/                                   (코어 시스템)
-│   ├── CoreEntity.java
-│   ├── CoreLevel.java
-│   ├── CoreEnergyManager.java
-│   ├── CoreUnlockManager.java
-│   ├── CoreState.java                      (NORMAL/DAMAGED/CRITICAL/DESTROYED)
-│   └── event/
-│       ├── CoreDamagedEvent.java
-│       ├── CoreLeveledUpEvent.java
-│       ├── CoreDestroyedEvent.java
-│       └── CoreSystemUnlockedEvent.java
-│
-├── wave/                                   (웨이브 시스템)
-│   ├── WaveManager.java
-│   ├── WaveState.java
-│   ├── WaveDefinition.java
-│   ├── WaveSpawnScheduler.java
-│   ├── boss/
-│   │   └── BossWaveHandler.java
-│   └── event/
-│       ├── WaveStartedEvent.java
-│       ├── WaveSpawnEvent.java
-│       └── WaveClearedEvent.java
-│
-├── combat/                                  (FPS 전투 / 총기 시스템)
-│   ├── weapon/
-│   │   ├── Weapon.java                     (인터페이스)
-│   │   ├── AbstractFirearm.java
-│   │   ├── FireMode.java                   (SINGLE/BURST/AUTO/CHARGE 등 Strategy)
-│   │   ├── strategy/
-│   │   │   ├── FireModeStrategy.java
-│   │   │   ├── SingleShotStrategy.java
-│   │   │   ├── BurstFireStrategy.java
-│   │   │   └── SniperShotStrategy.java
-│   │   ├── projectile/
-│   │   │   ├── ProjectileType.java
-│   │   │   ├── BulletProjectile.java
-│   │   │   └── ProjectileFactory.java
-│   │   ├── ammo/
-│   │   │   ├── AmmoType.java
-│   │   │   └── AmmoInventory.java
-│   │   ├── WeaponRegistry.java
-│   │   └── WeaponFactory.java
-│   ├── melee/
-│   │   ├── MeleeWeapon.java
-│   │   └── MeleeAttackHandler.java
-│   ├── damage/
-│   │   ├── DamageCalculator.java
-│   │   ├── DamageSource.java
-│   │   └── DamageModifier.java
-│   └── event/
-│       ├── WeaponFiredEvent.java
-│       └── EntityDamagedByGameEvent.java
-│
-├── mob/                                     (적 몬스터)
-│   ├── MonsterDefinition.java
-│   ├── MonsterFactory.java
-│   ├── MonsterAI.java                       (Strategy: 목표 지정/이동/공격 패턴)
-│   ├── ai/
-│   │   ├── TargetSelector.java
-│   │   └── PathingStrategy.java
-│   ├── MonsterRegistry.java
-│   └── event/
-│       └── MonsterKilledEvent.java
-│
-├── npc/                                     (NPC 시스템)
-│   ├── GameNpc.java
-│   ├── NpcRole.java                         (PRODUCTION/COMBAT)
-│   ├── NpcState.java                        (IDLE/WORKING/FIGHTING/DEAD)
-│   ├── NpcStatSheet.java
-│   ├── trait/
-│   │   ├── NpcTrait.java
-│   │   ├── TraitRegistry.java
-│   │   └── ResonanceCalculator.java         (특성 공명 계산)
-│   ├── job/
-│   │   ├── NpcJob.java                      (Miner/Medic/Researcher 등과 매핑)
-│   │   └── JobSkillTree.java
-│   ├── recruit/
-│   │   ├── RecruitPool.java
-│   │   ├── RecruitOffer.java
-│   │   └── RecruitmentService.java
-│   ├── death/
-│   │   ├── NpcDeathHandler.java
-│   │   ├── ReviveService.java               (빈사 구조)
-│   │   └── LegacyTransferService.java       (묘지/유산 이전)
-│   └── event/
-│       ├── NpcRecruitedEvent.java
-│       ├── NpcLeveledUpEvent.java
-│       └── NpcDiedEvent.java
-│
-├── mining/                                  (광산 클리커 시스템)
-│   ├── MiningSession.java
-│   ├── OreType.java
-│   ├── OreRegistry.java
-│   ├── ClickMiningHandler.java
-│   ├── AutoMiningTicker.java                (NPC 자동 채굴 틱 처리)
-│   └── event/
-│       └── OreMinedEvent.java
-│
-├── structure/                               (장벽/포탑)
-│   ├── wall/
-│   │   ├── WallDefinition.java
-│   │   ├── WallMaterialTier.java
-│   │   ├── WallInstance.java
-│   │   └── WallModule.java                  (가시/전기/폭발 강화 모듈)
-│   ├── turret/
-│   │   ├── Turret.java
-│   │   ├── TurretDefinition.java
-│   │   ├── TurretFactory.java
-│   │   ├── TurretTargeting.java
-│   │   └── TurretAmmoSupply.java
-│   ├── StructureRegistry.java
-│   ├── StructurePlacementService.java
-│   └── event/
-│       ├── StructurePlacedEvent.java
-│       └── StructureDestroyedEvent.java
-│
-├── job/                                     (플레이어 직업/전문화 — NPC job과는 별개 네임스페이스)
-│   ├── PlayerClass.java                     (Gunner/Swordsman/Archer/Miner/Medic/Researcher/Mechanic/Builder/Fighter)
-│   ├── ClassDefinition.java
-│   ├── Specialization.java                  (27개 전문화)
-│   ├── SkillTree.java
-│   ├── skill/
-│   │   ├── Skill.java
-│   │   ├── ActiveSkill.java
-│   │   ├── PassiveSkill.java
-│   │   └── UltimateSkill.java
-│   ├── ClassRegistry.java
-│   └── event/
-│       ├── ClassSelectedEvent.java
-│       └── SkillUsedEvent.java
-│
-├── progression/                              (영구 성장 / 메타 성장)
-│   ├── MetaCurrency.java
-│   ├── PlayerProgressionData.java
-│   ├── MetaUpgrade.java
-│   ├── MetaUpgradeTree.java
-│   ├── ScoreCalculator.java
-│   └── ProgressionService.java
-│
-├── persistence/                              (저장 시스템)
-│   ├── Repository.java                       (제네릭 인터페이스)
-│   ├── file/
-│   │   ├── YamlPlayerRepository.java
-│   │   └── JsonSessionSnapshotRepository.java
-│   ├── sql/
-│   │   ├── SqlPlayerRepository.java          (SQLite/MySQL 공용, JDBC 기반)
-│   │   └── SqlSchemaMigrator.java
-│   ├── DataStoreType.java                    (FLAT_FILE/SQLITE/MYSQL)
-│   └── PersistenceService.java
-│
-├── gui/                                       (인벤토리 기반 UI)
-│   ├── GameMenu.java
-│   ├── MenuFactory.java
-│   └── menus/
-│       ├── RecruitMenu.java
-│       ├── SkillTreeMenu.java
-│       └── MetaUpgradeMenu.java
-│
-└── command/
-    ├── CoreDefenseCommand.java
-    └── sub/
-        ├── StartGameSubcommand.java
-        └── AdminReloadSubcommand.java
-
-5.1 패키지 설계 근거
-
-
-도메인별 패키지 분리(core/wave/combat/mob/npc/mining/structure/job/progression/persistence): 하나의 도메인 변경이 다른 도메인의 컴파일에 영향을 주지 않도록 패키지 경계를 곧 모듈 경계로 취급한다. 추후 Gradle 멀티모듈로 쪼개기도 쉬움.
-event 하위 패키지를 각 도메인 안에 둠: 이벤트가 해당 도메인의 "공개 계약(public contract)"이라는 것을 명확히 하기 위함. 다른 도메인은 이 이벤트 클래스만 알면 되고 내부 구현 클래스는 몰라도 됨(캡슐화).
-api 패키지 별도 분리: 추후 다른 플러그인이나 애드온이 이 플러그인을 확장할 수 있도록 공개 인터페이스만 노출하는 계층을 처음부터 분리해둠 (하위 호환성 관리 용이).
-
-
+→ 별도 문서 「파일구조_AI친화적_개정안.md」로 이관되었습니다. 리소스 디렉터리 구조(구 4장)와 Java 패키지 구조(구 5장)는 해당 문서의 2장·3장을 최신 기준으로 참고하십시오. 이름 충돌 해소, 트리 누락분 반영, 이름 규칙 정리 등 개정 내역도 해당 문서에 정리되어 있습니다.
 
 6. 시스템별 클래스 구조 & 7. 주요 인터페이스/추상 클래스 & 8. 각 클래스의 역할
 
@@ -437,7 +179,7 @@ CoreState (Enum + State 패턴의 상태 마커) : NORMAL / DAMAGED / CRITICAL /
 핵심 인터페이스
 
 
-EnergyConsumer : int getEnergyDemand(); void onEnergyAllocated(int amount); — 포탑, 강화 모듈, 오버클럭 빌더 스킬 등이 구현.
+EnergyConsumer (common/contract 소속 — core 전속 인터페이스가 아니라 core/npc/structure/playerclass가 공동 구현하는 공용 계약) : int getEnergyDemand(); void onEnergyAllocated(int amount); — 포탑, 강화 모듈, 오버클럭 빌더 스킬 등이 구현.
 CoreLevelListener (마커) : 코어 레벨업에 반응해야 하는 시스템(광산, NPC 슬롯, 스킬트리 등)이 구현하여 ListenerRegistrar에 등록.
 
 
@@ -506,13 +248,13 @@ MonsterRegistry : ID → MonsterDefinition 조회.
 6.5 NPC 시스템
 
 
-GameNpc : 공통 상위 클래스. NpcRole(PRODUCTION/COMBAT), NpcState(IDLE/WORKING/FIGHTING/DEAD), NpcStatSheet(공격/체력/속도), 부여된 NpcTrait 1개, NpcJob(직업/전직 정보), JobSkillTree 진행도를 보유.
+GameNpc : 공통 상위 클래스. NpcRole(PRODUCTION/COMBAT), NpcState(IDLE/WORKING/FIGHTING/DEAD), NpcStatSheet(공격/체력/속도), 부여된 NpcTrait 1개, NpcVocation(직업/전직 정보, npc/vocation 패키지), NpcVocationSkillTree 진행도를 보유.
 NpcStatSheet : 기본 스탯 + 트레이트 보너스 + 공명 보너스를 합산한 최종 스탯을 계산하는 책임(ResonanceCalculator와 협업).
 NpcTrait (인터페이스) + TraitRegistry : "광부의 재능", "전투 본능", "강인함" 등 특성을 데이터 기반으로 정의. 특성은 스탯 보정치와 소속 직업 친화도(공명 계산용 태그)를 가짐.
 ResonanceCalculator : 동일 특성을 보유한 NPC 수를 세어 공명 보너스(예: 겹칠 때마다 7% 상승, 상한 캡 적용, 특성-직업 일치 시 100% 발휘)를 계산하는 순수 함수 클래스.
 RecruitPool / RecruitOffer / RecruitmentService : 웨이브 종료 후 후보 3명을 생성(랜덤 특성 + 랜덤 잠재 직업 성향), 리롤(자원 소모), 선택/방출 처리.
 NpcDeathHandler : NPC 사망 시 ReviveService(빈사 상태 시 구조 가능 여부 판정) → 실패 시 LegacyTransferService(경험치 일부를 코어 또는 동료에게 이전, "묘지" 개념) 순서로 처리.
-JobSkillTree : NPC 직업(광부/전투 등)별 성장 트리. 플레이어 직업 트리(job 패키지)와 구조는 유사하지만 완전히 별도 데이터셋으로 관리(혼동 방지를 위해 패키지도 분리됨: npc.job vs job).
+NpcVocationSkillTree : NPC 직업(광부/전투 등)별 성장 트리. 플레이어 직업 트리(playerclass 패키지의 SkillTree)와 구조는 유사하지만 완전히 별도 데이터셋으로 관리(혼동 방지를 위해 패키지도 분리됨: npc.vocation vs playerclass).
 
 
 6.6 광산(Mining) 시스템
@@ -520,7 +262,7 @@ JobSkillTree : NPC 직업(광부/전투 등)별 성장 트리. 플레이어 직�
 
 MiningSession : 플레이어별 또는 파티 공용 채광 상태(누적 채광 포인트, 현재 해금된 OreType 티어).
 ClickMiningHandler : 우클릭/좌클릭 이벤트를 구독하여 MiningSession에 포인트를 누적하고, 확률 테이블(OreType별 드랍률)에 따라 광물 지급.
-AutoMiningTicker : NPC 중 NpcRole.PRODUCTION && NpcJob == MINER인 개체를 주기적으로 순회하며 자동 채광 포인트를 누적. 광부 스탯이 임계치를 넘으면 사람 클릭보다 효율이 높아지는 규칙을 MiningEfficiencyPolicy로 캡슐화.
+AutoMiningTicker : NPC 중 NpcRole.PRODUCTION && NpcVocation == MINER인 개체를 주기적으로 순회하며 자동 채광 포인트를 누적. 광부 스탯이 임계치를 넘으면 사람 클릭보다 효율이 높아지는 규칙을 MiningEfficiencyPolicy로 캡슐화.
 OreType (Record) + OreRegistry : 광물 등급, 해금 조건(누적 포인트), 코어 에너지 환산 비율.
 
 
@@ -557,7 +299,7 @@ ClassRegistry : 직업/전문화 ID 조회, 신규 직업 확장 지점.
 파이터: 극딜/CC/방어 3분화. UltimateSkill 예: 극딜(순간 광역 폭딜), CC(도발+기절), 방어(무적 강化).
 메카닉: 자폭봇/견제봇/지원봇. 로봇은 GameNpc와 별개의 CombatDrone 엔티티로 구현하되 EnergyConsumer를 구현하여 코어 에너지 소모. 최대 운용 수는 DroneCapacityPolicy로 제한.
 빌더: 유지보수/강화/오버클럭. 오버클럭은 EnergyConsumer 초과 요청 + 과열 패널티(OverclockPenaltyHandler)로 구현, 코어 에너지 시스템과 강하게 연동.
-메딕: 지속/범위/집중 힐. HealStrategy 인터페이스로 힐 방식 분리, NPC/코어 시설도 회복 대상이 될 수 있도록 Healable 인터페이스를 코어/NPC/구조물이 공통 구현.
+메딕: 지속/범위/집중 힐. HealStrategy 인터페이스로 힐 방식 분리, NPC/코어 시설도 회복 대상이 될 수 있도록 Healable 인터페이스(common/contract 소속, core/npc/structure 공동 구현)를 코어/NPC/구조물이 공통 구현.
 
 
 6.9 영구 성장(Progression) 시스템
@@ -621,7 +363,7 @@ SqlSchemaMigrator : 버전별 스키마 마이그레이션 스크립트 관리(F
 4. (구독자) MiningSessionManager.onSystemUnlocked(event)
      → event.systemId() == "MINING" 이면 해당 세션의 MiningSession 활성화 플래그 on
      → GUI 알림(BossBar/ActionBar)으로 플레이어에게 안내
-5. (구독자) NpcRecruitmentService.onSystemUnlocked(event)
+5. (구독자) RecruitmentService.onSystemUnlocked(event)
      → event.systemId() == "NPC_RECRUIT" 이면 모집소 GUI 접근 가능 처리
 
 설계 포인트: CoreUnlockManager는 "무엇이 해금되는지"만 알고 "해금되면 각 시스템이 구체적으로 뭘 하는지"는 전혀 모른다. 이는 OCP의 핵심 사례로, 향후 레벨 6 이후 새로운 해금 콘텐츠(예: "특수 상점")를 추가해도 CoreUnlockManager는 수정할 필요가 없다(Config 데이터만 추가하고, 새 시스템이 CoreSystemUnlockedEvent를 구독하기만 하면 됨).
@@ -666,7 +408,7 @@ SqlSchemaMigrator : 버전별 스키마 마이그레이션 스크립트 관리(F
 
 10.2 이벤트 카탈로그 (발행자 → 주요 구독자)
 
-이벤트발행 시스템주요 구독 시스템WeaponFiredEventCombatProgression(통계), Skill(트리거형 스킬)MonsterKilledEventCombat/MobWave, Progression, NPC(경험치 분배), Job(스킬 트리거)WaveStartedEventWaveStructure(포탑 자동 활성화), NPC(전투 배치 알림)WaveClearedEventWaveCore(경험치 지급), NPC(모집소 갱신), ProgressionCoreDamagedEventCoreUI(BossBar 갱신), Progression(피격 통계)CoreLeveledUpEventCoreCoreUnlockManagerCoreSystemUnlockedEventCoreMining, NPC, Job, StructureCoreDestroyedEventCoreSessionManager(패배 처리), Progression(점수 확정)OreMinedEventMiningCore(에너지 증가), Progression(자원 통계)NpcRecruitedEventNPCJob(스킬트리 배정), UINpcLeveledUpEventNPCTrait/ResonanceNpcDiedEventNPCLegacy(유산 이전), UI(알림), Wave(전투력 재평가)StructurePlacedEventStructureCore(에너지 소비 등록)StructureDestroyedEventStructureWave(방어선 재계산), UISkillUsedEventJobProgression(통계), Core(에너지 연동 스킬의 경우)GameSessionEndedEventSessionProgression(최종 점수/저장), Persistence
+이벤트발행 시스템주요 구독 시스템WeaponFiredEventCombatProgression(통계), Skill(트리거형 스킬)MonsterKilledEventCombat/MobWave, Progression, NPC(경험치 분배), PlayerClass(스킬 트리거)WaveStartedEventWaveStructure(포탑 자동 활성화), NPC(전투 배치 알림)WaveClearedEventWaveCore(경험치 지급), NPC(모집소 갱신), ProgressionCoreDamagedEventCoreUI(BossBar 갱신), Progression(피격 통계)CoreLeveledUpEventCoreCoreUnlockManagerCoreSystemUnlockedEventCoreMining, NPC, PlayerClass, StructureCoreDestroyedEventCoreSessionManager(패배 처리), Progression(점수 확정)OreMinedEventMiningCore(에너지 증가), Progression(자원 통계)NpcRecruitedEventNPCPlayerClass(스킬트리 배정), UINpcLeveledUpEventNPCTrait/ResonanceNpcDiedEventNPCLegacy(유산 이전), UI(알림), Wave(전투력 재평가)StructurePlacedEventStructureCore(에너지 소비 등록)StructureDestroyedEventStructureWave(방어선 재계산), UISkillUsedEventPlayerClassProgression(통계), Core(에너지 연동 스킬의 경우)GameSessionEndedEventSessionProgression(최종 점수/저장), Persistence
 
 10.3 이벤트 흐름 다이어그램 (텍스트 표현)
 
@@ -696,7 +438,7 @@ SqlSchemaMigrator : 버전별 스키마 마이그레이션 스크립트 관리(F
       2) 각 Registry.populate(ConfigService)
            - WeaponRegistry ← guns.yml
            - MonsterRegistry ← (wave 폴더 내 몬스터 참조 데이터)
-           - ClassRegistry ← classes.yml, specializations.yml
+           - ClassRegistry ← player_classes/classes.yml, player_classes/specializations.yml
            - TraitRegistry ← npc_traits.yml
            - OreRegistry ← ores.yml
            - StructureRegistry ← walls.yml, turrets.yml
@@ -711,11 +453,11 @@ GameSession (메모리 상주, 세션 종료 시 소멸)
   ├─ WaveManager 상태 — 인메모리
   ├─ List<GameNpc> — 인메모리 (사망 시 소멸 or LegacyTransfer로 일부 값만 이전)
   ├─ List<WallInstance>/List<Turret> — 인메모리
-  └─ SessionStatsCollector — 인메모리 누적(처치 수, 채광량, 생존 시간 등)
+  └─ ProgressionStatsCollector — 인메모리 누적(처치 수, 채광량, 생존 시간 등)
 
 세션 종료 시:
   GameSessionEndedEvent
-    → ScoreCalculator.calculate(SessionStatsCollector 스냅샷)
+    → ScoreCalculator.calculate(ProgressionStatsCollector 스냅샷)
     → ProgressionService.applyScore(player, score)
     → PersistenceService.save(PlayerProgressionData)  ← 영속화 지점
 
@@ -737,7 +479,7 @@ GameSession (메모리 상주, 세션 종료 시 소멸)
 
 12. 직업 및 전문화 시스템 (상세)
 
-12.1 데이터 구조 예시 (classes.yml 설계, 실제 값이 아닌 구조 예시)
+12.1 데이터 구조 예시 (player_classes/classes.yml 설계, 실제 값이 아닌 구조 예시)
 
 yamlclasses:
   GUNNER:
@@ -777,7 +519,7 @@ Specialization은 별도 specializations.yml에서 skill_tree_id, ultimate_skill
 12.5 확장 방향
 
 
-신규 직업 추가 시 classes.yml에 항목 추가 + ClassRegistry에 자동 반영(리로드 커맨드로 핫스왑 가능하도록 ReloadableConfig 인터페이스 구현).
+신규 직업 추가 시 player_classes/classes.yml에 항목 추가 + ClassRegistry에 자동 반영(리로드 커맨드로 핫스왑 가능하도록 ReloadableConfig 인터페이스 구현).
 전문화 4번째 슬롯(하이브리드/각성 전문화)을 후반 확장 콘텐츠로 추가할 수 있도록 Specialization 목록을 고정 3개가 아닌 List<Specialization>으로 설계.
 
 
@@ -850,7 +592,7 @@ ResonanceCalculator.calculate(session):
 
 세션 내 전체 NPC의 특성을 집계(Map<TraitId, Integer> traitCounts)
 각 특성별로 count - 1을 겹침 수로 보고 bonus = min(cap, count_overlap * 0.07)로 1차 계산(회의에서 제안된 7% 기준치, cap은 Config화하여 후반 폭주 방지)
-NPC의 실제 NpcJob이 특성의 친화 직업과 일치하면 bonus *= affinityMultiplier(기본 1.0, 불일치 시 0.3 등으로 감쇠) — 이는 "실질적 광질 보너스는 광부만 의미 있게"라는 회의 요구사항의 구현.
+NPC의 실제 NpcVocation이 특성의 친화 직업과 일치하면 bonus *= affinityMultiplier(기본 1.0, 불일치 시 0.3 등으로 감쇠) — 이는 "실질적 광질 보너스는 광부만 의미 있게"라는 회의 요구사항의 구현.
 계산된 최종 보너스를 각 NpcStatSheet.applyResonanceBonus(bonus)에 반영.
 
 
@@ -861,7 +603,7 @@ NPC의 실제 NpcJob이 특성의 친화 직업과 일치하면 bonus *= affinit
 14.4 전직(전문화) 시스템
 
 
-NPC도 플레이어와 유사하게 일정 레벨(npc_job_promotion_level Config) 도달 시 JobSkillTree의 상위 분기(전직) 선택 UI가 뜨도록 하여, 광부라면 "채굴 전문가"류 상위 전직으로 분화.
+NPC도 플레이어와 유사하게 일정 레벨(npc_job_promotion_level Config) 도달 시 NpcVocationSkillTree의 상위 분기(전직) 선택 UI가 뜨도록 하여, 광부라면 "채굴 전문가"류 상위 전직으로 분화.
 전직 데이터는 npc_traits.yml과 분리된 npc_job_promotions.yml에서 관리하여, NPC 콘텐츠 확장 시 플레이어 직업 밸런스에 영향이 가지 않도록 격리.
 
 
@@ -932,7 +674,7 @@ CoreLevelRegistry가 레벨 1~N까지 최대 HP, 필요 경험치, 에너지 총
 16.2 코어 에너지(전력) 시스템 상세
 
 
-CoreEnergyManager는 매 틱마다 총 발전량 - 총 소비량을 계산하는 것이 아니라, 요청 기반(pull) 배분 모델을 사용: EnergyConsumer 구현체들이 필요할 때 requestEnergy()를 호출하고 CoreEnergyManager가 우선순위(EnergyPriority: CORE_DEFENSE > STRUCTURE > UTILITY)에 따라 배분.
+CoreEnergyManager는 매 틱마다 총 발전량 - 총 소비량을 계산하는 것이 아니라, 요청 기반(pull) 배분 모델을 사용: EnergyConsumer 구현체들이 필요할 때 requestEnergy()를 호출하고 CoreEnergyManager가 우선순위(EnergyPriority, common/contract 소속: CORE_DEFENSE > STRUCTURE > UTILITY)에 따라 배분.
 에너지가 부족하면 낮은 우선순위 소비처(예: 버프타워)부터 자동 다운그레이드(onEnergyStarved() 콜백) — 이는 "전력 공유를 통한 전략적 선택"이라는 회의 요구사항의 핵심 구현.
 
 
@@ -1027,7 +769,7 @@ StructurePlacementService.tryPlace(player, structureId, location) : 자원 소�
 19.1 메타 재화 및 점수 계산
 
 
-ScoreCalculator.calculate(SessionStats stats) 예시 가중치 구조:
+ScoreCalculator.calculate(ProgressionStatsCollector 스냅샷) 예시 가중치 구조:
 
 생존 웨이브 수 × W1
 몬스터 처치 수 × W2
@@ -1103,7 +845,9 @@ validate()는 로드 직후 필수 필드 누락/참조 무결성(예: TurretDef
 
 21.2 최상위 Config 파일 목록 및 책임
 
-파일책임core.yml코어 레벨 곡선, 에너지 총량, 상태 임계값, 해금 매핑waves/wave_definitions.yml일반 웨이브 구성waves/boss_waves.yml보스 웨이브 구성weapons/guns.yml총기 스탯/발사방식 매핑weapons/melee.yml근접무기 스탯classes/classes.yml9직업 정의classes/specializations.yml27전문화 정의 및 스킬트리 참조npc/npc_traits.ymlNPC 특성 목록 및 보너스npc/npc_recruit_pool.yml모집 후보 가중치 테이블mining/ores.yml광물 티어, 해금 조건, 에너지 환산율structures/walls.yml장벽 재질 티어structures/turrets.yml포탑 종류/탄약원/타겟팅 기본 전략progression/meta_upgrades.yml영구 업그레이드 트리progression/score_weights.yml점수 계산 가중치resonance_thresholds.ymlNPC 공명 레벨별 협업 해금 기준core_visual_stages.yml코어 레벨별 외형 스키매틱 매핑
+파일책임core.yml코어 레벨 곡선, 에너지 총량, 상태 임계값, 해금 매핑waves/wave_definitions.yml일반 웨이브 구성waves/boss_waves.yml보스 웨이브 구성weapons/guns.yml총기 스탯/발사방식 매핑weapons/melee.yml근접무기 스탯player_classes/classes.yml9직업 정의player_classes/specializations.yml27전문화 정의 및 스킬트리 참조npc/npc_traits.ymlNPC 특성 목록 및 보너스npc/npc_recruit_pool.yml모집 후보 가중치 테이블npc/npc_job_promotions.ymlNPC 전직(전문화 상위 분기) 데이터 (14.4)npc/resonance_thresholds.ymlNPC 공명 레벨별 협업 해금 기준mining/ores.yml광물 티어, 해금 조건, 에너지 환산율structures/walls.yml장벽 재질 티어structures/turrets.yml포탑 종류/탄약원/타겟팅 기본 전략progression/meta_upgrades.yml영구 업그레이드 트리progression/score_weights.yml점수 계산 가중치core_visual_stages.yml코어 레벨별 외형 스키매틱 매핑models/animation_triggers.yml게임 이벤트 → animId 매핑 (24.4)
+
+※ 경로는 파일구조_AI친화적_개정안.md의 리소스 트리(2장)와 100% 동기화됨: `classes/` → `player_classes/`로 개칭, `npc_job_promotions.yml`·`resonance_thresholds.yml`은 `npc/` 하위로 명시.
 
 21.3 ConfigService 접근 패턴
 
@@ -1185,5 +929,85 @@ MonsterKilledEvent처럼 짧은 시간에 대량 발생 가능한 이벤트는 �
 
 
 주요 시스템(웨이브 스폰, 포탑 타겟팅, 데미지 계산, 저장 I/O)에 PerformanceMonitor(간단한 타이머 유틸)를 삽입 지점으로 예비하여, 운영 중 병목 구간을 계측 가능하게 한다.
+
+
+
+24. 모델·애니메이션 렌더링 시스템 (Blockbench + Animated Java 파이프라인)
+
+24.1 파이프라인 개요
+
+이 프로젝트는 데이터팩이나 모드가 아니라 순수 Paper 플러그인이므로, 커스텀 3D 모델(코어/포탑/드론/몬스터/NPC 외형)은 서버 코드가 매 틱 제어하는 Display Entity 조합으로 구현한다. 외부 모델링 플러그인(ModelEngine, BetterModel 등)에 의존하지 않는다.
+
+디자이너 워크플로우 (코드 밖 산출물):
+
+Blockbench에서 .bbmodel 제작 → Animated Java 플러그인으로 뼈대(Bone)별 애니메이션 키프레임 작업
+Animated Java Export 시 (a) 뼈대별 개별 아이템 모델(리소스팩용, 1.21+ minecraft:item_model 컴포넌트 기준)과 (b) 뼈대별 키프레임 좌표 변환 데이터(JSON)가 함께 생성됨
+(a)는 리소스팩 assets/로, (b)는 플러그인이 런타임에 파싱할 애니메이션 데이터 저장소로 각각 배치 (경로는 25장/파일구조 문서 참고)
+
+런타임 흐름 (플러그인 코드):
+
+서버 시작 시 AnimatedJavaAssetLoader가 애니메이션 JSON을 파싱해 ModelRegistry/AnimationRegistry에 적재
+도메인 객체(CoreEntity, Turret, GameNpc, MonsterAI 등)가 ModelAnchor 계약을 구현하면, DisplayModelFactory가 해당 위치에 ItemDisplay 엔티티 묶음(뼈대 1개당 1개)을 스폰해 DisplayModelInstance로 관리
+AnimationPlayer.play(animId) 호출 시 AnimationTicker가 매 틱 현재 프레임의 뼈대별 Transformation을 보간 계산하여 각 ItemDisplay에 적용
+유저는 리소스팩만 받으면 되고, 실시간 계산/재생은 전부 서버 사이드에서 처리되므로 클라이언트 모드가 필요 없다.
+
+24.2 정적 데이터 모델 (에셋 로드 대상)
+
+핵심 클래스
+
+ModelDefinition (Record) : modelId, List<BoneDefinition>, rootBoneId. Animated Java export 시 함께 생성되는 모델 매니페스트에서 역직렬화.
+BoneDefinition (Record) : boneId, parentBoneId(nullable — null이면 루트), pivot(피벗 좌표), itemModelId(리소스팩 아이템 모델 참조 문자열), baseTransform(초기 위치/회전/스케일).
+AnimationDefinition (Record) : animId, lengthTicks, loop(boolean), List<BoneKeyframeTrack>.
+BoneKeyframeTrack (Record) : boneId, List<Keyframe> — 뼈대 하나에 대한 시간축 키프레임 목록.
+Keyframe (Record) : tick, position, rotation, scale, InterpolationType.
+InterpolationType (Enum) : LINEAR, CATMULLROM, STEP — Animated Java 키프레임 보간 방식과 1:1 대응.
+
+핵심 인터페이스
+
+ModelAnchor (공용 계약, common/contract 소속) : Location getAnchorLocation(); float getYaw(); String getModelId(); Optional<String> getCurrentAnimationId(); — Core/Turret/GameNpc/MonsterAI/CombatDrone이 구현.
+
+핵심 Registry/Loader
+
+ModelRegistry : modelId → ModelDefinition 조회.
+AnimationRegistry : animId → AnimationDefinition 조회 (모델별 네임스페이스, 예: "core.idle", "turret_minigun.fire").
+AnimatedJavaAssetLoader : 서버 시작 시 애니메이션 JSON 디렉터리를 스캔해 두 Registry를 채움. ReloadableConfig를 구현하여 관리자 커맨드로 핫리로드 가능(모델 수정 후 재시작 없이 갱신).
+
+24.3 런타임 렌더링 (Display Entity 제어)
+
+핵심 클래스
+
+DisplayModelFactory : ModelDefinition을 받아 실제 월드에 ItemDisplay 엔티티들을 스폰하고, 부모-자식 관계를 (Bukkit 엔티티 마운트가 아닌) 논리적 트리 구조로 보유한 DisplayModelInstance를 반환.
+DisplayModelInstance : 하나의 모델 인스턴스(예: 포탑 하나) = Map<boneId, ItemDisplay> + 현재 재생 중인 AnimationPlayer. setAnchor(ModelAnchor)로 매 틱 위치/방향을 동기화, dispose()로 세션/구조물 파괴 시 엔티티 일괄 제거.
+AnimationPlayer : 인스턴스별 재생 상태(현재 AnimationDefinition, 현재 tick, loop 여부, 다음 예약된 애니메이션 큐). play(animId), stop(), isPlaying(animId) 제공.
+AnimationTicker : GameScheduler(22.3의 Folia 대응 스케줄러)를 통해 매 틱(또는 분산 틱, 23.1 원칙 재사용) 전체 활성 AnimationPlayer를 순회하며 현재 프레임 계산을 위임.
+TransformInterpolator : 두 Keyframe 사이를 InterpolationType에 따라 보간하여 뼈대 로컬 Transformation을 산출하는 순수 함수 클래스.
+BoneTransformComposer : 부모 뼈대의 누적 Transformation과 자식 뼈대의 로컬 Transformation을 행렬 합성하여 최종 월드 Transformation을 계산 (BoneDefinition.parentBoneId 체인을 따라 재귀 합성). ItemDisplay#setTransformation에 그대로 적용 가능한 형태로 산출.
+
+역할 요약: 정적 데이터(24.2)는 "무엇을 어떻게 움직일지"를 선언하고, 런타임 클래스(24.3)는 그 선언을 매 틱 실제 Transformation 행렬로 환산해 Display Entity에 적용하는 책임만 진다. 애니메이션 로직은 도메인 로직을 전혀 참조하지 않는 순수 계산 계층으로 격리되어, 코어/포탑/NPC/몬스터 중 무엇에 붙든 동일한 재생 엔진을 재사용한다.
+
+24.4 도메인 시스템과의 연동 (트리거 매핑)
+
+각 도메인은 Render 시스템을 직접 호출하지 않고, 이벤트 발행 → AnimationTriggerListener(Render 소속 구독자)가 이벤트를 받아 해당 ModelAnchor의 AnimationPlayer.play()를 호출하는 방식으로 연동한다 (3.2의 이벤트 기반 원칙 그대로 적용).
+
+AnimationTriggerMapping (Config, animation_triggers.yml 역직렬화) : 이벤트 타입 → animId 매핑 테이블. 예: CoreDamagedEvent → "core.hit", CoreStateChangedEvent(CRITICAL 진입) → "core.critical_idle", WeaponFiredEvent(포탑 발사) → "turret_minigun.fire", NpcDiedEvent → "npc.death". 기획자가 코드 수정 없이 매핑을 조정 가능(21.1 ReloadableConfig 원칙 재사용).
+AnimationTriggerListener : GameListener를 구현하는 단일 리스너로, 카탈로그(10.2)의 이벤트들을 구독해 AnimationTriggerMapping을 조회하고 해당 이벤트의 발신자(ModelAnchor)에 대해 애니메이션을 재생. 새 애니메이션 트리거 추가 시 이 리스너나 도메인 코드를 수정할 필요 없이 YAML 한 줄만 추가하면 된다(OCP).
+
+24.5 리소스팩 에셋 파이프라인 (빌드 산출물, 코드 아님)
+
+Blockbench 원본(.bbmodel, Animated Java 프로젝트 파일)은 저장소 내 models/raw/에 보관하며, 빌드/배포 산출물이 아니므로 src/main/resources/ 밖에 위치한다 (경로 상세는 파일구조 문서 참고).
+Animated Java Export 결과물 중 아이템 모델/텍스처는 src/main/resources/assets/로, 애니메이션 키프레임 JSON은 src/main/resources/animations/로 각각 export 규칙에 맞춰 배치한다.
+ResourcePackBuildTask (Gradle task) : assets/ 하위를 zip으로 패킹해 빌드 산출물로 만든다. 서버 자동 배포(예: pack.mcmeta 생성, 해시 계산)까지 이 태스크에서 담당할지는 24.7 확장 방향에서 다룬다.
+ModelAssetValidator : 서버 시작 시(ConfigService.loadAll()과 동일 시점) ModelDefinition이 참조하는 모든 itemModelId가 실제 리소스팩에 존재하는지, AnimationDefinition이 참조하는 boneId가 해당 모델에 실재하는지 검증하여 21.1의 validate() 원칙을 모델 데이터에도 동일하게 적용한다.
+
+24.6 성능 최적화 (23장 원칙의 Render 적용)
+
+동시에 재생 중인 AnimationPlayer가 많을 때 23.1의 분산 틱(Staggered Tick) 원칙을 그대로 적용해 프레임 계산을 여러 틱에 걸쳐 분산한다.
+플레이어와의 거리에 따라 애니메이션 갱신 주기를 낮추는 AnimationLodPolicy(23.3의 VfxLodPolicy와 동일 패턴)를 적용하고, 시야 밖(청크 미로드 등) 모델은 AnimationTicker 활성 목록에서 제외한다.
+DisplayModelInstance.dispose() 미호출로 인한 Display Entity 누수를 막기 위해, 세션/구조물/NPC/몬스터의 소멸 훅에서 반드시 Render 측 dispose를 함께 호출하도록 23.5의 메모리 관리 원칙을 확장한다.
+
+24.7 확장 방향
+
+동일 모델에 대해 여러 애니메이션을 블렌딩 재생(예: 이동+공격 동시 재생)하는 애니메이션 레이어링은 1차 범위에서 제외하고, AnimationPlayer가 향후 다중 트랙을 지원하도록 인터페이스만 열어둔다.
+서버 시작 시 리소스팩을 자동 호스팅/배포(내장 리소스팩 서버 또는 외부 CDN 업로드)하는 기능은 ResourcePackBuildTask 산출물을 소비하는 별도 배포 모듈로 후속 설계.
 
 
