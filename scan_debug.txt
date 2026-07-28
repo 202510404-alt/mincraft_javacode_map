@@ -31,3 +31,4 @@ C:\Users\COMLAB\Desktop\AI_agent\extraction_target_project\package-lock.json
 C:\Users\COMLAB\Desktop\AI_agent\extraction_target_project\package.json
 C:\Users\COMLAB\Desktop\AI_agent\extraction_target_project\prompt.md
 C:\Users\COMLAB\Desktop\AI_agent\extraction_target_project\README.md
+C:\Users\COMLAB\Desktop\AI_agent\extraction_target_project\start.bat

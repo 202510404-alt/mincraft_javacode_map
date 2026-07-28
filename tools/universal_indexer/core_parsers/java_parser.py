@@ -107,13 +107,14 @@ def extract_symbols(file_path: Path, project_root: Path):
             symbols_info_strings.append(f"🧬 class {c_name} [L{line_num}-{end_line}]")
             skeleton_segments.append(f"class {c_name} {{ // L{line_num}-{end_line}")
             
+            c_id = f"{rel_path_str}::{c_name}"
             symbols.append({
-                "symbol_id": f"{rel_path_str}::{c_name}",
+                "symbol_id": c_id,
                 "name": c_name, "full_name": c_name, "type": "class",
                 "path": rel_path_str, "start_line": line_num, "end_line": end_line,
                 "calls": [], "used_by": []
             })
-            definition_map[c_name] = f"{rel_path_str}:{line_num}"
+            definition_map[c_id] = f"{rel_path_str}:{line_num}"
             continue
 
 # B. 메서드 탐지 및 인자(파라미터) 정밀 추출로 변경
@@ -173,7 +174,7 @@ def extract_symbols(file_path: Path, project_root: Path):
                 "path": rel_path_str, "start_line": line_num, "end_line": end_line,
                 "calls": detected_calls, "used_by": []
             })
-            definition_map[def_key] = f"{rel_path_str}:{line_num}"
+            definition_map[m_id] = f"{rel_path_str}:{line_num}"
 
     # 3. 🧱 소스 스켈레톤 마감 처리
     skeleton_text = "\n".join(skeleton_segments)

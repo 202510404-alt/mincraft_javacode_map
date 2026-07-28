@@ -32,7 +32,7 @@
     },
     "extraction_target_project/client/src/App.js": {
       "hash": "542cdbcacd8ea2140703ab4bff2f504cbbd7f7d95c43d8b6d5f0aba6a6d9d93b",
-      "symbols_summary": "💡 📦 imp: ./Canvas, ./Home, react, react-hot-toast, react-router-dom | 🎯 def App() [L11~L11]",
+      "symbols_summary": "💡 📦 imp: ./Canvas, ./Home, react, react-hot-toast, react-router-dom | 🎯 def App() [L11~L20]",
       "skeleton": "import React from \"react\";\nimport Canvas from \"./Canvas\";\nimport {useState} from \"react\";\nimport { Toaster } from \"react-hot-toast\";\nimport { BrowserRouter,Routes,Route } from \"react-router-dom\";\nimport Home from \"./Home\";\n\n\n\n\nfunction App() {\n  \n  // const [color,setColor] = useState(\"#000000\");\n   \n  const [height,setHeight] = useState(700);\n  const [width,setWidth] = useState(1200);\n  \n//  window.onscroll = function (event) {\n     \n//   if(window.scrollY > 0)\n//     setHeight(height + 10);\n\n/"
     },
     "extraction_target_project/client/src/App.test.js": {

@@ -100,7 +100,7 @@ def extract_symbols(file_path: Path, project_root: Path):
                 "path": rel_path_str, "start_line": node.lineno, "end_line": node.end_lineno,
                 "calls": list(set(calls)), "used_by": []
             })
-            definition_map[s_name] = f"{rel_path_str}:{node.lineno}"
+            definition_map[s_id] = f"{rel_path_str}:{node.lineno}"
 
         elif isinstance(node, ast.ClassDef):
             c_name = node.name
@@ -112,7 +112,7 @@ def extract_symbols(file_path: Path, project_root: Path):
                 "path": rel_path_str, "start_line": node.lineno, "end_line": node.end_lineno,
                 "calls": [], "used_by": []
             })
-            definition_map[c_name] = f"{rel_path_str}:{node.lineno}"
+            definition_map[c_id] = f"{rel_path_str}:{node.lineno}"
 
             # 클래스 내부 메서드 슬라이싱
             for sub in node.body:
@@ -132,7 +132,7 @@ def extract_symbols(file_path: Path, project_root: Path):
                         "path": rel_path_str, "start_line": sub.lineno, "end_line": sub.end_lineno,
                         "calls": list(set(sub_calls)), "used_by": []
                     })
-                    definition_map[f"{c_name}.{m_name}"] = f"{rel_path_str}:{sub.lineno}"
+                    definition_map[m_id] = f"{rel_path_str}:{sub.lineno}"
 
     # 임포트 내역 파싱
     imports = []

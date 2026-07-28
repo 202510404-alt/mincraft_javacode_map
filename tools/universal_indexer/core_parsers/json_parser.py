@@ -61,8 +61,8 @@ def extract_symbols(file_path: Path, project_root: Path):
                 "path": rel_path_str, "start_line": 1, "end_line": 1,
                 "calls": [], "used_by": []
             })
-            # 정의 맵 매핑 등록
-            definition_map[key] = f"{rel_path_str}:1"
+            # 정의 맵 매핑 등록 (고유 symbol_id 사용)
+            definition_map[s_id] = f"{rel_path_str}:1"
 
     elif isinstance(data, list):
         skeleton_lines.append(f"  └── Root Array: List (len: {len(data)})")

@@ -6,50 +6,50 @@ from pathlib import Path
 # ==========================================
 # 🚨 [DEBUG CONFIG] 디버깅 로그 ON / OFF 스위치
 # ==========================================
-DEBUG = True  # True로 설정하면 디버깅 로그가 터미널에 쏟아집니다. (OFF 하려면 False)
+DEBUG = True                                              
+
 
 def debug_log(message: str):
-    """DEBUG 플래그가 True일 때만 콘솔에 로그를 도배하는 헬퍼 함수"""
     if DEBUG:
         print(f"[🐛 DEBUG_JS_PARSER] {message}", file=sys.stderr)
 
 
-def find_end_line_by_braces(lines: list, start_line_idx: int) -> int:
+def find_end_line_by_braces(lines: list, start_line_idx: int, max_search_range: int = 500) -> int:
     """
-    start_line_idx(0-based)부터 아래로 내려가며 중괄호('{', '}')의 짝을 맞아 0이 되는 지점(end_line)을 추적합니다.
+    start_line_idx(0-based)부터 연산량을 제한하여 괄호 짝을 추적합니다.
+    - max_search_range: 한 함수/클래스당 최대 500줄만 탐색하여 $O(N^2)$ 폭증 방지
     """
     brace_count = 0
     found_first_open = False
     
-    debug_log(f"  └── 🔍 [Trace Scope Start] L{start_line_idx + 1}부터 스코프 추적 시작...")
+    # 탐색 한계선 설정 (파일 끝 또는 최대 500줄 아래)
+    max_idx = min(len(lines), start_line_idx + max_search_range)
 
-    for i in range(start_line_idx, len(lines)):
+    for i in range(start_line_idx, max_idx):
         line = lines[i]
         
-        # 주석이나 문자열 내 중괄호 예외처리를 위한 단순화 카운터
-        # (필요 시 더 정밀하게 다듬을 수 있습니다)
-        opens = line.count('{')
-        closes = line.count('}')
+        # 간단한 주석(//) 제거 후 괄호 카운트 (불필요한 과도 탐색 방지)
+        clean_line = line.split('//')[0]
+        opens = clean_line.count('{')
+        closes = clean_line.count('}')
 
         if opens > 0 and not found_first_open:
             found_first_open = True
             
         if found_first_open:
             brace_count += (opens - closes)
-            debug_log(f"      [L{i + 1}] Line Brace Delta: +{opens}/-{closes} => Current Balance Depth: {brace_count}")
             
-            # 괄호 짝이 다 맞아떨어져 스코프가 종료된 순간
+            # 괄호 짝이 맞춰진 순간 연산 즉시 종료
             if brace_count <= 0:
-                debug_log(f"  └── 🎯 [Trace Scope Complete] 함수/클래스 종료 지점 발견: L{i + 1}")
-                return i + 1  # 1-based line number
+                return i + 1
 
-    debug_log(f"  └── ⚠️ [Trace Scope Fail] 닫히는 중괄호를 찾지 못함 -> 시작 라인(L{start_line_idx + 1}) 반환")
-    return start_line_idx + 1
+    # 500줄 안에서 못 찾았거나 닫는 괄호가 없을 경우 기본값 안전하게 반환
+    return min(len(lines), start_line_idx + 10)
 
 
 def extract_symbols(file_path: Path, project_root: Path):
     """
-    ⚡ [JavaScript / TypeScript Parser v1.1 - Debug Mode Supported]
+    ⚡ [JavaScript / TypeScript Parser v1.5 - High Performance]
     """
     symbols = []
     file_context = {}
@@ -69,25 +69,21 @@ def extract_symbols(file_path: Path, project_root: Path):
     except ValueError:
         rel_path_str = file_path.resolve().relative_to(project_root.resolve()).as_posix()
 
-    debug_log("=" * 80)
-    debug_log(f"📂 [File Start] 파일 스캔 시작: {rel_path_str}")
-    debug_log("=" * 80)
+    debug_log(f"📂 [File Start] {rel_path_str}")
 
     file_hash = hashlib.sha256(content.encode("utf-8")).hexdigest()
     lines = content.splitlines()
 
-    # 1. 💡 임포트 모듈 포착
+    # 1. 임포트 모듈 포착
     imports = []
     import_matches = re.findall(r'(?:import\s+.*?\s+from\s+[\'"]([^\'"]+)[\'"]|require\([\'"]([^\'"]+)[\'"]\))', content)
     for m in import_matches:
         imp = m[0] if m[0] else m[1]
         imports.append(imp)
     
-    debug_log(f"📦 발견된 임포트 모듈 ({len(imports)}개): {imports}")
     imports_str = f"💡 📦 imp: {', '.join(sorted(list(set(imports))))}" if imports else ""
     symbols_info_strings = []
 
-    # 정규식 패턴 지정
     class_pattern = re.compile(r'class\s+([A-Za-z0-9_]+)')
     func_pattern = re.compile(r'(?:async\s+)?function\s+([A-Za-z0-9_]+)|(?:const|let|var)\s+([A-Za-z0-9_]+)\s*=\s*(?:async\s*)?\([^)]*\)\s*=>')
     object_pattern = re.compile(r'(?:const|let|var)\s+([A-Za-z0-9_]+)\s*=\s*\{([^}]+)\}')
@@ -103,9 +99,7 @@ def extract_symbols(file_path: Path, project_root: Path):
             c_name = c_match.group(1)
             c_id = f"{rel_path_str}::{c_name}"
             
-            debug_log(f"\n🧬 [Class Found] '{c_name}' detected at Line {idx}")
             end_line = find_end_line_by_braces(lines, idx - 1)
-            debug_log(f"    결과: Class '{c_name}' Scope -> [L{idx} ~ L{end_line}]")
 
             symbols_info_strings.append(f"🧬 class {c_name} [L{idx}~L{end_line}]")
             symbols.append({
@@ -113,7 +107,7 @@ def extract_symbols(file_path: Path, project_root: Path):
                 "path": rel_path_str, "start_line": idx, "end_line": end_line,
                 "calls": [], "used_by": []
             })
-            definition_map[c_name] = f"{rel_path_str}:{idx}"
+            definition_map[c_id] = f"{rel_path_str}:{idx}"
 
             if any(kw in c_name.lower() for kw in KEYWORDS):
                 registry_constants.append(c_name)
@@ -125,9 +119,7 @@ def extract_symbols(file_path: Path, project_root: Path):
             if f_name and f_name not in ["require", "import"]:
                 f_id = f"{rel_path_str}::{f_name}"
                 
-                debug_log(f"\n🎯 [Function Found] '{f_name}()' detected at Line {idx}")
                 end_line = find_end_line_by_braces(lines, idx - 1)
-                debug_log(f"    결과: Function '{f_name}()' Scope -> [L{idx} ~ L{end_line}]")
 
                 symbols_info_strings.append(f"🎯 def {f_name}() [L{idx}~L{end_line}]")
                 symbols.append({
@@ -135,7 +127,7 @@ def extract_symbols(file_path: Path, project_root: Path):
                     "path": rel_path_str, "start_line": idx, "end_line": end_line,
                     "calls": [], "used_by": []
                 })
-                definition_map[f_name] = f"{rel_path_str}:{idx}"
+                definition_map[f_id] = f"{rel_path_str}:{idx}"
 
     # [C] 데이터 프로토콜 스캔
     for obj_match in object_pattern.finditer(content):
@@ -149,10 +141,8 @@ def extract_symbols(file_path: Path, project_root: Path):
             fields[k] = f"Any (기본값: {v_clean})"
             
         if fields:
-            debug_log(f"🔑 [Protocol Found] '{obj_name}' Protocol Keys: {list(fields.keys())}")
             data_protocols[obj_name] = fields
 
-    # 5. 요약 문자열 조립
     summary_parts = [imports_str] if imports_str else []
     summary_parts.extend(symbols_info_strings)
     symbols_summary_str = " | ".join(summary_parts)
@@ -163,5 +153,5 @@ def extract_symbols(file_path: Path, project_root: Path):
         "skeleton": content[:500]
     }
 
-    debug_log(f"\n✅ [File Scan Finished] {rel_path_str} - 추출된 심볼 수: {len(symbols)}개\n")
+    debug_log(f"✅ [File Scan Complete] {rel_path_str} (추출 심볼: {len(symbols)}개)")
     return symbols, file_context, definition_map, data_protocols, registry_constants

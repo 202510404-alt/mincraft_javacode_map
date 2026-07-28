@@ -370,7 +370,7 @@
       "type": "function",
       "path": "extraction_target_project/client/src/App.js",
       "start_line": 11,
-      "end_line": 11,
+      "end_line": 20,
       "calls": [],
       "used_by": []
     },

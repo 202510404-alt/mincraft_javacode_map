@@ -20,7 +20,7 @@ extraction_target_project/
 │   │   ├── manifest.json [📂 client/public/manifest.json] -> [💡 📦 json_keys: 7개 포착 | 🔑 "short_name" [str] | 🔑 "name" [str] | 🔑 "icons" [list] | 🔑 "start_url" [str] | 🔑 "display" [str] | ...외 2개]
 │   ├── src/
 │   │   ├── App.css [📂 client/src/App.css]
-│   │   ├── App.js [📂 client/src/App.js] -> [💡 📦 imp: ./Canvas, ./Home, react, react-hot-toast, react-router-dom | 🎯 def App() [L11~L11]]
+│   │   ├── App.js [📂 client/src/App.js] -> [💡 📦 imp: ./Canvas, ./Home, react, react-hot-toast, react-router-dom | 🎯 def App() [L11~L20]]
 │   │   ├── App.test.js [📂 client/src/App.test.js] -> [💡 📦 imp: ./App, @testing-library/react]
 │   │   ├── Button.js [📂 client/src/Button.js] -> [💡 📦 imp: react | 🎯 def Button() [L4~L24]]
 │   │   ├── Canvas.js [📂 client/src/Canvas.js] -> [💡 📦 imp: ./Button, ./UploadFile, ./hooks/useWebRTC, ./socket, react, react-hot-toast, react-icons/ai, react-icons/fa6, react-router-dom | 🎯 def RemoteAudio() [L24~L32] | 🎯 def Canvas() [L34~L433] | 🎯 def changeColour() [L61~L64] | 🎯 def lineWidth() [L66~L72] | 🎯 def handleImageUploadSuccess() [L74~L82] | 🎯 def init() [L85~L133] | 🎯 def handleError() [L96~L100] | 🎯 def handleDraw() [L165~L175] | 🎯 def handleMoveDraw() [L177~L191] | 🎯 def handleNotDraw() [L193~L200] | 🎯 def undo() [L202~L210] | 🎯 def redrawCanvas() [L212~L230] | 🎯 def handleCanvasChange() [L236~L241] | 🎯 def clearCanvas() [L250~L257] | 🎯 def copyBoardId() [L259~L262] | 🎯 def leaveBoard() [L264~L266]]
@@ -41,3 +41,4 @@ extraction_target_project/
 ├── package.json [📂 package.json] -> [💡 📦 json_keys: 8개 포착 | 🔑 "name" [str] | 🔑 "version" [str] | 🔑 "description" [str] | 🔑 "type" [str] | 🔑 "main" [str] | ...외 3개]
 ├── prompt.md [📂 prompt.md]
 ├── README.md [📂 README.md]
+├── start.bat [📂 start.bat]
